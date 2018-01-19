@@ -80,12 +80,12 @@ hr {
 
 }
 .caption-titulo>p{
-	margin: 0 auto;
+	margin: 0;
 	color: #b1874a;
 	font-family: 'Yeseva One', cursive;
-	font-size: 30px;
+	font-size: 40px;
 	text-align: left;
-	line-height: 1;
+	line-height: 1.3;
 	display: block;
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
@@ -104,7 +104,7 @@ hr {
 }
 .a-caption{
 	letter-spacing: 3px;
-	font-size: 11px;
+	font-size: 13px;
 	font-weight: 400;
 	color: #b1874a;
 	display: flex;
@@ -127,6 +127,10 @@ hr {
 	background-color: #151B33;
 	color: #fff;
 	font-weight: 700;
+}
+.links-vermais:focus, .links-vermais:hover {
+    color: #b1874a;
+    background-color: #000;
 }
 a:focus, a:hover {
     color: #b1874a;

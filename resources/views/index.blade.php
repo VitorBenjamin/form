@@ -80,13 +80,13 @@
           <div class="caption">
             <div class="col-xs-9 col-sm-6 col-md-10">
               <div class="caption-titulo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadadasdasdasdsadasdasdasdasdasdasd</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               </div>
             </div>
             <div class="col-xs-7 col-md-7">
               <div class="border-top">
                 <hr width="25%">
-                <p>VIAGENS PARA </p>
+                <p>Porto Seguro</p>
               </div>
             </div>
             <div class="col-xs-5 col-md-5">
@@ -108,14 +108,14 @@
             <div class="col-xs-9 col-sm-6 col-md-10">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadadasdasdasdsadasdasdasdasdasdasd</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
             <div class="col-xs-7 col-md-7">
               <div class="border-top">
                 <hr width="25%">
-                <p>VIAGENS PARA</p>
+                <p>Porto Seguro</p>
               </div>
             </div>
             <div class="col-xs-5 col-md-5">
@@ -137,14 +137,14 @@
             <div class="col-xs-9 col-sm-6 col-md-10">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadadasdasdasdsadasdasdasdasdasdasd</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
             <div class="col-xs-7 col-md-7">
               <div class="border-top">
                 <hr width="25%">
-                <p>VIAGENS PARA </p>
+                <p>Porto Seguro</p>
               </div>
             </div>
             <div class="col-xs-5 col-md-5">
@@ -170,7 +170,7 @@
             <div class="col-xs-9 col-sm-6 col-md-10">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadadasdasdasdsadasdasdasdasdasdasd</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
@@ -178,7 +178,7 @@
               <div class="col-xs-7 col-md-7">
                 <div class="border-top">
                   <hr width="25%">
-                  <p>VIAGENS PARA </p>
+                  <p>Porto Seguro</p>
                 </div>
               </div>
               <div class="col-xs-5 col-md-5">
@@ -201,14 +201,14 @@
             <div class="col-xs-9 col-sm-6 col-md-10">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadadasdasdasdsadasdasdasdasdasdasd</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
             <div class="col-xs-7 col-md-7">
               <div class="border-top">
                 <hr width="25%">
-                <p>VIAGENS PARA </p>
+                <p>Porto Seguro</p>
               </div>
             </div>
             <div class="col-xs-5 col-md-5">
@@ -230,14 +230,14 @@
             <div class="col-xs-9 col-sm-6 col-md-10">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadadasdasdasdsadasdasdasdasdasdasd</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
             <div class="col-xs-7 col-md-7">
               <div class="border-top">
                 <hr width="25%">
-                <p>VIAGENS PARA </p>
+                <p>Porto Seguro</p>
               </div>
             </div>
             <div class="col-xs-5 col-md-5">
