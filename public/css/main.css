@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800');@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One');
+.select {
+	background-color: #161b33;
+}
+.select > .container >.row{
+	margin: 30px 0;
+}
+select{
+	padding: 5px 20px;
+	max-width: 95%;
+	height: 90%;
+	color: #fff;
+	font-size: 13px;
+	background: rgba(0,0,0,0);
+	border: 2px #fff solid;
+	border-radius: 20px;
+
+}
+select option {
+	background: #161b33;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.border-left{
+	border-left: 3px solid #b1874a;
+	padding: 13px 0;
+
+}
+.border-left > p{
+	color: #b1874a;
+	font-weight: bold;
+	margin: 0 0 0 40px;
+}
+.select-right{
+	padding: 13px 0 0 0;
+}
+
+.thumb {
+	position:relative;
+	overflow:hidden;
+}
+/* .thumb>img {
+	height: 500px;
+} */
+
+.caption {
+	position:absolute;
+	top:0;
+	right:0;
+	background:rgba(0, 0, 0, 0.73);
+	width:100%;
+	height:100%;
+	padding:2%;
+	display: none;
+	text-align:center;
+	color: #b1874a !important;
+	z-index:2;
+}
+
+hr {
+	margin-top: 0;
+	margin-bottom: 5px;
+	border: 0;
+	border-top: 4px solid #b1874a;
+	margin-left: 0;
+}
+.border-top > p{
+	color: #fff;
+	font-weight: bold;
+	margin: 0;
+	text-align: left;
+}
+.select-right{
+	padding: 13px 0 0 0;
+}
+.caption-titulo{
+	margin: 60px 0;
+
+}
+.caption-titulo>p{
+	margin: 0 auto;
+	color: #b1874a;
+	font-family: 'Yeseva One', cursive;
+	font-size: 30px;
+	text-align: left;
+	line-height: 1;
+	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+.caption-rodape{
+	margin: 50px 0;
+}
+
+.button-caption{
+	border: 2px solid #b1874a;
+	padding: 5px 20px;
+}
+.a-caption{
+	letter-spacing: 3px;
+	font-size: 11px;
+	font-weight: 400;
+	color: #b1874a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+.links-viagens{
+	margin: 70px 0 50px 0;
+}
+.links-viagens>a{
+	color: black;
+}
+.links-viagens>a>p{
+	border-left: 2px solid #b1874a;
+	padding-left: 10px;
+}
+.links-vermais{
+	padding: 12px 23px;
+	background-color: #151B33;
+	color: #fff;
+	font-weight: 700;
+}
+a:focus, a:hover {
+    color: #b1874a;
+    text-decoration: none;
+}
+@media (max-width: 575px)  {
+	.caption-titulo {
+    	margin: 40px 0;
+	}
+}
+@media (min-width: 576px) and (max-width: 767px)  {
+	.caption-titulo {
+    	margin: 100px 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px)  {
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.caption-titulo {
+    	margin: 30px 0;
+	}
+}
+@media (min-width: 1199px) {
+	.caption-titulo {
+    	margin: 85px 0;
+	}
+}
