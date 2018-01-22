@@ -18,3 +18,30 @@ $( document ).ready(function() {
 		return false;
 	});
 });
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+  	nav:true,
+  	dots:false,
+  	autoplay:true,
+    loop:true,
+    margin:60,
+    responsiveClass:true,
+    navText:["<i class='material-icons icons-custom'>keyboard_arrow_left</i>","<i class='material-icons icons-custom'>keyboard_arrow_right</i>"],
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+});
+});
+
