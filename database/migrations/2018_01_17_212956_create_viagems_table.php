@@ -17,6 +17,7 @@ class CreateViagemsTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('descricao');
+            $table->enum('AFRICA','ASIA','AMERICA')
             $table->integer('categorias_id')->unsigned();
             $table->timestamps();
         });
