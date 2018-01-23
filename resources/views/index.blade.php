@@ -7,7 +7,7 @@
   <div class="container">
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
-        <span class="navbar-menu-text">MENU</span>
+        <span class="navbar-menu-text hidden-xs">MENU</span>
         <button type="button" class="navbar-toggle x collapsed" data-toggle="collapse" data-target="#navbar-collapse-x">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -21,15 +21,34 @@
 
       <div class="collapse navbar-collapse" id="navbar-collapse-x">
         <ul class="nav navbar-nav navbar-right">
-          <li data-toggle="collapse" data-target="#navbar-collapse.in"><a href="#top">Link</a></li>
-          <li data-toggle="collapse" data-target="#navbar-collapse.in"><a href="#top">Link</a></li>
+          <li><a href="#">INÍCIO</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">QUEM SOMOS</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">ESTILOS DE VIAGEM</a></li>
+          <li role="separator" class="divider"></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ROTEIROS<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">AMÉRICA DO SUL</a></li>
+              <li><a href="#">AMÉRICA DO NORTE</a></li>
+              <li><a href="#">EUROPA</a></li>
+              <li><a href="#">ÁFRICA</a></li>
+              <li><a href="#">ÁSIA</a></li>
+              <li><a href="#">OCEANIA</a></li>
+              <li><a href="#">ANTÁRTIDA</a></li>
+            </ul>
+          </li>
+          <li><a href="#">MONTE UM ROTEIRO</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">BLOG</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">CONTATO</a></li>
         </ul>
       </div><!-- .navbar-collapse -->
     </nav>
   </div>
 </div>
-
-
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
@@ -41,11 +60,11 @@
               <div class="col-md-offset-3 col-md-6">
                 <div class="texto-carousel">
                   <h1 style="margin-top: 50%">Arte Design e Arquitetura</h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+                  <p class="show-summary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
                   </p>
 
                   <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-xs-5 col-md-4">
                       <button type="">VER MAIS</button>
                     </div>
                   </div>
@@ -66,11 +85,10 @@
               <div class="col-md-offset-3 col-md-6">
                 <div class="texto-carousel">
                   <h1 style="margin-top: 50%">Arte Design e Arquitetura</h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+                  <p class="show-summary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
                   </p>
-
                   <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-xs-5 col-md-4">
                       <button type="">VER MAIS</button>
                     </div>
                   </div>
@@ -79,7 +97,6 @@
             </div>
           </div>
           <div class="col-sm-6" style="background: url('{{ asset('assets/slide-02.jpg') }}') center/cover no-repeat; height: 700px;">
-            
           </div>
         </div>
       </div>
@@ -92,11 +109,11 @@
               <div class="col-md-offset-3 col-md-6">
                 <div class="texto-carousel">
                   <h1 style="margin-top: 50%">Arte Design e Arquitetura</h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+                  <p class="show-summary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
                   </p>
 
                   <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-xs-5 col-md-4">
                       <button type="">VER MAIS</button>
                     </div>
                   </div>
@@ -110,13 +127,13 @@
       </div>
     </div>
   </div>
-  <div class="col-xs-3 col-sm-offset-1 col-sm-2 col-md-offset-6 col-md-1" style="position: absolute; top: 10%; z-index:1000">
+  <div class="col-sm-offset-6 col-sm-2 col-md-offset-6 col-md-1 hidden-xs" style="position: absolute; top: 10%; z-index:1000">
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <img class="glyphicon glyphicon-chevron-left" src="{{asset('assets/seta-esq.svg')}}" alt="">
       <span class="sr-only">Previous</span>
     </a>
     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <img class="glyphicon glyphicon-chevron-right" src="{{asset('assets/seta-dir.svg')}}" alt="">
       <span class="sr-only">Next</span>
     </a>
   </div>
@@ -135,8 +152,8 @@
       </div>
       <div class="col-sm-6 col-md-5">
         <div class="select-right">
-          <select name="">
-            <option value="">SELECIONE O DESTINO AQUI</option>
+          <select>
+            <option value="">SELECIONE O DESTINO</option>
             <option value="">Porto Seguro</option>
             <option value="">Salvador</option>
             <option value="">Porto de Galinhas</option>
@@ -154,11 +171,11 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="http://via.placeholder.com/1080x720" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-1.jpg')}}" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               </div>
             </div>
             <div class="col-xs-6 col-md-6">
@@ -181,12 +198,12 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="http://via.placeholder.com/1080x720" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-2.jpg')}}" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
@@ -210,12 +227,12 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="http://via.placeholder.com/1080x720" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-3.jpg')}}" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
@@ -243,12 +260,12 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="http://via.placeholder.com/1080x720" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-4.jpg')}}" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
@@ -274,12 +291,12 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="http://via.placeholder.com/1080x720" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-5.jpg')}}" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
@@ -303,12 +320,12 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="http://via.placeholder.com/1080x720" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-6.jpg')}}" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
                 <div class="caption-titulo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
@@ -378,13 +395,13 @@
 
       </div>
     </div>
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
         <div class="col-sm-offset-5 col-sm-2" style="text-align: center;">
           <button type="button" class="links-vermais">VER MAIS</button>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 <!-- FIM VIAGENS LISTAGENS -->
@@ -392,9 +409,8 @@
 <!-- VIAGENS LISTAGENS -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12" style="padding: 0">
-      <div style="margin-top: 50px">
-        <img src="{{asset('assets/slide-02.jpg')}}" class="img-responsive" alt="">
+    <div class="col-xs-12" style="padding: 0; background: url('{{asset('assets/slide-02.jpg')}}') center/cover no-repeat; min-height:700px">
+      <div style="margin-top: 50px" style="">
       </div>
     </div>
   </div>
@@ -488,7 +504,7 @@
 <!-- FIM LISTAGENS CATEGORIAS -->
 
 <!-- LISTAGENS CATEGORIAS -->
-<div class="container-fluid" style="background: url('{{asset('assets/bg-newsletter.jpg')}}') center/cover no-repeat; height: 370px">
+<div class="container-fluid news" style="background: url('{{asset('assets/bg-newsletter.jpg')}}') center/cover no-repeat;">
   <div class="row" style="margin: 7% 0 5% 0">
 
     <div class="col-sm-6 col-md-offset-1 col-md-5">
@@ -536,7 +552,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-offset-1 col-md-2" style="padding: 0">
+        <div class="col-md-offset-1 col-md-2 hidden-sm hidden-xs" style="padding: 0">
           <hr class="hr-vertical">
         </div>
         <div class="col-md-offset-1 col-md-4 dicas" style="padding: 0">
@@ -572,7 +588,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <p class="roteiro-paragrafo">
+          <p class="roteiro-paragrafo ">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
           </p>
         </div>

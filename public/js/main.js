@@ -1,14 +1,36 @@
 $( document ).ready(function() {
 	$("[rel='tooltip']").tooltip();    
 
-	$('.thumb').hover(
-		function(){
-			$(this).find('.caption').fadeIn(250)
-		},
-		function(){
-			$(this).find('.caption').fadeOut(205)
-		}
-		); 
+	$('.thumb').hover(function(){
+		$(this).find('.caption').fadeIn(250)
+	},function(){
+		$(this).find('.caption').fadeOut(205)
+	}
+	); 
+	var wordLimit = 60;
+	$('.show-summary').each(function() {
+		var post = $(this);
+		var text = post.text();
+		var re = /[\s]+/gm, results = null, count = 0;
+		while ((results = re.exec(text)) !== null && ++count < wordLimit) { }
+			if (results !== null && count >= wordLimit) {
+				var summary = text.substring(0, re.lastIndex - results[0].length);
+				post.text(summary + '...');
+
+			}
+		});
+	var wordLimit2 = 12;
+	$('.show-dots').each(function() {
+		var post = $(this);
+		var text = post.text();
+		var re = /[\s]+/gm, results = null, count = 0;
+		while ((results = re.exec(text)) !== null && ++count < wordLimit2) { }
+			if (results !== null && count >= wordLimit2) {
+				var summary = text.substring(0, re.lastIndex - results[0].length);
+				post.text(summary + '...');
+
+			}
+		});
 });
 $( document ).ready(function() {
 	var hamburger = $('#hamburger-icon');
@@ -119,3 +141,11 @@ $('.formphp').on('submit', function() {
 	
 	return false;
 });
+$(document).ready(function() {  
+	$("#myCarousel").swiperight(function() {  
+		$("#myCarousel").carousel('prev');  
+	});  
+	$("#myCarousel").swipeleft(function() {  
+		$("#myCarousel").carousel('next');  
+	});  
+});  
