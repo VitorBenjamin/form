@@ -5,7 +5,9 @@ a {
 	cursor:pointer;
 	text-decoration: none;
 }
-
+.margem-padrao{
+	margin: 7% 0 7% 0;
+}
 .navbar-default {
 	background-color: #2220;
 	border-color: #08080800;
@@ -54,9 +56,7 @@ a {
 .select {
 	background-color: #161b33;
 }
-.select > .container >.row{
-	margin: 30px 0;
-}
+
 .navbar-toggle.x .icon-bar:nth-of-type(1) {
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
@@ -118,6 +118,33 @@ a {
 	right: 19%;
 	top: 25%;
 }
+.texto-carousel>h1{
+	margin-top: 50%;
+	color: #161b33;
+	font-family: 'Yeseva One', cursive;
+	font-size: 50px;
+	font-weight: 900;
+	text-align: left;
+	line-height: 1;
+}
+.texto-carousel>p{
+	text-align: justify;
+	margin-top: 5%;
+	color: #7b7b7b;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 2;
+}
+.texto-carousel>div>div>button{
+	border: 0;
+	color: #fff;
+	font-size:15px;
+	font-weight:700;
+	background-color: #161b33;
+	width: 100%;
+	height: 50px;
+	margin-top: 20px;
+}
 select{
 	padding: 5px 20px;
 	max-width: 95%;
@@ -136,13 +163,16 @@ select option {
 }
 
 .border-left{
-	border-left: 3px solid #b1874a;
+	border-left: 6px solid #b1874a;
 	padding: 13px 0;
 
 }
 .border-left > p{
-	color: #b1874a;
-	font-weight: bold;
+
+	letter-spacing: 3px;
+	color: #fff;
+	font-weight: 900;
+	font-size: 17px;
 	margin: 0 0 0 40px;
 }
 .select-right{
@@ -359,55 +389,124 @@ select option {
 		color: #b1874a;
 		text-decoration: none;
 	}
+	.roteiro-paragrafo{
+		letter-spacing: 1px;
+		margin: 50px 0;
+		line-height: 2.3;
+		font-weight: 500;
+		text-align: justify;
+	}
+
+	.roteiro-span{
+		font-size:15px;
+		font-weight:900; 
+		margin-right:40px;
+	}
+	.margem-padrao>div>p{
+		margin: 20px;
+		color: #fff;
+		text-align: center;
+	}
+	.rodape-center{
+		margin: auto;
+	}
+	.rodape-span{
+		font-size:15px;
+		font-weight:700;
+		color: #fff;
+	}
+	.formphp label.nao-aparece, .formphp input.nao-aparece {
+		display: none !important;
+	}
+	.formphp>div>input, .formphp>div>textarea {
+		color: #f3a93e;
+		letter-spacing: 1px;
+		padding: 20px;
+		border: 3px solid #b1874a;
+		background-color: rgba(0, 0, 0, 0);
+		width: 100%;
+		margin-top: 0;
+	}
+	.formphp>div>input::placeholder, .formphp>div>textarea::placeholder {
+		color: #b1874a;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		margin-right: 10px;
+		font-weight: 700;
+	}
+	.formphp>div>input{
+		height: 50px;
+	}
+	.formphp>div>textarea {
+		height: 200px;
+		margin-top: 25px;
+	}
+	.formphp>div>button {
+		border: 0;
+		color: #161b33;
+		font-size:15px;
+		font-weight:700;
+		background-color: #b1874a;
+		width: 100%;
+		height: 50px;
+		margin-top: 20px;
+	}
+	#form-erro span, #form-send span  {
+		font-size: 18px;
+		line-height: 25px;
+		margin-bottom: 10px;
+		display: block;
+		padding-left: 40px;
+	}
+
+	#form-send {
+		color: #f37421;
+	}
+
+	#form-erro {
+		color: #f64540;
+	}
+	.vilaca{
+		color: #b1874a;
+		font-size: 11px;
+		font-weight: 600;
+	}
+	.vilaca>img{
+		width: 80px;
+	}
 	@media (max-width: 575px)  {
- 	/*
-	.caption-titulo {
-    	margin: 40px 0;
+		.roteiro-span{ 
+			margin:20px 0;
+		}
+		.roteiro-img{ 
+			margin:20px 0 0 0;
+		}
+		#navbar-collapse-x {
+			position: absolute;
+			background-color: beige;
+			right: 35%;
+			top: 25%;
+		}
 	}
-	@supports (-webkit-line-clamp: 3) {
+	@media (min-width: 576px) and (max-width: 767px)  {
+		.caption-titulo {
+			margin: 100px 0;
+		}
+		
 
-	.caption-titulo>p{
-	margin: 0;
-	font-size: 20px;
-	text-align: left;
-	line-height: 1;
-	display: block;
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	text-overflow: ellipsis;
-
-}
-}
-*/
-#navbar-collapse-x {
-	position: absolute;
-	background-color: beige;
-	right: 35%;
-	top: 25%;
-}
-}
-
-
-@media (min-width: 576px) and (max-width: 767px)  {
-	.caption-titulo {
-		margin: 100px 0;
 	}
 
-}
-
-@media (min-width: 768px) and (max-width: 991px)  {
-	#navbar-collapse-x {
-		position: absolute;
-		background-color: beige;
-		right: 15%;
-		top: 25%;
+	@media (min-width: 768px) and (max-width: 991px)  {
+		#navbar-collapse-x {
+			position: absolute;
+			background-color: beige;
+			right: 15%;
+			top: 25%;
+		}
 	}
-}
 
 
-@media (min-width: 992px) and (max-width: 1329px){
+	@media (min-width: 992px) and (max-width: 1329px){
 	/* .caption-titulo {
     	margin: 20px 0 30px 0;
 	}

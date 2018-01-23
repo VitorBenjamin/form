@@ -28,14 +28,33 @@
     </nav>
   </div>
 </div>
+
+
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
+            <div class="row">
+              <div class="col-md-offset-3 col-md-6">
+                <div class="texto-carousel">
+                  <h1 style="margin-top: 50%">Arte Design e Arquitetura</h1>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+                  </p>
+
+                  <div class="row">
+                    <div class="col-md-5">
+                      <button type="">VER MAIS</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-01.jpg') }}') center/cover no-repeat; height: 700px;"></div>
+          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-01.jpg') }}') center/cover no-repeat; height: 700px;">
+          </div>
         </div>
       </div>
     </div>
@@ -43,8 +62,25 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
+            <div class="row">
+              <div class="col-md-offset-3 col-md-6">
+                <div class="texto-carousel">
+                  <h1 style="margin-top: 50%">Arte Design e Arquitetura</h1>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+                  </p>
+
+                  <div class="row">
+                    <div class="col-md-5">
+                      <button type="">VER MAIS</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-02.jpg') }}') center/cover no-repeat; height: 700px;"></div>
+          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-02.jpg') }}') center/cover no-repeat; height: 700px;">
+            
+          </div>
         </div>
       </div>
     </div>
@@ -52,6 +88,22 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
+            <div class="row">
+              <div class="col-md-offset-3 col-md-6">
+                <div class="texto-carousel">
+                  <h1 style="margin-top: 50%">Arte Design e Arquitetura</h1>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+                  </p>
+
+                  <div class="row">
+                    <div class="col-md-5">
+                      <button type="">VER MAIS</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div class="col-sm-6" style="background: url('{{ asset('assets/slide-03.jpg') }}') center/cover no-repeat; height: 700px;"></div>
         </div>
@@ -75,7 +127,7 @@
 <!-- SELECT VIAGENS -->
 <div class="container-fluid select">
   <div class="container select-margin">
-    <div class="row">
+    <div class="row margem-padrao">
       <div class="col-sm-6 col-md-7">
         <div class="border-left">
           <p class="center">VIAGENS</p>
@@ -348,6 +400,47 @@
   </div>
 </div>
 <!-- FIM VIAGENS LISTAGENS -->
+<div class="container-fluid" style="background-color: #fff">
+  <div class="row" style="margin: 7% 0 5% 0">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 col-md-5">
+          <div class="border-left">
+            <p class="center" style="color: #161b33;">MONTE O SEU ROTEIRO</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="roteiro-paragrafo">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting,
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p class="roteiro-paragrafo">
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-responsive" src="{{asset('assets/avatar-consultora.png')}}" style="float:left;" alt="">
+          <img src="{{asset('assets/assinatura-consultora.svg')}}" style="width: 40%; margin: 40px 0 0 0;clear:both" alt="">
+        </div>
+        <div class="col-md-6" style="margin-top:35px">
+          <img class="roteiro-img" src="{{asset ('assets/icon-email.svg')}}" alt="" style="width:30px">
+          <span class="roteiro-span">roteiro@formulaturismo.com.br</span>
+
+          <img class="roteiro-img" src="{{asset('assets/icon-telefone.svg')}}" alt="" style="width:30px">
+          <span class="roteiro-span">+55 (21) 2509-4614</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
 
 <!-- LISTAGENS CATEGORIAS -->
 <div class="container-fluid select">
@@ -421,6 +514,7 @@
   </div>
 </div>
 <!-- FIM LISTAGENS CATEGORIAS -->
+
 <!-- LISTAGENS CATEGORIAS -->
 <div class="container-fluid" style="background: url('{{asset('assets/bg-categoria-continente-norte.jpg')}}') center/cover no-repeat;">
   <div class="row" style="margin: 7% 0 5% 0">
@@ -466,7 +560,160 @@
 </div>
 @include('modals.modals')
 
+<div class="container-fluid" style="background-color: #d8d8d8">
+  <div class="row" style="margin: 7% 0 5% 0">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 col-md-5">
+          <div class="border-left">
+            <p class="center" style="color: #161b33;">QUEM SOMOS</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="roteiro-paragrafo">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p class="roteiro-paragrafo">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-offset-9 col-sm-3">
+          <img style="width:97%" src="{{asset('assets/logo-formula-turismo-preta.png')}}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- SELECT VIAGENS -->
+<div class="container-fluid">
+  <div class="container select-margin">
+    <div class="row" style="margin: 4% 0">
+      <div class="col-sm-6 col-md-7">
+        <div class="border-left">
+          <p class="center" style="color:#161b33">NOSSOS CLIENTES</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12" style="padding: 0">
+      <div class="owl-carousel clientes owl-theme">
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-1.jpg')}}" alt="">
+        </div>
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-2.jpg')}}" alt="">
+        </div>
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-3.jpg')}}" alt="">
+        </div>
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-4.jpg')}}" alt="">
+        </div>
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-5.jpg')}}" alt="">
+        </div>
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-1.jpg')}}" alt="">
+        </div>
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-2.jpg')}}" alt="">
+        </div>
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-3.jpg')}}" alt="">
+        </div>
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-4.jpg')}}" alt="">
+        </div>
+        <div>
+          <img class="img-responsive" src="{{asset('assets/cliente-5.jpg')}}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- SELECT VIAGENS -->
+<div class="container-fluid select">
+  <div class="container select-margin">
+    <div class="row margem-padrao">
+      <div class="col-sm-offset-4 col-sm-4">
+        <img class="img-responsive rodape-center" src="{{asset('assets/logo-formula-turismo-branca.png')}}" alt="">
+      </div>
+      
+      <div class="col-sm-offset-3 col-sm-6">
+        <p class="rodape-center">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+        </p>
+      </div>
+      
+      <div class="col-xs-12">
+        <div class="col-md-offset-1 col-md-3">
+          <img class="roteiro-img" src="{{asset('assets/icon-telefone.svg')}}" alt="" style="width:30px">
+          <span class="rodape-span">+55 (21) 2509-4614</span>
 
+        </div>
+        <div class="col-md-4">
+          <img class="roteiro-img" src="{{asset ('assets/icon-email.svg')}}" alt="" style="width:30px">
+          <span class="rodape-span">roteiro@formulaturismo.com.br</span>
+        </div>
+
+        <div class="col-md-3">
+          <img class="roteiro-img" src="{{asset('assets/icon-facebook.svg')}}" alt="" style="width:30px">
+          <span class="rodape-span">+55 (21) 2509-4614</span>
+        </div>
+      </div>
+    </div>
+    <div class="row margem-padrao">
+      <div class="col-xs-12">
+        <div class="row">
+          <form action="enviar.php" method="post" name="form" class="formphp form">
+            <div class="col-sm-offset-4 col-sm-4 col-md-offset-0">
+              <input id="nome" name="nome" type="text" placeholder="Nome">
+            </div>
+            <div class="col-md-4">
+              <input id="telefone" name="telefone" type="text" placeholder="Telefone">
+              <label class="nao-aparece">Se você não é um robô, deixe em branco.</label>
+              <input type="text" class="nao-aparece" name="leaveblank">
+              <label class="nao-aparece">Se você não é um robô, não mude este campo.</label>
+              <input type="text" class="nao-aparece" name="dontchange" value="http://" >
+            </div>
+            <div class="col-md-4">
+              <input id="email" name="email" type="text" placeholder="E-mail">
+            </div>
+            <div class="col-xs-12">
+              <textarea name="mensagem" id="mensagem" placeholder="Digite aqui sua mensagem:"></textarea>
+            </div>
+            <div class="col-md-offset-10 col-md-2">
+              <button id="enviar" name="enviar" type="submit">ENVIAR</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div class="container-fluid" style="background-color: #1d233c;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-9 col-md-3 vilaca">
+        Desenvolvido pela
+        <img class="vilaca" src="{{asset('assets/agencia-vilaca-eunapolis.svg')}}" alt="">
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection
