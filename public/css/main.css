@@ -330,7 +330,6 @@ select option {
 		columns:2;
 	}
 	.paises-lista{
-		
 		margin:0;
 		padding:0;
 	}
@@ -349,11 +348,14 @@ select option {
 		font-weight: 900;
 		font-family: 'Yeseva One', cursive; 
 	}
+	.paises-lista>li>a{
+		color: #fff;
+	}
 	.dicas>hr {
 		width: 125px;
 		border-top: 4px solid #ffffff;
 	}
-	a:focus, a:hover {
+	.paises-lista>li>a:focus, .paises-lista>li>a:hover ,a:focus, a:hover {
 		color: #b1874a;
 		text-decoration: none;
 	}

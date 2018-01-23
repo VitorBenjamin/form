@@ -433,12 +433,12 @@
           <hr>
           <div class="collumn">
             <ul class="paises-lista">
-              <li><a title="" data-toggle="modal" data-target="#myModal">Estados Unidos</a></li>
-              <li>Holanda</li>
-              <li>Cone Sul</li>
-              <li>Chile</li>
-              <li>México</li>
-              <li>Guiana</li>
+              <li><a title="" data-toggle="modal" data-target="#eua">Estados Unidos</a></li>
+              <li><a title="" data-toggle="modal" data-target="#hol">Holanda</a></li>
+              <li><a title="" data-toggle="modal" data-target="#con">Cone Sul</a></li>
+              <li><a title="" data-toggle="modal" data-target="#chi">Chile</a></li>
+              <li><a title="" data-toggle="modal" data-target="#mex">México</a></li>
+              <li><a title="" data-toggle="modal" data-target="#gui">Guiana</a></li>
             </ul>
           </div>
         </div>
@@ -450,12 +450,13 @@
           <hr>
           <div class="collumn">
             <ul class="paises-lista">
-              <li>Estados Unidos</li>
-              <li>Holanda</li>
-              <li>Cone Sul</li>
-              <li>Chile</li>
-              <li>México</li>
-              <li>Guiana</li>
+              <li><a title="" data-toggle="modal" data-target="#casa">Casa</a></li>
+              <li><a title="" data-toggle="modal" data-target="#bolso">Bolso</a></li>
+              <li><a title="" data-toggle="modal" data-target="#doc">Documentos</a></li>
+              <li><a title="" data-toggle="modal" data-target="#sau">Saúde</a></li>
+              <li><a title="" data-toggle="modal" data-target="#seg">Seguro de Viagem</a></li>
+              <li><a title="" data-toggle="modal" data-target="#car">Carro</a></li>
+              <li><a title="" data-toggle="modal" data-target="#aer">Aéreo</a></li>
             </ul>
           </div>
         </div>
@@ -463,25 +464,8 @@
     </div>
   </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- FIM LISTAGENS CATEGORIAS -->
+@include('modals.modals')
+
 
 
 
