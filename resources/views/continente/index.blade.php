@@ -4,124 +4,34 @@
 
 @include('layouts.menu')
 
-<!-- INICIO SESSÃO DO CAROUSEL -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
-            <div class="row">
-              <div class="col-sm-offset-1 col-sm-10 col-md-9">
-                <div class="texto-carousel">
-                  <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
-                  <p class="show-summary">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
-                  </p>
-
-                  <div class="row">
-                    <div class="col-xs-5 col-md-4">
-                      <button type="">VER MAIS</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-01.jpg') }}') center/cover no-repeat; height: 700px;">
-          </div>
-        </div>
+<!-- INCIO SESSÃO TOPO DA VIAGEM -->
+<div class="container-fluid" style="background: url('{{asset('assets/bg-categoria-arte-arquitetura.jpg')}}') center/cover no-repeat; padding: 250px 0;">
+  <div class="container continente">
+    <div class="row">
+      <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
+        <h1 class="text-center">America do Norte</h1>
       </div>
     </div>
-    <div class="item">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
-            <div class="row">
-              <div class="col-sm-offset-1 col-sm-10 col-md-9">
-                <div class="texto-carousel">
-                  <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
-                  <p class="show-summary">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
-                  </p>
-                  <div class="row">
-                    <div class="col-xs-5 col-md-4">
-                      <button type="">VER MAIS</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-02.jpg') }}') center/cover no-repeat; height: 700px;">
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        </p>
       </div>
     </div>
-    <div class="item">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
-            <div class="row">
-              <div class="col-sm-offset-1 col-sm-10 col-md-9">
-                <div class="texto-carousel">
-                  <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
-                  <p class="show-summary">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
-                  </p>
-
-                  <div class="row">
-                    <div class="col-xs-5 col-md-4">
-                      <button type="">VER MAIS</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-03.jpg') }}') center/cover no-repeat; height: 700px;"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-offset-6 col-sm-2 col-md-offset-6 col-md-1 hidden-xs" style="position: absolute; top: 10%; z-index:1000">
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <img class="glyphicon glyphicon-chevron-left" src="{{asset('assets/seta-esq.svg')}}" alt="">
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <img class="glyphicon glyphicon-chevron-right" src="{{asset('assets/seta-dir.svg')}}" alt="">
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-<!-- FIM SESSÃO DO CAROUSEL -->
-
-<!-- INCIO SESSÃO DE SELEÇÃO DE VIAGENS -->
-<div class="container-fluid select">
-  <div class="container select-margin">
-    <div class="row margem-padrao">
-      <div class="col-sm-6 col-md-7">
-        <div class="border-left">
-          <p class="center">VIAGENS</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-5">
-        <div class="select-right">
-          <select>
-            <option value="">SELECIONE O DESTINO</option>
-            <option value="">Porto Seguro</option>
-            <option value="">Salvador</option>
-            <option value="">Porto de Galinhas</option>
-          </select>
-        </div>
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" style="text-align: center;">
+        <select>
+          <option value="">SELECIONE O DESTINO</option>
+          <option value="">Porto Seguro</option>
+          <option value="">Salvador</option>
+          <option value="">Porto de Galinhas</option>
+        </select>
       </div>
     </div>
   </div>
 </div>
-<!-- FIM DA SESSÃO DE SELEÇÃO DE VIAGENS -->
-
+<!-- FIM SESSÃO TOPO DA VIAGEM -->
 
 <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
 <div class="container-fluid">

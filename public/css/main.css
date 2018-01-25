@@ -117,7 +117,7 @@ a {
 }
 #navbar-collapse-x {
 	position: absolute;
-	background-color: #161b33;
+	background-color: #161b33e3;
 	right: 19%;
 	top: 25%;
 	padding: 0 40px;
@@ -559,6 +559,25 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 }
 .news{
 	height: 370px;
+}
+.continente>div>div>h1{
+	color: #fff;
+	font-size: 80px;
+	font-family: 'Yeseva One', cursive;
+}
+.continente>div>div>p{
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 50px;
+	letter-spacing: 2px;
+}
+.continente>div>div>select{
+	color: #fff;
+	font-size: 12px;
+	letter-spacing: 5px;
+	padding: 8px 30px;
+	font-weight: 500;
 }
 @media (min-width: 575px) {
 	

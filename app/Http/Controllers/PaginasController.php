@@ -12,10 +12,10 @@ class PaginasController extends Controller
     	return view('index');
     }
 
-    public function exibiViagem($id)
+    public function exibirViagem()
     {
-    	$viagem = Viagem::with('imgs','categoria')->where('id',$id);
-    	return view('viagem.index',compact('viagem'));
+    	//$viagem = Viagem::with('imgs','categoria')->where('id',$id);
+    	return view('continente.index');
 
     }
 }

@@ -13,6 +13,7 @@
 
 
 Route::get('/', ['uses' => 'PaginasController@index', 'as' => 'pagina.index']);
+Route::get('viagem', ['uses' => 'PaginasController@exibirViagem', 'as' => 'pagina.exibirViagem']);
 Route::get('pacote-de-viagens/{categoria}', ['uses' => 'PaginasController@viagensCategoria', 'as' => 'pagina.viagensCategoria']);
 
 Route::get('admin', ['uses' => 'Auth\LoginController@showLoginForm']);
