@@ -9,7 +9,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#top">
-          <img src="{{ asset('assets/logo-formula-turismo-branca.png') }}" class="img-responsive hidden-xs" alt="">
+          <img src="{{ asset('assets/logo-formula-turismo-preta.png') }}" class="img-responsive hidden-xs" alt="">
           <img src="{{ asset('assets/logo-formula-turismo-branca.png') }}" class="img-responsive visible-xs" alt="">
         </a>
       </div>

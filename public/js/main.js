@@ -1,3 +1,6 @@
+AOS.init({
+  duration: 1200,
+});
 $( document ).ready(function() {
 	$('.link-menu').on('click', function(){
 		console.log("teste")

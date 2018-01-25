@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('layouts.menu')
+@include('layouts.menu_black')
 
 <!-- INICIO SESSÃO DO CAROUSEL -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -124,12 +124,12 @@
 
 
 <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
-<div class="container-fluid">
+<div class="container-fluid" >
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4" >
       <div class="row">
         <div class="thumb">
-          <img src="{{asset('assets/viagem-1.jpg')}}" alt="" class="img-responsive">
+          <img data-aos="fade-right" src="{{asset('assets/viagem-1.jpg')}}" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
@@ -156,7 +156,7 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="{{asset('assets/viagem-2.jpg')}}" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-2.jpg')}}" data-aos="fade-down" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
@@ -185,7 +185,7 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="{{asset('assets/viagem-3.jpg')}}" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-3.jpg')}}" data-aos="fade-left" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
@@ -219,7 +219,7 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="{{asset('assets/viagem-4.jpg')}}" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-4.jpg')}}" data-aos="fade-right"alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
@@ -250,7 +250,7 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="{{asset('assets/viagem-5.jpg')}}" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-5.jpg')}}" data-aos="fade-up" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
@@ -279,7 +279,7 @@
     <div class="col-sm-4">
       <div class="row">
         <div class="thumb">
-          <img src="{{asset('assets/viagem-6.jpg')}}" alt="" class="img-responsive">
+          <img src="{{asset('assets/viagem-6.jpg')}}" data-aos="fade-left" alt="" class="img-responsive">
           <div class="caption">
             <div class="col-xs-12">
               <div class="caption-titulo">
