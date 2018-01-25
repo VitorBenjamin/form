@@ -1,4 +1,9 @@
 $( document ).ready(function() {
+	$('.link-menu').on('click', function(){
+		console.log("teste")
+		$('.collapse').removeClass('in');
+		$('.navbar-toggle').addClass('collapsed');
+	});
 	$("[rel='tooltip']").tooltip();    
 
 	$('.thumb').hover(function(){
@@ -66,7 +71,7 @@ $(document).ready(function(){
 	$('.owl-carousel').owlCarousel({
 		nav:true,
 		dots:false,
-		autoplay:true,
+		autoplay:false,
 		loop:true,
 		margin:60,
 		responsiveClass:true,
@@ -87,7 +92,7 @@ $(document).ready(function(){
 			}
 		}
 	});
-	
+
 });
 
 $('.formphp').on('submit', function() {

@@ -5,6 +5,9 @@ a {
 	cursor:pointer;
 	text-decoration: none;
 }
+.text-center{
+	text-align: center;
+}
 .margem-padrao{
 	margin: 7% 0 7% 0;
 }
@@ -324,6 +327,29 @@ hr {
 .links-vermais:focus, .links-vermais:hover {
 	color: #b1874a;
 	background-color: #000;
+}
+.destaque > .row > div > h1{
+	color: #fff;
+	font-size: 55px;
+	font-weight: 500;
+	font-family: 'Yeseva One', cursive; 
+}
+.destaque > .row > div > a{
+	padding: 7px 15px;
+	background-color: #b1874a;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 2px;
+
+}
+.destaque > .row > div > h5{
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 2px;
+
 }
 .categorias{
 	letter-spacing: 3px;
