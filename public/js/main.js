@@ -1,5 +1,5 @@
 AOS.init({
-  duration: 1200,
+	duration: 1200,
 });
 $( document ).ready(function() {
 	$('.link-menu').on('click', function(){
@@ -47,6 +47,114 @@ $( document ).ready(function() {
 		hamburger.toggleClass('active');
 		return false;
 	});
+	$('#add').click(function(){  
+		$('#dinamico').append(
+			'<div class="container-fluid" style="background: #161b33">'
+			+'<div class="row">'
+			+'<div class="col-sm-4">'
+			+'<div class="row">'
+			+'<div class="thumb">'
+			+'<img src="assets/viagem-15.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
+			+'<div class="caption">'
+			+'<div class="col-xs-12">'
+			+'<div class="caption-titulo">'
+			+'<div class="caption-titulo">'
+			+'<p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'<div class="caption-rodape">'
+			+'<div class="col-xs-6 col-md-6">'
+			+'<div class="border-top">'
+			+'<hr width="25%">'
+			+'<p>Porto Seguro</p>'
+			+'</div>'
+			+'</div>'
+			+'<div class="col-xs-6 col-md-6">'
+			+'<a href="#" class="a-caption">'
+			+'<div class="button-caption">'
+			+'VER MAIS'
+			+'</div>'
+			+'</a>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'<div class="col-sm-4">'
+			+'<div class="row">'
+			+'<div class="thumb">'
+			+'<img src="assets/viagem-16.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
+			+'<div class="caption">'
+			+'<div class="col-xs-12">'
+			+'<div class="caption-titulo">'
+			+'<div class="caption-titulo">'
+			+'<p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'<div class="col-xs-6 col-md-6">'
+			+'<div class="border-top">'
+			+'<hr width="25%">'
+			+'<p>Porto Seguro</p>'
+			+'</div>'
+			+'</div>'
+			+'<div class="col-xs-6 col-md-6">'
+			+'<a href="#" class="a-caption">'
+			+'<div class="button-caption">'
+			+'VER MAIS'
+			+'</div>'
+			+'</a>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'<div class="col-sm-4">'
+			+'<div class="row">'
+			+'<div class="thumb">'
+			+'<img src="assets/viagem-18.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
+			+'<div class="caption">'
+			+'<div class="col-xs-12">'
+			+'<div class="caption-titulo">'
+			+'<div class="caption-titulo">'
+			+'<p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'<div class="col-xs-6 col-md-6">'
+			+'<div class="border-top">'
+			+'<hr width="25%">'
+			+'<p>Porto Seguro Porto Seguro </p>'
+			+'</div>'
+			+'</div>'
+			+'<div class="col-xs-6 col-md-6">'
+			+'<a href="#" class="a-caption">'
+			+'<div class="button-caption">'
+			+'VER MAIS'
+			+'</div>'
+			+'</a>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'</div>'
+			+'</div>');
+		$('.thumb').hover(function(){
+			$(this).find('.caption').fadeIn(250)
+		},function(){
+			$(this).find('.caption').fadeOut(205)
+		}
+		);
+	}); 
+});
+$(".link-menu").click(function() {
+
+	$('html, body').animate({
+		scrollTop: $($(this).attr('href')).offset().top
+	}, 1500);
 });
 $(document).ready(function(){
 	$('.clientes').owlCarousel({

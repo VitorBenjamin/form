@@ -1,5 +1,5 @@
 <div class="navbar-wrapper">
-  <div class="container">
+  <div class="container" data-aos="fade-down">
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
         <span class="navbar-menu-text hidden-xs">MENU</span>
@@ -16,29 +16,29 @@
 
       <div class="collapse navbar-collapse" id="navbar-collapse-x">
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="link-menu" href="#">INÍCIO</a></li>
+          <li><a class="link-menu" href="#inicio">INÍCIO</a></li>
           <li role="separator" class="divider"></li>
-          <li><a class="link-menu" href="#">QUEM SOMOS</a></li>
+          <li><a class="link-menu" href="#about">QUEM SOMOS</a></li>
           <li role="separator" class="divider"></li>
-          <li><a class="link-menu" href="#">ESTILOS DE VIAGEM</a></li>
+          <li><a class="link-menu" href="#destaque">VIAGEM DESTAQUE</a></li>
           <li role="separator" class="divider"></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ROTEIROS<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a class="link-menu" href="#">AMÉRICA DO SUL</a></li>
-              <li><a class="link-menu" href="#">AMÉRICA DO NORTE</a></li>
-              <li><a class="link-menu" href="#">EUROPA</a></li>
-              <li><a class="link-menu" href="#">ÁFRICA</a></li>
-              <li><a class="link-menu" href="#">ÁSIA</a></li>
-              <li><a class="link-menu" href="#">OCEANIA</a></li>
-              <li><a class="link-menu" href="#">ANTÁRTIDA</a></li>
+              <li><a class="link-menu" href="/form/public/viagem">AMÉRICA DO SUL</a></li>
+              <li><a class="link-menu" href="/form/public/viagem">AMÉRICA DO NORTE</a></li>
+              <li><a class="link-menu" href="/form/public/viagem">EUROPA</a></li>
+              <li><a class="link-menu" href="/form/public/viagem">ÁFRICA</a></li>
+              <li><a class="link-menu" href="/form/public/viagem">ÁSIA</a></li>
+              <li><a class="link-menu" href="/form/public/viagem">OCEANIA</a></li>
+              <li><a class="link-menu" href="/form/public/viagem">ANTÁRTIDA</a></li>
             </ul>
           </li>
-          <li><a href="#">MONTE UM ROTEIRO</a></li>
+          <li><a class="link-menu" href="#monte-seu-roteiro">MONTE UM ROTEIRO</a></li>
           <li role="separator" class="divider"></li>
-          <li><a href="#">BLOG</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">CONTATO</a></li>
+          <!-- <li><a href="#">BLOG</a></li>
+          <li role="separator" class="divider"></li> -->
+          <li><a class="link-menu" href="#contato">CONTATO</a></li>
         </ul>
       </div>
     </nav>
