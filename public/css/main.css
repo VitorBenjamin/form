@@ -417,7 +417,7 @@ hr {
 	margin-top: 30px;
 }
 .hr-vertical{ 
-	margin: auto;
+	/*margin: auto;*/
 	border: none;
 	border-left: 2px solid hsl(0, 0%,100%);
 	height: 40vh;

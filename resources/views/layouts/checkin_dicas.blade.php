@@ -3,7 +3,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-md-4 dicas" style="padding: 0">
+        <div class="col-md-offset-2 col-sm-6 col-md-4 dicas" style="padding: 0">
 
           <h1>Check-in</h1>
           <hr>
@@ -18,10 +18,10 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-offset-1 col-md-2 hidden-sm hidden-xs" style="padding: 0">
+        <div class="col-md-1 hidden-sm hidden-xs" style="padding: 0">
           <hr class="hr-vertical">
         </div>
-        <div class="col-md-offset-1 col-md-4 dicas" style="padding: 0">
+        <div class="col-md-4 dicas" style="padding: 0">
           <h1>Dicas de Viagens</h1>
           <hr>
           <div class="collumn">

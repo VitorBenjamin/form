@@ -12,6 +12,6 @@ class Img extends Model
      * @var array
      */
     protected $fillable = [
-        'titulo', 'alt'
+        'titulo', 'alt' ,'mime'
     ];
 }

@@ -17,6 +17,7 @@ class CreateImgsTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('atl');
+            $table->String('mime',10)
             $table->timestamps();
         });
         Schema::table('imgs', function (Blueprint $table) {
