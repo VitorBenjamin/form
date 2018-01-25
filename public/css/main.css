@@ -498,7 +498,7 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 .formphp>div>input, .formphp>div>textarea {
 	color: #f3a93e;
 	letter-spacing: 1px;
-	padding: 20px;
+	padding: 12px 20px;
 	border: 3px solid #b1874a;
 	background-color: rgba(0, 0, 0, 0);
 	width: 100%;
@@ -510,9 +510,6 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	text-transform: uppercase;
 	margin-right: 10px;
 	font-weight: 700;
-}
-.formphp>div>input{
-	height: 50px;
 }
 .formphp>div>textarea {
 	height: 200px;

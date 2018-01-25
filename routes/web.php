@@ -14,6 +14,7 @@
 
 Route::get('/', ['uses' => 'PaginasController@index', 'as' => 'pagina.index']);
 Route::get('pacote-de-viagens/{categoria}', ['uses' => 'PaginasController@viagensCategoria', 'as' => 'pagina.viagensCategoria']);
+
 Route::get('admin', ['uses' => 'Auth\LoginController@showLoginForm']);
 
 Auth::routes();
