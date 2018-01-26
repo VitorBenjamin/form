@@ -16,22 +16,22 @@
 
       <div class="collapse navbar-collapse" id="navbar-collapse-x">
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="link-menu" href="#">INÍCIO</a></li>
+         <li><a class="link-menu" href="#inicio">INÍCIO</a></li>
           <li role="separator" class="divider"></li>
-          <li><a class="link-menu" href="#">QUEM SOMOS</a></li>
+          <li><a class="link-menu" href="#about">QUEM SOMOS</a></li>
           <li role="separator" class="divider"></li>
-          <li><a class="link-menu" href="#">ESTILOS DE VIAGEM</a></li>
+          <li><a class="link-menu" href="#destaque">VIAGEM DESTAQUE</a></li>
           <li role="separator" class="divider"></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ROTEIROS<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a class="link-menu" href="#">AMÉRICA DO SUL</a></li>
-              <li><a class="link-menu" href="#">AMÉRICA DO NORTE</a></li>
-              <li><a class="link-menu" href="#">EUROPA</a></li>
-              <li><a class="link-menu" href="#">ÁFRICA</a></li>
-              <li><a class="link-menu" href="#">ÁSIA</a></li>
-              <li><a class="link-menu" href="#">OCEANIA</a></li>
-              <li><a class="link-menu" href="#">ANTÁRTIDA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-sul')}}">AMÉRICA DO SUL</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-norte')}}">AMÉRICA DO NORTE</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-europa')}}">EUROPA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-africa')}}">ÁFRICA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-asia')}}">ÁSIA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-OCEANIA')}}">OCEANIA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-antantida')}}">ANTÁRTIDA</a></li>
             </ul>
           </li>
           <li><a href="#">MONTE UM ROTEIRO</a></li>

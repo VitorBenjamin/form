@@ -1,6 +1,6 @@
 <div class="container-fluid select">
   <div class="row" style="margin: 10% 0 5% 0">
-    <div class="container">
+    <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
       <div class="row">
         <div class="col-sm-2 middle">
           <p class="categorias">QUAL ESTILO DE VIAGEM FAZ PARTE DO SEU SONHO?</p>

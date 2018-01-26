@@ -58,7 +58,6 @@
   </div>
 </div>
 
-<!-- INCIO RODAPÉ VILÇA -->
 <div class="container-fluid" style="background-color: #1d233c;">
   <div class="container">
     <div class="row">
@@ -69,4 +68,3 @@
     </div>
   </div>
 </div>
-<!-- FIM RODAPÉ VILÇA -->

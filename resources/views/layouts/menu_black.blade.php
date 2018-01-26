@@ -1,5 +1,5 @@
 <div class="navbar-wrapper">
-  <div class="container" data-aos="fade-down">
+  <div class="container-fluid" data-aos="fade-down">
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
         <span class="navbar-menu-text hidden-xs">MENU</span>
@@ -25,19 +25,17 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ROTEIROS<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a class="link-menu" href="/form/public/viagem">AMÉRICA DO SUL</a></li>
-              <li><a class="link-menu" href="/form/public/viagem">AMÉRICA DO NORTE</a></li>
-              <li><a class="link-menu" href="/form/public/viagem">EUROPA</a></li>
-              <li><a class="link-menu" href="/form/public/viagem">ÁFRICA</a></li>
-              <li><a class="link-menu" href="/form/public/viagem">ÁSIA</a></li>
-              <li><a class="link-menu" href="/form/public/viagem">OCEANIA</a></li>
-              <li><a class="link-menu" href="/form/public/viagem">ANTÁRTIDA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-sul')}}">AMÉRICA DO SUL</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-norte')}}">AMÉRICA DO NORTE</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-europa')}}">EUROPA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-africa')}}">ÁFRICA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-asia')}}">ÁSIA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-OCEANIA')}}">OCEANIA</a></li>
+              <li><a class="link-menu" href="{{route('pagina.exibirContinente','america-do-antantida')}}">ANTÁRTIDA</a></li>
             </ul>
           </li>
           <li><a class="link-menu" href="#monte-seu-roteiro">MONTE UM ROTEIRO</a></li>
           <li role="separator" class="divider"></li>
-          <!-- <li><a href="#">BLOG</a></li>
-          <li role="separator" class="divider"></li> -->
           <li><a class="link-menu" href="#contato">CONTATO</a></li>
         </ul>
       </div>

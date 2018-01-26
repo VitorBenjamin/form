@@ -28,7 +28,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-01.jpg') }}') center/cover no-repeat; height: 700px;">
+          <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{ asset('assets/slide-01.jpg') }}') center/cover no-repeat; height: 700px;">
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-02.jpg') }}') center/cover no-repeat; height: 700px;">
+          <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{ asset('assets/slide-02.jpg') }}') center/cover no-repeat; height: 700px;">
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
             </div>
 
           </div>
-          <div class="col-sm-6" style="background: url('{{ asset('assets/slide-03.jpg') }}') center/cover no-repeat; height: 700px;"></div>
+          <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{ asset('assets/slide-03.jpg') }}') center/cover no-repeat; height: 700px;"></div>
         </div>
       </div>
     </div>
@@ -108,7 +108,7 @@
             <p class="center">VIAGENS</p>
           </div>
         </div>
-        <div class="col-sm-6 col-md-5">
+        <!-- <div class="col-sm-6 col-md-5">
           <div class="select-right">
             <select>
               <option value="">SELECIONE O DESTINO</option>
@@ -117,7 +117,7 @@
               <option value="">Porto de Galinhas</option>
             </select>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -310,104 +310,47 @@
   </div>
   <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
 </section>
-<!-- INICIO DA SESSÃO DAS VIAGENS -->
-<div class="container">
-  <div class="row">
-    <!-- <div class="col-sm-4">
-      <div class="links-viagens">
-        <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Azura - Moçambique & Tanzania</p></a>
-
-        <a href="#" title=""><p>Art Basel Miami 2017</p></a>
-
-        <a href="#" title=""><p>Silversea </p></a>
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="links-viagens">
-        <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Azura - Moçambique & Tanzania</p></a>
-
-        <a href="#" title=""><p>Art Basel Miami 2017</p></a>
-
-        <a href="#" title=""><p>Silversea </p></a>
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="links-viagens">
-        <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Azura - Moçambique & Tanzania</p></a>
-
-        <a href="#" title=""><p>Art Basel Miami 2017</p></a>
-
-        <a href="#" title=""><p>Silversea </p></a>
-
-      </div>
-    </div> -->
-    <div class="container">
-      <div class="row" style="padding: 30px;">
-        <div class="col-sm-offset-5 col-sm-2" style="text-align: center;">
-          <button id="add" type="button" class="links-vermais">VER MAIS</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- FIM DA SESSÃO DAS VIAGENS -->
 
 <!-- INCIO SESSÃO DA VIAGEM EM DESTAQUE -->
 <section id="destaque">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12" style="padding: 30px; background: url('{{asset('assets/slide-02.jpg')}}') center/cover no-repeat; min-height:550px">
+      <div class="col-xs-12" style="padding: 30px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{asset('assets/slide-02.jpg')}}') center/cover no-repeat; min-height:550px">
         <div style="padding:150px 0 30px 0; width: 100%; min-height: 550px;border: 3px solid #fff">
-          <div class="container destaque">
+          <div class="destaque">
             <div class="row">
-              <div class="col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4" style="text-align: center;" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+              <div class="col-sm-offset-4 col-sm-4 col-md-offset-5 col-md-2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750">
                 <a href="#" title="">
-                  <span class="text-center">PACOTE ESPECIAL</span>
+                  <span> PACOTE ESPECIAL</span>
                 </a>
-
               </div>
             </div>
             <div class="row">
-              <div class="col-md-offset-2 col-md-8">
+              <div class="col-md-offset-1 col-md-10">
                 <h1 class="text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                   Casa de Uco Mendoza
                 </h1>
               </div>
             </div>
             <div class="row">
-             <div class="col-sm-offset-4 col-sm-4 col-md-offset-5 col-md-2">
-              <h5 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500" class="text-center" style="margin-bottom: 150px;">
-                ARGENTINA
-              </h5>
+              <div class="col-md-offset-5 col-md-2">
+                <h5 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="750" class="text-center" style="margin-bottom: 150px;">
+                  ARGENTINA
+                </h5>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-offset-1 col-sm-10 col-md-offset-4 col-md-4">
-              <img class="img-responsive" style="margin:auto" src="{{ asset('assets/logo-formula-turismo-branca.png') }}" alt="">
+            <div class="row">
+              <div class="col-md-offset-4 col-md-4">
+                <img class="img-responsive" style="margin:auto" src="{{ asset('assets/logo-formula-turismo-branca.png') }}" alt="">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 <!-- FIM SESSÃO DA VIAGEM EM DESTAQUE -->
-
 
 <!-- INCIO da SESSÃO MONTE SEU ROTERIRO -->
 <section id="monte-seu-roteiro">
@@ -422,24 +365,24 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6" data-aos="fade-right">
-            <p class="roteiro-paragrafo">
+          <div class="col-md-6">
+            <p class="roteiro-paragrafo" data-aos="fade-down">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting,
             </p>
           </div>
           <div class="col-md-6">
-            <p class="roteiro-paragrafo" data-aos="fade-left">
+            <p class="roteiro-paragrafo" data-aos="fade-down">
               remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6" data-aos="fade-right">
+          <div class="col-md-6" data-aos="fade-down">
             <img class="img-responsive" src="{{asset('assets/avatar-consultora.png')}}" style="float:left;" alt="">
             <img src="{{asset('assets/assinatura-consultora.svg')}}" style="width: 40%; margin: 40px 0 0 0;clear:both" alt="">
           </div>
-          <div class="col-md-6" style="margin-top:35px" data-aos="fade-left">
+          <div class="col-md-6" style="margin-top:35px" data-aos="fade-down">
             <img class="roteiro-img" src="{{asset ('assets/icon-email.svg')}}" alt="" style="width:30px">
             <span class="roteiro-span">roteiro@formulaturismo.com.br</span>
 
@@ -447,14 +390,11 @@
             <span class="roteiro-span">+55 (21) 2509-4614</span>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
 </section>
 <!-- FIM DA SESSÃO MONTE SEU ROTERIRO -->
-
 <!-- INCIO SESSÃO CATEGORIAS -->
 @include('layouts.categorias')
 <!-- FIM LISTAGENS CATEGORIAS -->
@@ -484,5 +424,4 @@
   @include('layouts.footer')
 </section>
 <!-- FIM SESSÃO CLIENTES -->
-
 @endsection

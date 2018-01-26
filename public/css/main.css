@@ -5,6 +5,19 @@ a {
 	cursor:pointer;
 	text-decoration: none;
 }
+
+.modal-content {
+	position: relative;
+	background-color: 0;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 0;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+	-webkit-box-shadow: 0;
+	box-shadow: 0;
+}
 .vertical-menu {
 	width: 250px;
 	height: 200px;
@@ -46,14 +59,14 @@ a {
 .arrows{
 	position: absolute;
 	left: 40%;
-    top: 120px;
+	top: 120px;
 
 }
 .text-center{
 	text-align: center;
 }
 .margem-padrao{
-	margin: 7% 0 7% 0;
+	margin: 4% 0 4% 0;
 }
 .navbar-default {
 	background-color: #2220;
@@ -378,13 +391,13 @@ hr {
 	color: #b1874a;
 	background-color: #000;
 }
-.destaque > div > h1{
+.destaque > div > div > h1{
 	color: #fff;
 	font-size: 55px;
 	font-weight: 500;
 	font-family: 'Yeseva One', cursive; 
 }
-.destaque > div > a{
+.destaque > div > div > a{
 	padding: 7px 15px;
 	background-color: #b1874a;
 	color: #fff;
@@ -393,7 +406,7 @@ hr {
 	letter-spacing: 2px;
 
 }
-.destaque > div > h5{
+.destaque > div > div > h5{
 	padding: 10px 20px;
 	color: #fff;
 	font-size: 14px;
@@ -606,6 +619,8 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 }
 .navbar-wrapper {
 	margin-top: 52px;
+	margin-left: 52px;
+	margin-right: 52px;
 }
 .news{
 	height: 370px;
@@ -629,8 +644,12 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	padding: 8px 30px;
 	font-weight: 500;
 }
-@media (min-width: 575px) {
-	
+@media (max-width: 762px) {
+	.navbar-wrapper {
+		margin-top: 52px;
+		margin-left: 0;
+		margin-right: 20px;
+	}
 }
 @media (max-width: 575px)  {
 	.roteiro-span{ 
@@ -640,7 +659,7 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 		margin:20px 0 0 0;
 	}
 	#navbar-collapse-x {
-		right: 17%;
+		right: 21%;
 		top: 25%;
 	}
 	.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
@@ -654,7 +673,7 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 		margin-right: -93px;
 	}
 	.caption-titulo>p{
-		
+
 		font-size: 25px;
 	}
 
@@ -721,9 +740,15 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 		top: 25%;
 	}
 } 
+.topo-padding{
+	padding: 100px 0;
+}
 
 @media screen and (min-width: 991px){
 	.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
 		margin-right: -49px;
+	}
+	.topo-padding{
+		padding: 250px 0 150px 0;
 	}
 }

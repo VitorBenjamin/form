@@ -1,6 +1,5 @@
-<div class="container-fluid news" style="background: url('{{asset('assets/bg-newsletter.jpg')}}') center/cover no-repeat;">
-  <div class="row" style="margin: 7% 0 5% 0">
-
+<div class="container-fluid news" style="background: url('{{asset('assets/bg-newsletter.jpg')}}') center/cover no-repeat;" >
+  <div class="row" style="margin: 7% 0 5% 0" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
     <div class="col-sm-6 col-md-offset-1 col-md-5">
       <div class="newsletter">
         <h1>Assine nossa Newsletter</h1>

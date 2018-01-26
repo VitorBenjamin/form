@@ -377,6 +377,7 @@
       <div class="modal-body">
         <h1>AÉREO</h1>
         <h3>Em vôos nacionais</h3>
+         <img class="img-resposive" src="{{asset('assets/arte-viagem.jpg')}}" alt="">
         <p>
           A bagagem será considerada extraviada caso não seja entregue no seu ponto de destino. Quando isso acontece, deve-se procurar o balcão da companhia aérea para o preenchimento do Registro de Irregularidade de Bagagem (RIB). O fiscal de Aviação Civil do DAC, localizado na Seção de Aviação Civil (SAC) nos principais aeroportos brasileiros, deve ser acionado em caso de problemas.
 

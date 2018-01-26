@@ -5,7 +5,7 @@
 @include('layouts.menu')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid" style="background: url('{{asset('assets/bg-categoria-arte-arquitetura.jpg')}}') center/cover no-repeat; padding: 250px 0;">
+<div class="container-fluid topo-padding" style="background: url('{{asset('assets/bg-categoria-arte-arquitetura.jpg')}}') center/cover no-repeat;">
   <div class="container continente">
     <div class="row">
       <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" style="text-align: center;">
+      <div class="col-xs-12" style="text-align: center;">
         <select>
           <option value="">SELECIONE O DESTINO</option>
           <option value="">Porto Seguro</option>
@@ -41,7 +41,7 @@
           <p class="center">VIAGENS</p>
         </div>
       </div>
-      <div class="col-sm-6 col-md-5">
+      <!-- <div class="col-sm-6 col-md-5">
         <div class="select-right">
           <select>
             <option value="">SELECIONE O DESTINO</option>
@@ -50,7 +50,7 @@
             <option value="">Porto de Galinhas</option>
           </select>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -265,7 +265,7 @@
       <div class="col-xs-12" style="padding: 30px; background: url('{{asset('assets/slide-02.jpg')}}') center/cover no-repeat; width: 100%; min-height:550px">
         <div style="padding:150px 0 30px 0; min-height: 550px;border: 3px solid #fff">
           <div class="container destaque">
-            <div class="col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4" style="text-align: center;" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+            <div class="col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4" style="text-align: center;" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
               <a href="#" title="">
                 <span class="text-center">PACOTE ESPECIAL</span>
               </a>
@@ -276,7 +276,7 @@
               </h1>
             </div>
             <div class="col-sm-offset-4 col-sm-4 col-md-offset-5 col-md-2">
-              <h5 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500" class="text-center" style="margin-bottom: 150px;">
+              <h5 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="text-center" style="margin-bottom: 150px;">
                 ARGENTINA
               </h5>
             </div>
