@@ -13,8 +13,9 @@
 
 
 Route::get('/', ['uses' => 'PaginasController@index', 'as' => 'pagina.index']);
-Route::get('viagem', ['uses' => 'PaginasController@exibirViagem', 'as' => 'pagina.exibirViagem']);
-Route::get('pacote-de-viagens/{categoria}', ['uses' => 'PaginasController@viagensCategoria', 'as' => 'pagina.viagensCategoria']);
+Route::get('viagens/continente/{contiente}', ['uses' => 'PaginasController@exibirContinente', 'as' => 'pagina.exibirContinente']);
+Route::get('viagens/categoria/{categoria}', ['uses' => 'PaginasController@exibirCategoria', 'as' => 'pagina.exibirCategoria']);
+Route::get('pacote-de-viagens/{categoria}', ['uses' => 'PaginasController@exibirCategoria', 'as' => 'pagina.exibirCategoria']);
 
 Route::get('admin', ['uses' => 'Auth\LoginController@showLoginForm']);
 

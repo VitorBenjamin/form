@@ -1,6 +1,18 @@
 AOS.init({
 	duration: 1200,
 });
+$(".up").click(function() {
+     var currentTop = parseFloat($(".p").css('top').replace('px', ''));
+     console.log(currentTop);
+     var newTop = currentTop - 35;
+     $(".p").animate({top: newTop + "px"});
+});
+
+$(".down").click(function() {
+     var currentTop = parseFloat($(".p").css('top').replace('px', ''));
+     var newTop = currentTop + 35;
+     $(".p").animate({top: newTop + "px"});
+});
 $( document ).ready(function() {
 	$('.link-menu').on('click', function(){
 		console.log("teste")
@@ -54,7 +66,7 @@ $( document ).ready(function() {
 			+'<div class="col-sm-4">'
 			+'<div class="row">'
 			+'<div class="thumb">'
-			+'<img src="assets/viagem-15.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
+			+'<img src="/form/public/assets/viagem-15.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
 			+'<div class="caption">'
 			+'<div class="col-xs-12">'
 			+'<div class="caption-titulo">'
@@ -85,7 +97,7 @@ $( document ).ready(function() {
 			+'<div class="col-sm-4">'
 			+'<div class="row">'
 			+'<div class="thumb">'
-			+'<img src="assets/viagem-16.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
+			+'<img src="/form/public/assets/viagem-16.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
 			+'<div class="caption">'
 			+'<div class="col-xs-12">'
 			+'<div class="caption-titulo">'
@@ -114,7 +126,7 @@ $( document ).ready(function() {
 			+'<div class="col-sm-4">'
 			+'<div class="row">'
 			+'<div class="thumb">'
-			+'<img src="assets/viagem-18.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
+			+'<img src="/form/public/assets/viagem-18.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
 			+'<div class="caption">'
 			+'<div class="col-xs-12">'
 			+'<div class="caption-titulo">'

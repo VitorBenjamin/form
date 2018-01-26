@@ -122,8 +122,8 @@
     </div>
   </div>
   <!-- FIM DA SESSÃO DE SELEÇÃO DE VIAGENS -->
+  <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
   <div id="dinamico">
-    <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
     <div class="container-fluid" style="background: #161b33">
       <div class="row">
         <div class="col-sm-4" >
@@ -214,7 +214,6 @@
         </div>
       </div>
     </div>
-
     <div class="container-fluid" style="background: #161b33">
       <div class="row">
         <div class="col-sm-4">
@@ -308,10 +307,8 @@
         </div>
       </div>
     </div>
-    <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
-    
-
   </div>
+  <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
 </section>
 <!-- INICIO DA SESSÃO DAS VIAGENS -->
 <div class="container">

@@ -5,6 +5,50 @@ a {
 	cursor:pointer;
 	text-decoration: none;
 }
+.vertical-menu {
+	width: 250px;
+	height: 200px;
+	/*background: #e3e3e3;*/
+	overflow: hidden;
+	position: relative;
+}
+.vertical-container{
+	position: absolute;
+	top:500px;
+	left: 100px;
+}
+.vertical-menu>p {
+	line-height:2;
+	position: absolute;
+	top: -10px;
+	color: #b1874a;
+	font-weight: 900;
+	font-size: 15px;
+}
+.vertical-menu>.p>a {
+	color: #b1874a;
+	font-weight: 900;
+	font-size: 12px;
+}
+.up, .down {
+	margin-top: 5px;
+	color: #000;
+	margin-left: 10px;
+	cursor: pointer;
+	display:block;
+	background-color: #b1874a; 
+	border: 0;
+	font-size: 12px;
+}
+.up:hover, .down:hover {
+	border: 1px solid black;
+}
+.arrows{
+	position: absolute;
+	left: 40%;
+    top: 120px;
+
+}
 .text-center{
 	text-align: center;
 }
@@ -55,9 +99,6 @@ a {
 .navbar-collapse.collapse.in{
 	display:block !important;
 	overflow: hidden !important;
-}
-.select {
-	background-color: #161b33;
 }
 
 .navbar-toggle.x .icon-bar:nth-of-type(1) {
@@ -196,16 +237,22 @@ a {
 	padding: 9px;
 	width: 40px;
 }
+.select {
+	background-color: #161b33;
+}
+.select-brown {
+	background-color: #b1874a;
+}
 select{
 	padding: 5px 20px;
-	max-width: 95%;
+	max-width: 105%;
 	height: 90%;
 	color: #fff;
 	font-size: 12px;
 	background: rgba(0,0,0,0);
 	border: 2px #fff solid;
 	border-radius: 20px;
-	letter-spacing: 2px;
+	letter-spacing: 4px;
 	font-weight: 600;
 
 }
@@ -223,6 +270,9 @@ select option {
 	border-left: 6px solid #b1874a;
 	padding: 13px 0;
 
+}
+.white{
+	border-left: 6px solid #fff;
 }
 .border-left > p{
 
@@ -328,13 +378,13 @@ hr {
 	color: #b1874a;
 	background-color: #000;
 }
-.destaque > .row > div > h1{
+.destaque > div > h1{
 	color: #fff;
 	font-size: 55px;
 	font-weight: 500;
 	font-family: 'Yeseva One', cursive; 
 }
-.destaque > .row > div > a{
+.destaque > div > a{
 	padding: 7px 15px;
 	background-color: #b1874a;
 	color: #fff;
@@ -343,7 +393,7 @@ hr {
 	letter-spacing: 2px;
 
 }
-.destaque > .row > div > h5{
+.destaque > div > h5{
 	padding: 10px 20px;
 	color: #fff;
 	font-size: 14px;
