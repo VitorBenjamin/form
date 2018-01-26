@@ -5,6 +5,65 @@ a {
 	cursor:pointer;
 	text-decoration: none;
 }
+button.mfp-arrow, button.mfp-close{
+	position: fixed;
+}
+.mfp-hide2 {
+  display: none !important; 
+}
+#test-modal >h1>a {
+	color: #fff;
+	background-color: #b1874a;
+	padding: 0 10px;
+}
+#test-modal >h1 {
+	text-align: right;
+	padding: 10px;
+}
+#test-modal >img {
+	/* text-align: -webkit-center; */
+	margin: auto;
+}
+/* 
+button.mfp-close{ 
+	background-color:#b1874a ;
+	right: 5%;
+	top: 40px;
+} 
+.mfp-close {
+	position: fixed;
+	opacity: 1;
+	color: #fff;
+	font-style: normal;
+	font-size: 65px;
+	font-family: Arial,Baskerville,monospace;
+} 
+*/
+/* body.magnificpopupnoscroll{
+	overflow-y: hidden !important;
+} */
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+	opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
 
 .modal-content {
 	position: relative;
@@ -27,7 +86,7 @@ a {
 }
 .vertical-container{
 	position: absolute;
-	top:500px;
+	top: 450px;
 	left: 100px;
 }
 .vertical-menu>p {

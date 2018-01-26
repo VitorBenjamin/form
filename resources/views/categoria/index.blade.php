@@ -32,137 +32,41 @@
   </div>
 </div>
 <!-- FIM SESSÃO TOPO DA VIAGEM -->
-<!-- SELECT VIAGENS -->
-<div class="container-fluid select">
-  <div class="container select-margin">
-    <div class="row margem-padrao">
-      <div class="col-sm-6 col-md-7">
-        <div class="border-left">
-          <p class="center">VIAGENS</p>
-        </div>
-      </div>
-      <!-- <div class="col-sm-6 col-md-5">
-        <div class="select-right">
-          <select>
-            <option value="">SELECIONE O DESTINO</option>
-            <option value="">Porto Seguro</option>
-            <option value="">Salvador</option>
-            <option value="">Porto de Galinhas</option>
-          </select>
-        </div>
-      </div> -->
-    </div>
-  </div>
-</div>
-<!--  -->
+
 
 <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
-<div id="dinamico">
-  <div class="container-fluid" style="background: #161b33">
-    <div class="row">
-      <div class="col-sm-4" >
-        <div class="row">
-          <div class="thumb">
-            <img 
-            src="{{asset('assets/viagem-1.jpg')}}" data-aos="fade-down" alt="" data-aos-duration="500"class="img-responsive">
-            <div class="caption">
-              <div class="col-xs-12">
-                <div class="caption-titulo">
-                  <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <div class="border-top">
-                  <hr width="25%">
-                  <p>Porto Seguro</p>
-                </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <a href="#" class="a-caption">
-                  <div class="button-caption">
-                    VER MAIS
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="row">
-          <div class="thumb">
-            <img src="{{asset('assets/viagem-2.jpg')}}" data-aos="fade-down" data-aos-duration="1000" alt="" class="img-responsive">
-            <div class="caption">
-              <div class="col-xs-12">
-                <div class="caption-titulo">
-                  <div class="caption-titulo">
-                    <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <div class="border-top">
-                  <hr width="25%">
-                  <p>Porto Seguro</p>
-                </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <a href="#" class="a-caption">
-                  <div class="button-caption">
-                    VER MAIS
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="row">
-          <div class="thumb">
-            <img src="{{asset('assets/viagem-3.jpg')}}" data-aos="fade-down" data-aos-duration="1500" alt="" class="img-responsive">
-            <div class="caption">
-              <div class="col-xs-12">
-                <div class="caption-titulo">
-                  <div class="caption-titulo">
-                    <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <div class="border-top">
-                  <hr width="25%">
-                  <p>Porto Seguro</p>
-                </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <a href="#" class="a-caption">
-                  <div class="button-caption">
-                    VER MAIS
-                  </div>
-                </a>
-              </div>
-            </div>
+<section id="inicio">
+  <!-- INCIO SESSÃO DE SELEÇÃO DE VIAGENS -->
+  
+  <!-- SELECT VIAGENS -->
+  <div class="container-fluid select">
+    <div class="container select-margin">
+      <div class="row margem-padrao">
+        <div class="col-sm-6 col-md-7">
+          <div class="border-left">
+            <p class="center">VIAGENS</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid" style="background: #161b33">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="row">
-          <div class="thumb">
-            <img src="{{asset('assets/viagem-4.jpg')}}" data-aos="fade-down"  alt="" class="img-responsive">
-            <div class="caption">
-              <div class="col-xs-12">
-                <div class="caption-titulo">
+  <!-- FIM DA SESSÃO DE SELEÇÃO DE VIAGENS -->
+  
+  <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
+  <div id="dinamico">
+    <div class="container-fluid" style="background: #161b33">
+      <div class="row">
+        <div class="col-sm-4" >
+          <div class="row">
+            <div class="thumb">
+              <img 
+              src="{{asset('assets/viagem-1.jpg')}}" data-aos="fade-down" alt="" data-aos-duration="500"class="img-responsive">
+              <div class="caption">
+                <div class="col-xs-12">
                   <div class="caption-titulo">
                     <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                   </div>
                 </div>
-              </div>
-              <div class="caption-rodape">
                 <div class="col-xs-6 col-md-6">
                   <div class="border-top">
                     <hr width="25%">
@@ -170,70 +74,164 @@
                   </div>
                 </div>
                 <div class="col-xs-6 col-md-6">
-                  <a href="#" class="a-caption">
-                    <div class="button-caption">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
                       VER MAIS
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="thumb">
+              <img src="{{asset('assets/viagem-2.jpg')}}" data-aos="fade-down" data-aos-duration="1000" alt="" class="img-responsive">
+              <div class="caption">
+                <div class="col-xs-12">
+                  <div class="caption-titulo">
+                    <div class="caption-titulo">
+                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
-                  </a>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="border-top">
+                    <hr width="25%">
+                    <p>Porto Seguro</p>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
+                      VER MAIS
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="thumb">
+              <img src="{{asset('assets/viagem-3.jpg')}}" data-aos="fade-down" data-aos-duration="1500" alt="" class="img-responsive">
+              <div class="caption">
+                <div class="col-xs-12">
+                  <div class="caption-titulo">
+                    <div class="caption-titulo">
+                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="border-top">
+                    <hr width="25%">
+                    <p>Porto Seguro</p>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
+                      VER MAIS
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
-        <div class="row">
-          <div class="thumb">
-            <img src="{{asset('assets/viagem-5.jpg')}}" data-aos="fade-down"  alt="" class="img-responsive">
-            <div class="caption">
-              <div class="col-xs-12">
-                <div class="caption-titulo">
+    </div>
+    <div class="container-fluid" style="background: #161b33">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="thumb">
+              <img src="{{asset('assets/viagem-4.jpg')}}" data-aos="fade-down"  alt="" class="img-responsive">
+              <div class="caption">
+                <div class="col-xs-12">
                   <div class="caption-titulo">
-                    <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="caption-titulo">
+                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <div class="border-top">
-                  <hr width="25%">
-                  <p>Porto Seguro</p>
-                </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <a href="#" class="a-caption">
-                  <div class="button-caption">
-                    VER MAIS
+                <div class="caption-rodape">
+                  <div class="col-xs-6 col-md-6">
+                    <div class="border-top">
+                      <hr width="25%">
+                      <p>Porto Seguro</p>
+                    </div>
                   </div>
-                </a>
+                  <div class="col-xs-6 col-md-6">
+                    <div class="button-caption zoom-gallery">
+                      <a class="popup-modal a-caption" href="#test-modal">
+                        VER MAIS
+
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="row">
-          <div class="thumb">
-            <img src="{{asset('assets/viagem-6.jpg')}}" data-aos="fade-down"  alt="" class="img-responsive">
-            <div class="caption">
-              <div class="col-xs-12">
-                <div class="caption-titulo">
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="thumb">
+              <img src="{{asset('assets/viagem-5.jpg')}}" data-aos="fade-down"  alt="" class="img-responsive">
+              <div class="caption">
+                <div class="col-xs-12">
                   <div class="caption-titulo">
-                    <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="caption-titulo">
+                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="border-top">
+                    <hr width="25%">
+                    <p>Porto Seguro</p>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
+                      VER MAIS
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-6">
-                <div class="border-top">
-                  <hr width="25%">
-                  <p>Porto Seguro Porto Seguro </p>
-                </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <a href="#" class="a-caption">
-                  <div class="button-caption">
-                    VER MAIS
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="thumb">
+              <img src="{{asset('assets/viagem-6.jpg')}}" data-aos="fade-down"  alt="" class="img-responsive">
+              <div class="caption">
+                <div class="col-xs-12">
+                  <div class="caption-titulo">
+                    <div class="caption-titulo">
+                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
                   </div>
-                </a>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="border-top">
+                    <hr width="25%">
+                    <p>Porto Seguro Porto Seguro </p>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
+                      VER MAIS
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -241,7 +239,14 @@
       </div>
     </div>
   </div>
-</div>
+  <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
+  <!-- <a class="popup-modal" href="#test-modal">Open modal</a> -->
+
+  <div id="test-modal" class="mfp-hide2 white-popup-block closeOnBgClick ">
+    <h1><a class="popup-modal-dismiss" href="#">X</a></h1>
+    <img class="img-responsive" src="{{asset('assets/arte-viagem.jpg')}}" alt="">
+  </div>
+</section>
 <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
 
 <!-- INICIO DA SESSÃO DAS VIAGENS -->

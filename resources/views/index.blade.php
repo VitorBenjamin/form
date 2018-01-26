@@ -144,11 +144,11 @@
                   </div>
                 </div>
                 <div class="col-xs-6 col-md-6">
-                  <a href="#" class="a-caption">
-                    <div class="button-caption">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
                       VER MAIS
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -173,11 +173,11 @@
                   </div>
                 </div>
                 <div class="col-xs-6 col-md-6">
-                  <a href="#" class="a-caption">
-                    <div class="button-caption">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
                       VER MAIS
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -202,11 +202,11 @@
                   </div>
                 </div>
                 <div class="col-xs-6 col-md-6">
-                  <a href="#" class="a-caption">
-                    <div class="button-caption">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
                       VER MAIS
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -236,11 +236,12 @@
                     </div>
                   </div>
                   <div class="col-xs-6 col-md-6">
-                    <a href="#" class="a-caption">
-                      <div class="button-caption">
+                    <div class="button-caption zoom-gallery">
+                      <a class="popup-modal a-caption" href="#test-modal">
                         VER MAIS
-                      </div>
-                    </a>
+
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -266,11 +267,11 @@
                   </div>
                 </div>
                 <div class="col-xs-6 col-md-6">
-                  <a href="#" class="a-caption">
-                    <div class="button-caption">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
                       VER MAIS
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -295,11 +296,11 @@
                   </div>
                 </div>
                 <div class="col-xs-6 col-md-6">
-                  <a href="#" class="a-caption">
-                    <div class="button-caption">
+                  <div class="button-caption zoom-gallery">
+                    <a class="popup-modal a-caption" href="#test-modal">
                       VER MAIS
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -309,8 +310,20 @@
     </div>
   </div>
   <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
+  <!-- <a class="popup-modal" href="#test-modal">Open modal</a> -->
+
+  <div id="test-modal" class="mfp-hide2 white-popup-block closeOnBgClick ">
+    <h1><a class="popup-modal-dismiss" href="#">X</a></h1>
+    <img class="img-responsive" src="{{asset('assets/arte-viagem.jpg')}}" alt="">
+  </div>
 </section>
 
+<!-- <div class="zoom-gallery">
+  <a href="{{asset('assets/viagem-6.jpg')}}" data-source="{{asset('assets/viagem-6.jpg')}}" title="teste" style="width:32px;height:32px;">
+    <img class="img_popup" src="{{asset('assets/viagem-6.jpg')}}" width="32" height="32">
+  </a>
+</div>
+-->
 <!-- INCIO SESSÃO DA VIAGEM EM DESTAQUE -->
 <section id="destaque">
   <div class="container-fluid">

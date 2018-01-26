@@ -2,17 +2,19 @@ AOS.init({
 	duration: 1200,
 });
 $(".up").click(function() {
-     var currentTop = parseFloat($(".p").css('top').replace('px', ''));
-     console.log(currentTop);
-     var newTop = currentTop - 35;
-     $(".p").animate({top: newTop + "px"});
+	var currentTop = parseFloat($(".p").css('top').replace('px', ''));
+	console.log(currentTop);
+	var newTop = currentTop - 35;
+	$(".p").animate({top: newTop + "px"});
 });
 
 $(".down").click(function() {
-     var currentTop = parseFloat($(".p").css('top').replace('px', ''));
-     var newTop = currentTop + 35;
-     $(".p").animate({top: newTop + "px"});
+	var currentTop = parseFloat($(".p").css('top').replace('px', ''));
+	var newTop = currentTop + 35;
+	$(".p").animate({top: newTop + "px"});
 });
+
+
 $( document ).ready(function() {
 	$('.link-menu').on('click', function(){
 		console.log("teste")
@@ -52,6 +54,7 @@ $( document ).ready(function() {
 			}
 		});
 });
+
 $( document ).ready(function() {
 	var hamburger = $('#hamburger-icon');
 	var drop = $('dropdown');
@@ -60,13 +63,14 @@ $( document ).ready(function() {
 		return false;
 	});
 	$('#add').click(function(){  
+		var rota = "http://developer.agenciavilaca.com.br/formula/public/assets/viagem-15.jpg";
 		$('#dinamico').append(
 			'<div class="container-fluid" style="background: #161b33">'
 			+'<div class="row">'
 			+'<div class="col-sm-4">'
 			+'<div class="row">'
 			+'<div class="thumb">'
-			+'<img src="/form/public/assets/viagem-15.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
+			+'<img src="'+rota+'" data-aos="fade-down"  alt="" class="img-responsive">'
 			+'<div class="caption">'
 			+'<div class="col-xs-12">'
 			+'<div class="caption-titulo">'
@@ -97,7 +101,7 @@ $( document ).ready(function() {
 			+'<div class="col-sm-4">'
 			+'<div class="row">'
 			+'<div class="thumb">'
-			+'<img src="/form/public/assets/viagem-16.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
+			+'<img src="'+rota+'" data-aos="fade-down"  alt="" class="img-responsive">'
 			+'<div class="caption">'
 			+'<div class="col-xs-12">'
 			+'<div class="caption-titulo">'
@@ -126,7 +130,7 @@ $( document ).ready(function() {
 			+'<div class="col-sm-4">'
 			+'<div class="row">'
 			+'<div class="thumb">'
-			+'<img src="/form/public/assets/viagem-18.jpg" data-aos="fade-down"  alt="" class="img-responsive">'
+			+'<img src="'+rota+'" data-aos="fade-down"  alt="" class="img-responsive">'
 			+'<div class="caption">'
 			+'<div class="col-xs-12">'
 			+'<div class="caption-titulo">'
@@ -160,7 +164,40 @@ $( document ).ready(function() {
 			$(this).find('.caption').fadeOut(205)
 		}
 		);
+		$('.popup-modal').magnificPopup({
+			type: 'inline',
+			midClick: true,
+			preloader: false,
+			modal: false
+		});
+		$(document).on('click', '.popup-modal-dismiss', function (e) {
+			e.preventDefault();
+			$.magnificPopup.close();
+		});
+		$('.popup-modal').on('click',function (e) {
+		//console.log('asdasdas');
+		e.preventDefault();
+		$('#test-modal').removeClass('mfp-hide2');
+	});
 	}); 
+});
+$(document).ready(function() {
+	$('.popup-modal').magnificPopup({
+		type: 'inline',
+		midClick: true,
+		preloader: false,
+		modal: false
+	});
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+	$('.popup-modal').on('click',function (e) {
+		//console.log('asdasdas');
+		e.preventDefault();
+		$('#test-modal').removeClass('mfp-hide2');
+	});
+
 });
 $(".link-menu").click(function() {
 
@@ -168,6 +205,8 @@ $(".link-menu").click(function() {
 		scrollTop: $($(this).attr('href')).offset().top
 	}, 1500);
 });
+
+
 $(document).ready(function(){
 	$('.clientes').owlCarousel({
 		dots:false,
@@ -269,6 +308,7 @@ $('.formphp').on('submit', function() {
 	
 	return false;
 });
+
 $(document).ready(function() {  
 	$("#myCarousel").swiperight(function() {  
 		$("#myCarousel").carousel('prev');  
@@ -277,3 +317,4 @@ $(document).ready(function() {
 		$("#myCarousel").carousel('next');  
 	});  
 });  
+
