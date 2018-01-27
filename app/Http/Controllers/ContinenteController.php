@@ -4,24 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use App\Categoria;
+use App\Continente;
 use Intervention\Image\Facades\Image;
-class CategoriaController extends Controller
+
+class ContinenteController extends Controller
 {
 	public function index()
 	{
-		$categoria = Categoria::all();
-		return view('categoria.admin_index',compact('categoria'));
+		$continente = Continente::all();
+		return view('continente.admin_index',compact('continente'));
 	}
-	public function create()
-	{
-		return view('categoria.create');
-	}
-
 	public function editar($id)
 	{
-		$categoria = Categoria::find($id);
-		return view('categoria.editar',compact('categoria'));
+		$continente = Continente::find($id);
+		return view('continente.editar',compact('continente'));
+	}
+
+	public function create()
+	{
+		return view('continente.create');
 	}
 
 	public function salvar(Request $request,$id)
@@ -39,16 +40,16 @@ class CategoriaController extends Controller
 			$thumb_img_64 = (string) $file->encode('data-url');
 			$data['thumb'] = $thumb_img_64;
 		}
-		$categoria = Categoria::create($data);
+		$continente = Continente::create($data);
 		Session::flash('flash_message',[
-			'msg'=>"Cadastro do Categoria Realizado com Sucesso!!!",
+			'msg'=>"Cadastro do Continente Realizado com Sucesso!!!",
 			'class'=>"alert bg-green alert-dismissible"
 		]);
-		return redirect()->route('categoria.admin_index');
+		return redirect()->route('continente.admin_index');
 	}
 	public function update(Request $request,$id)
 	{	
-		$categoria = Categoria::find($id);
+		$continente = Continente::find($id);
 		$mimeCapa = $request->file('capa')->getClientMimeType();
 		$mimeThumb = $request->file('thumb')->getClientMimeType();
 		$data = ['nome' => $request->nome];
@@ -59,7 +60,7 @@ class CategoriaController extends Controller
 				$data['capa'] = $capa_img_64;
 			}
 		}else{
-			$data['capa'] = $categoria->capa;
+			$data['capa'] = $continente->capa;
 		}
 		
 		if ($request->file('thumb')) {
@@ -69,26 +70,26 @@ class CategoriaController extends Controller
 				$data['thumb'] = $thumb_img_64;
 			}
 		}else{
-			$data['thumb'] = $categoria->thumb;
+			$data['thumb'] = $continente->thumb;
 		}
 		
-		$categoria->update($data);
+		$continente->update($data);
 
 		Session::flash('flash_message',[
-			'msg'=>"Cadastro do Categoria Realizado com Sucesso!!!",
+			'msg'=>"Cadastro do Continente Realizado com Sucesso!!!",
 			'class'=>"alert bg-green alert-dismissible"
 		]);
-		return redirect()->route('categoria.admin_index');
+		return redirect()->route('continente.admin_index');
 	}
 	public function excluir($id)
 	{
-		$categoria = Categoria::find($id);
-		$categoria->delete();
+		$continente = Continente::find($id);
+		$continente->delete();
 
 		Session::flash('flash_message',[
-			'msg'=>"Cadastro do Categoria Realizado com Sucesso!!!",
+			'msg'=>"Cadastro do Continente Realizado com Sucesso!!!",
 			'class'=>"alert bg-green alert-dismissible"
 		]);
-		return view('categoria.admin_index');
+		return view('continente.admin_index');
 	}
 }

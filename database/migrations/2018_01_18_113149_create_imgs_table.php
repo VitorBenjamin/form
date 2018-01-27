@@ -13,16 +13,16 @@ class CreateImgsTable extends Migration
      */
     public function up()
     {
-        Schema::create('imgs', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('titulo');
-            $table->string('atl');
-            $table->String('mime',10)
-            $table->timestamps();
-        });
-        Schema::table('imgs', function (Blueprint $table) {
-            DB::statement("ALTER TABLE imgs ADD imagem LONGBLOB NULL");
-        });
+        // Schema::create('imgs', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->string('titulo');
+        //     $table->string('atl');
+        //     $table->String('mime',10);
+        //     $table->timestamps();
+        // });
+        // Schema::table('imgs', function (Blueprint $table) {
+        //     DB::statement("ALTER TABLE imgs ADD imagem LONGBLOB NULL");
+        // });
     }
 
     /**

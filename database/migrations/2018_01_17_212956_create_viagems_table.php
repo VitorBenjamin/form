@@ -13,18 +13,23 @@ class CreateViagemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('viagems', function (Blueprint $table) {
+        Schema::create('viagens', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
             $table->string('descricao');
-            $table->enum('AFRICA','ASIA','AMERICA')
             $table->integer('categorias_id')->unsigned();
+            $table->integer('continente_id')->unsigned();
             $table->timestamps();
         });
-        Schema::table('viagems', function (Blueprint $table) {
-            $table->foreign('categorias_id')->references('id')->on('categorias')
-            ->onUpdate('cascade')->onDelete('cascade');
+        Schema::table('viagens', function (Blueprint $table) {
+            DB::statement("ALTER TABLE viagens ADD thumb LONGBLOB");
+            DB::statement("ALTER TABLE viagens ADD foto LONGBLOB");
         });
+        Schema::table('viagens', function (Blueprint $table) {
+            $table->foreign('categorias_id')->references('id')->on('categorias');
+            $table->foreign('continente_id')->references('id')->on('continentes');
+        });
+        
     }
 
     /**

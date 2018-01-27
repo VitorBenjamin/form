@@ -15,7 +15,14 @@ class CreateContinentesTable extends Migration
     {
         Schema::create('continentes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nome');
+            $table->string('descricao')->nullable();
+            $table->string('tag')->nullable();
             $table->timestamps();
+        });
+        Schema::table('continentes', function (Blueprint $table) {
+            DB::statement("ALTER TABLE continentes ADD thumb LONGBLOB");
+            DB::statement("ALTER TABLE continentes ADD capa LONGBLOB");
         });
     }
 

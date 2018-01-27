@@ -12,6 +12,11 @@ class Categoria extends Model
      * @var array
      */
     protected $fillable = [
-        'nome', 'thumb', 'foto_capa',
+    	'nome', 'thumb', 'capa','descricao','tag'
     ];
+
+    public function viagem()
+    {
+    	return $this->hasMany('App\Viagem','categoria_id');
+    }
 }
