@@ -8,7 +8,7 @@ class Viagem extends Model
 {
     protected $table = 'viagens';
     protected $fillable = [
-        'titulo', 'descricao', 'foto', 'thumb', 'especial', 'categorias_id','continente_id'
+        'titulo', 'descricao', 'foto', 'thumb', 'especial', 'categorias_id','continentes_id'
     ];
     
     /** Consulta a imagem da Viagem
@@ -27,6 +27,6 @@ class Viagem extends Model
     }
     public function continente()
     {
-        return $this->belongsTo('App\Continente','continente_id');
+        return $this->belongsTo('App\Continente','continentes_id');
     }
 }

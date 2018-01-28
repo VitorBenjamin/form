@@ -3,6 +3,29 @@
 @section('content')
 
 @include('layouts.menu_black')
+<script>
+  console.log('asdasdsads')
+  @if(Session::has('message'))
+  var type = "{{ Session::get('alert-type', 'info') }}";
+  switch(type){
+    case 'info':
+    toastr.info("{{ Session::get('message') }}");
+    break;
+    
+    case 'warning':
+    toastr.warning("{{ Session::get('message') }}");
+    break;
+    case 'success':
+    toastr.options.timeOut = 15000;
+    toastr.options.closeButton = true;
+    toastr.success("{{ Session::get('message') }}");
+    break;
+    case 'error':
+    toastr.error("{{ Session::get('message') }}");
+    break;
+  }
+  @endif
+</script>
 
 <!-- INICIO SESSÃO DO CAROUSEL -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">

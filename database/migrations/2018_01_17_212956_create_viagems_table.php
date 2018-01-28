@@ -18,7 +18,7 @@ class CreateViagemsTable extends Migration
             $table->string('titulo');
             $table->string('descricao');
             $table->integer('categorias_id')->unsigned();
-            $table->integer('continente_id')->unsigned();
+            $table->integer('continentes_id')->unsigned();
             $table->timestamps();
         });
         Schema::table('viagens', function (Blueprint $table) {
@@ -27,7 +27,7 @@ class CreateViagemsTable extends Migration
         });
         Schema::table('viagens', function (Blueprint $table) {
             $table->foreign('categorias_id')->references('id')->on('categorias');
-            $table->foreign('continente_id')->references('id')->on('continentes');
+            $table->foreign('continentes_id')->references('id')->on('continentes');
         });
         
     }

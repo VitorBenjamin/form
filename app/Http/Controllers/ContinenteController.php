@@ -12,24 +12,27 @@ class ContinenteController extends Controller
 	public function index()
 	{
 		$continente = Continente::all();
-		return view('continente.admin_index',compact('continente'));
+		return view('continente.admin.index',compact('continente'));
 	}
 	public function editar($id)
 	{
 		$continente = Continente::find($id);
-		return view('continente.editar',compact('continente'));
+		return view('continente.admin.editar',compact('continente'));
 	}
 
 	public function create()
 	{
-		return view('continente.create');
+		return view('continente.admin.create');
 	}
 
-	public function salvar(Request $request,$id)
-	{	
+	public function salvar(Request $request)
+	{ 
 		$mimeCapa = $request->file('capa')->getClientMimeType();
 		$mimeThumb = $request->file('thumb')->getClientMimeType();
-		$data = ['nome' => $request->nome];
+		$data = [
+			'nome' => $request->nome,
+			'descricao' => $request->descricao ? $request->descricao : null,
+		];
 		if ($mimeCapa == "image/jpeg" || $mimeCapa == "image/png") {
 			$file = Image::make($request->file('capa'));
 			$capa_img_64 = (string) $file->encode('data-url');
@@ -43,9 +46,9 @@ class ContinenteController extends Controller
 		$continente = Continente::create($data);
 		Session::flash('flash_message',[
 			'msg'=>"Cadastro do Continente Realizado com Sucesso!!!",
-			'class'=>"alert bg-green alert-dismissible"
+			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return redirect()->route('continente.admin_index');
+		return redirect()->route('continente.create');
 	}
 	public function update(Request $request,$id)
 	{	
@@ -77,9 +80,9 @@ class ContinenteController extends Controller
 
 		Session::flash('flash_message',[
 			'msg'=>"Cadastro do Continente Realizado com Sucesso!!!",
-			'class'=>"alert bg-green alert-dismissible"
+			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return redirect()->route('continente.admin_index');
+		return redirect()->route('continente.admin.admin_index');
 	}
 	public function excluir($id)
 	{
@@ -88,8 +91,8 @@ class ContinenteController extends Controller
 
 		Session::flash('flash_message',[
 			'msg'=>"Cadastro do Continente Realizado com Sucesso!!!",
-			'class'=>"alert bg-green alert-dismissible"
+			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return view('continente.admin_index');
+		return view('continente.admin.index');
 	}
 }

@@ -31,25 +31,26 @@
     <div class="row margem-padrao">
       <div class="col-xs-12">
         <div class="row">
-          <form action="enviar.php" method="post" name="form" class="formphp form">
+          <form action="{{route('postcontact')}}" method="post" class="form">
+            {{ csrf_field() }}
             <div class="col-sm-offset-4 col-sm-4 col-md-offset-0">
-              <input id="nome" name="nome" type="text" placeholder="Nome">
+              <input id="nome" name="nome" type="text" placeholder="Nome" required>
             </div>
             <div class="col-md-4">
-              <input id="telefone" name="telefone" type="text" placeholder="Telefone">
+              <input id="telefone" name="telefone" pattern="^\d{11}$" type="tel" placeholder="Telefone">
               <label class="nao-aparece">Se você não é um robô, deixe em branco.</label>
               <input type="text" class="nao-aparece" name="leaveblank">
               <label class="nao-aparece">Se você não é um robô, não mude este campo.</label>
-              <input type="text" class="nao-aparece" name="dontchange" value="http://" >
+              <input type="text" class="nao-aparece" name="dontchange" value="http://">
             </div>
             <div class="col-md-4">
-              <input id="email" name="email" type="text" placeholder="E-mail">
+              <input id="email" name="email" type="email" placeholder="E-mail" required>
             </div>
             <div class="col-xs-12">
               <textarea name="mensagem" id="mensagem" placeholder="Digite aqui sua mensagem:"></textarea>
             </div>
             <div class="col-md-offset-10 col-md-2">
-              <button id="enviar" name="enviar" type="submit">ENVIAR</button>
+              <button type="submit">ENVIAR</button>
             </div>
           </div>
         </form>

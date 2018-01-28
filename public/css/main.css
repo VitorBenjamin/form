@@ -614,10 +614,10 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	font-weight:700;
 	color: #fff;
 }
-.formphp label.nao-aparece, .formphp input.nao-aparece {
+.form label.nao-aparece, .form input.nao-aparece {
 	display: none !important;
 }
-.formphp>div>input, .formphp>div>textarea {
+.form>div>input, .form>div>textarea {
 	color: #f3a93e;
 	letter-spacing: 1px;
 	padding: 12px 20px;
@@ -626,18 +626,18 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	width: 100%;
 	margin-top: 0;
 }
-.formphp>div>input::placeholder, .formphp>div>textarea::placeholder {
+.form>div>input::placeholder, .form>div>textarea::placeholder {
 	color: #b1874a;
 	letter-spacing: 3px;
 	text-transform: uppercase;
 	margin-right: 10px;
 	font-weight: 700;
 }
-.formphp>div>textarea {
+.form>div>textarea {
 	height: 200px;
 	margin-top: 25px;
 }
-.formphp>div>button {
+.form>div>button {
 	border: 0;
 	color: #161b33;
 	font-size:15px;
