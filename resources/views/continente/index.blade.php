@@ -5,11 +5,11 @@
 @include('layouts.menu')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: url('{{asset('assets/bg-categoria-arte-arquitetura.jpg')}}') center/cover no-repeat;">
+<div class="container-fluid topo-padding" style="background: url('{{$continente->capa}}') center/cover no-repeat fixed;">
   <div class="container continente">
     <div class="row">
       <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
-        <h1 class="text-center">America do Norte</h1>
+        <h1 class="text-center">{{$continente->nome}}</h1>
       </div>
     </div>
     <div class="row">
@@ -21,15 +21,15 @@
     </div>
     <div class="row">
       <div class="col-xs-12" style="text-align: center;">
-        <select>
-          <option value="">SELECIONE O DESTINO</option>
-          <option value="">Porto Seguro</option>
-          <option value="">Salvador</option>
-          <option value="">Porto de Galinhas</option>
-        </select>
-      </div>
-    </div>
-  </div>
+        <select class="destino">
+          <option value="">ESCOLHA UM DESTINO</option>}
+         @foreach ($continentes as $cont)
+         <option value="{{route('pagina.exibirContinente',$cont->nome)}}">{{$cont->nome}}</option>
+         @endforeach
+       </select>
+     </div>
+   </div>
+ </div>
 </div>
 <!-- FIM SESSÃO TOPO DA VIAGEM -->
 

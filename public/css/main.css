@@ -5,11 +5,19 @@ a {
 	cursor:pointer;
 	text-decoration: none;
 }
+h1,p{
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-webkit-hyphens: manual;
+	-ms-hyphens: manual;
+	-moz-hyphens: manual;
+	hyphens: manual;
+}
 button.mfp-arrow, button.mfp-close{
 	position: fixed;
 }
 .mfp-hide2 {
-  display: none !important; 
+	display: none !important; 
 }
 #test-modal >h1>a {
 	color: #fff;
@@ -39,9 +47,6 @@ button.mfp-close{
 	font-family: Arial,Baskerville,monospace;
 } 
 */
-/* body.magnificpopupnoscroll{
-	overflow-y: hidden !important;
-} */
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
 	opacity: 0;
@@ -85,9 +90,22 @@ button.mfp-close{
 	position: relative;
 }
 .vertical-container{
-	position: absolute;
-	top: 450px;
-	left: 100px;
+	/*position: absolute;
+	top: 350px;
+	left: 150px;*/
+	margin-top: 100px;
+}
+.menu{
+	z-index: 999;
+	position: fixed;
+	margin: 0 0 10px 0;
+	padding: 0;
+	background-color: #966f18;
+	width: 100%;
+	display: none;
+}
+.menu > .container-fluid > .navbar > .navbar-header > span,.menu > .container-fluid > .navbar > .navbar-header > button {
+	margin-top:30px;
 }
 .vertical-menu>p {
 	line-height:2;
@@ -123,6 +141,9 @@ button.mfp-close{
 }
 .text-center{
 	text-align: center;
+}
+.text-right{
+	text-align: right;
 }
 .margem-padrao{
 	margin: 4% 0 4% 0;
@@ -226,10 +247,19 @@ button.mfp-close{
 	border-color: #ffffff00 !important;
 }
 .navbar-brand {
-	width: 55%;
+	width: 80%;
 }
 #navbar-collapse-x {
+	z-index: 1000;
 	position: absolute;
+	background-color: #161b33e3;
+	right: 19%;
+	top: 25%;
+	padding: 0 40px;
+}
+#navbar-collapse-x2 {
+	z-index: 1000;
+	position: fixed;
 	background-color: #161b33e3;
 	right: 19%;
 	top: 25%;
@@ -684,9 +714,9 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 .news{
 	height: 370px;
 }
-.continente>div>div>h1{
+.continente>div>div>h1,.categoria>div>div>h1{
 	color: #fff;
-	font-size: 80px;
+	font-size: 60px;
 	font-family: 'Yeseva One', cursive;
 }
 .continente>div>div>p{
@@ -695,6 +725,14 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	text-align: center;
 	margin-bottom: 50px;
 	letter-spacing: 2px;
+	font-weight: 600;
+}
+.categoria>div>div>p{
+	color: #fff;
+	font-size: 14px;
+	text-align: right;
+	margin-bottom: 50px;
+	letter-spacing: 5px;
 }
 .continente>div>div>select{
 	color: #fff;
@@ -704,10 +742,18 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	font-weight: 500;
 }
 @media (max-width: 762px) {
+	.menu > .container > .navbar > .navbar-header > span,.menu > .container > .navbar > .navbar-header > button {
+		margin-top:15px;
+	}
 	.navbar-wrapper {
-		margin-top: 52px;
+		margin-top: 12px;
 		margin-left: 0;
 		margin-right: 20px;
+	}
+	.continente>div>div>h1, .categoria>div>div>h1 {
+		color: #fff;
+		font-size: 3em;
+		font-family: 'Yeseva One', cursive;
 	}
 }
 @media (max-width: 575px)  {
@@ -720,6 +766,10 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	#navbar-collapse-x {
 		right: 21%;
 		top: 25%;
+	}
+	.menu > div > nav > #navbar-collapse-x {
+		right: 21%;
+		top: 47%;
 	}
 	.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
 		width: 50px;
@@ -735,11 +785,23 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 
 		font-size: 25px;
 	}
+	/*#navbar-collapse-x {
+		right: 21%;
+		top: 25%;
+	}*/
+	.menu > div > nav > #navbar-collapse-x {
+		right: 11%;
+		top: 47%;
+	}
 
 }
 @media (min-width: 576px) and (max-width: 767px)  {
 	.caption-titulo {
 		margin: 100px 0;
+	}
+	.menu > div > nav > #navbar-collapse-x {
+		right: 16%;
+		top: 47%;
 	}
 
 
@@ -771,8 +833,12 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 @media (min-width: 992px) and (max-width: 1329px){
 
 	#navbar-collapse-x {
-		right: 11%;
+		right: 21%;
 		top: 25%;
+	}
+	.menu > div > nav > #navbar-collapse-x {
+		right: 13%;
+		top: 47%;
 	}
 	.caption-titulo>p{
 		margin: 0;
@@ -794,9 +860,14 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	.caption-titulo {
 		margin: 15% 0 20% 0;
 	}
+
 	#navbar-collapse-x {
 		right: 10%;
 		top: 25%;
+	}
+	.menu > div > nav > #navbar-collapse-x {
+		right: 12%;
+		top: 47%;
 	}
 } 
 .topo-padding{

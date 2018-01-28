@@ -24,6 +24,33 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 <body>
+	<script>
+		@if(Session::has('flash_message'))
+		var type = "{{ Session::get('flash_message')['alert-type'] }}";
+		switch(type){
+			case 'info':
+			toastr.options.timeOut = 5000;
+			toastr.options.closeButton = true;
+			toastr.info("{{ Session::get('flash_message')['msg'] }}");
+			break;
+			case 'warning':
+			toastr.options.timeOut = 5000;
+			toastr.options.closeButton = true;
+			toastr.warning("{{ Session::get('flash_message')['msg'] }}");
+			break;
+			case 'success':
+			toastr.options.timeOut = 5000;
+			toastr.options.closeButton = true;
+			toastr.success("{{ Session::get('flash_message')['msg'] }}");
+			break;
+			case 'error':
+			toastr.options.timeOut = 5000;
+			toastr.options.closeButton = true;
+			toastr.error("{{ Session::get('flash_message')['msg'] }}");
+			break;
+		}
+		@endif
+	</script>
 	@yield('content')
 	<!-- Scripts -->
 	

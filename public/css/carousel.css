@@ -39,18 +39,19 @@ body {
   right: 0;
   left: 0;
   z-index: 20;
+  display: block;
 }
 
 /* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
+.navbar-wrapper > .container, .menu > .container {
   padding-right: 0;
   padding-left: 0;
 }
-.navbar-wrapper .navbar {
+.navbar-wrapper .navbar, .menu .navbar {
   padding-right: 15px;
   padding-left: 15px;
 }
-.navbar-wrapper .navbar .container {
+.navbar-wrapper .navbar .container,.menu .navbar .container {
   width: auto;
 }
 

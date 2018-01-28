@@ -1,27 +1,57 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Viagem;
+use App\Categoria;
+use App\Continente;
 use Mail;
 class PaginasController extends Controller
 {
     public function index()
     {
-    	return view('index');
+        $categorias = Categoria::all('nome');
+        $continentes = Continente::all('nome');
+
+        return view('index',compact('categorias','continentes'));
     }
 
-    public function exibirContinente()
+    public function exibirContinente($nome)
     {
     	//$viagem = Viagem::with('imgs','categoria')->where('id',$id);
-    	return view('continente.index');
+    	$continente = Continente::where('nome',$nome)->first();
+
+        if (count($continente) == 0) {
+            Session::flash('flash_message',[
+                'msg'=>"Continente Não Encontrado",
+                'class'=>"alert success alert-dismissible",
+                'alert-type' => 'warning'
+            ]);
+            return redirect()->route('pagina.index');
+        }
+        $continentes = Continente::all('nome');
+        $viagens = Viagem::where('continentes_id', $continente->id)->get();
+        return view('continente.index',compact('continentes','continente'));
 
     }
-    public function exibirCategoria()
+    public function exibirCategoria($nome)
     {
     	//$viagem = Viagem::with('imgs','categoria')->where('id',$id);
-    	return view('categoria.index');
+    	$categoria = Categoria::where('nome',$nome)->first();
+        if (count($categoria) == 0) {
+            Session::flash('flash_message',[
+                'msg'=>"Categoria Não Encontrada",
+                'class'=>"alert success alert-dismissible",
+                'alert-type' => 'warning'
+            ]);
+            return redirect()->route('pagina.index');
+        }
+        $continentes = Continente::all('nome');
+        $categorias = Categoria::all('nome');
+        //dd($categoria);
+        $viagens = Viagem::where('categorias_id',$categoria->id)->get();
+        return view('categoria.index',compact('categorias','categoria','continentes','viagens'));
 
     }
     public function postContact(Request $request)
@@ -35,20 +65,20 @@ class PaginasController extends Controller
         //     ]);
 
         // Mail::send('mail',
-        //  array(
-        //      'name' => $request->get('nome'),
-        //      'email' => $request->get('email'),
-        //      'user_message' => $request->get('mensagem')
-        //  ), function($message)
-        //  {
-        //      $message->from('moselo@betsoccer.club');
-        //      $message->to('moselo@betsoccer.club', 'Admin')->subject('Contato pelo Site');
-        //  });
-
-        $notification = array(
-            'message' => 'Obrigado Por entrar em contato! Seu E-mail foi Enviado com Sucesso', 
+        //     [
+        //         'name' => $request->get('nome'),
+        //         'email' => $request->get('email'),
+        //         'user_message' => $request->get('mensagem')
+        //     ], function($message)
+        //     {
+        //         $message->from('moselo@betsoccer.club');
+        //         $message->to('moselo@betsoccer.club', 'Admin')->subject('Contato pelo Site');
+        //     });
+        Session::flash('flash_message',[
+            'msg'=>"Obrigado Por entrar em contato! Seu E-mail foi Enviado com Sucesso",
+            'class'=>"alert success alert-dismissible",
             'alert-type' => 'success'
-        );
-        return redirect()->back()->with($notification);
+        ]);
+        return redirect()->back();
     }
 }
