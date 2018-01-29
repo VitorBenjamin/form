@@ -19,13 +19,13 @@ textarea:invalid {
 }
 input:required:valid { border: 2px solid green; }*/
 input:optional {
-  border-left-color: #999;
+	border-left-color: #999;
 }
 input:required:valid {
-  border-left-color: palegreen;
+	border-left-color: palegreen;
 }
 input:invalid {
-  border-left-color: salmon;
+	border-left-color: salmon;
 }
 button.mfp-arrow, button.mfp-close{
 	position: fixed;
@@ -114,7 +114,7 @@ button.mfp-close{
 	position: fixed;
 	margin: 0 0 10px 0;
 	padding: 0;
-	background-color: #966f18;
+	background-color: #b1874a;
 	width: 100%;
 	display: none;
 }
@@ -329,13 +329,30 @@ button.mfp-close{
 }
 .texto-carousel>p{
 	text-align: justify;
-	margin-top: 5%;
+	margin: 5% 0 9% 0;
 	color: #7b7b7b;
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 2;
 }
-.texto-carousel>div>div>button{
+.texto-carousel-mobi>h1{
+	margin-top: 50%;
+	color: #fff;
+	font-family: 'Yeseva One', cursive;
+	font-size: 40px;
+	font-weight: 900;
+	text-align: left;
+	line-height: 1;
+}
+.texto-carousel-mobi>p{
+	text-align: justify;
+	margin: 10% 0 9% 0;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 2.5;
+}
+.texto-carousel>div>div>div>a,.texto-carousel-mobi>div>div>div>a{
 	border: 0;
 	color: #fff;
 	font-size:15px;
@@ -343,7 +360,7 @@ button.mfp-close{
 	background-color: #161b33;
 	width: 100%;
 	height: 50px;
-	margin-top: 20px;
+	padding: 15px 20px;
 }
 .carousel-control{
 	opacity: 1 !important;	
@@ -680,14 +697,15 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 .form>div>textarea {
 	height: 200px;
 	margin-top: 25px;
+	width: 100%;
 }
-.form>div>button {
+.form>div>div>button {
 	border: 0;
 	color: #161b33;
 	font-size:15px;
 	font-weight:700;
 	background-color: #b1874a;
-	width: 100%;
+	width: 90%;
 	height: 50px;
 	margin-top: 20px;
 }
@@ -728,12 +746,12 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 .news{
 	height: 370px;
 }
-.continente>div>div>h1,.categoria>div>div>h1{
+.categoria>div>div>h1,.continente>div>div>h1{
 	color: #fff;
 	font-size: 60px;
 	font-family: 'Yeseva One', cursive;
 }
-.continente>div>div>p{
+.categoria>div>div>p{
 	color: #fff;
 	font-size: 14px;
 	text-align: center;
@@ -741,14 +759,14 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	letter-spacing: 2px;
 	font-weight: 600;
 }
-.categoria>div>div>p{
+.continente>div>div>p{
 	color: #fff;
 	font-size: 14px;
 	text-align: right;
 	margin-bottom: 50px;
 	letter-spacing: 5px;
 }
-.continente>div>div>select{
+.categoria>div>div>select{
 	color: #fff;
 	font-size: 12px;
 	letter-spacing: 5px;
@@ -764,13 +782,16 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 		margin-left: 0;
 		margin-right: 20px;
 	}
-	.continente>div>div>h1, .categoria>div>div>h1 {
+	.categoria>div>div>h1, .continente>div>div>h1 {
 		color: #fff;
 		font-size: 3em;
 		font-family: 'Yeseva One', cursive;
 	}
 }
 @media (max-width: 575px)  {
+	.thumb{
+		min-height:250px;
+	}
 	.roteiro-span{ 
 		margin:20px 0;
 	}
@@ -783,7 +804,7 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	}
 	.menu > div > nav > #navbar-collapse-x {
 		right: 21%;
-		top: 47%;
+		top: 31%;
 	}
 	.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
 		width: 50px;
@@ -799,19 +820,21 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 
 		font-size: 25px;
 	}
-	/*#navbar-collapse-x {
-		right: 21%;
-		top: 25%;
-	}*/
 	.menu > div > nav > #navbar-collapse-x {
-		right: 11%;
+		right: 20%;
 		top: 47%;
+	}
+	.menu > .container-fluid > .navbar > .navbar-header > span, .menu > .container-fluid > .navbar > .navbar-header > button {
+		margin-top: 13px;
 	}
 
 }
 @media (min-width: 576px) and (max-width: 767px)  {
+	.thumb{
+		min-height:350px;
+	}
 	.caption-titulo {
-		margin: 100px 0;
+		margin: 70px 0;
 	}
 	.menu > div > nav > #navbar-collapse-x {
 		right: 16%;
@@ -822,6 +845,16 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 }
 
 @media (min-width: 768px) and (max-width: 991px)  {
+	.thumb{
+		min-height:250px;
+	}
+	.caption-titulo>p{
+
+		font-size: 20px;
+	}
+	.caption-titulo {
+		margin: 60px 0;
+	}
 	#navbar-collapse-x {
 		right: 15%;
 		top: 25%;
@@ -837,62 +870,76 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 		margin-top: 0px;
 		font-size: 30px;
 	}
-	.caption-titulo>p{
+	/* .caption-titulo>p{
 
 		font-size: 40px;
 
+		} */
 	}
-}
 
-@media (min-width: 992px) and (max-width: 1329px){
+	@media (min-width: 992px) and (max-width: 1329px){
+		.thumb{
+			min-height:300px;
+		}
+		.caption-titulo {
+			margin: 60px 0;
+		}
+		#navbar-collapse-x {
+			right: 21%;
+			top: 25%;
+		}
+		.menu > div > nav > #navbar-collapse-x {
+			right: 13%;
+			top: 47%;
+		}
+		.caption-titulo>p{
+			margin: 0;
+			color: #b1874a;
+			font-family: 'Yeseva One', cursive;
+			font-size: 30px;
+			text-align: left;
+			line-height: 1;
+			display: block;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
 
-	#navbar-collapse-x {
-		right: 21%;
-		top: 25%;
-	}
-	.menu > div > nav > #navbar-collapse-x {
-		right: 13%;
-		top: 47%;
-	}
-	.caption-titulo>p{
-		margin: 0;
-		color: #b1874a;
-		font-family: 'Yeseva One', cursive;
-		font-size: 25px;
-		text-align: left;
-		line-height: 1;
-		display: block;
-		display: -webkit-box;
-		-webkit-line-clamp: 3;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-}
-
-@media (min-width: 1330px) {
-	.caption-titulo {
+	@media (min-width: 1330px) {
+		.menu > .container-fluid > .navbar > .navbar-header > span{
+			margin-right: 4%;
+		}
+		.thumb{
+			min-height:350px;
+		}
+		.caption-titulo {
+			margin: 60px 0;
+		}
+	/* .caption-titulo {
 		margin: 15% 0 20% 0;
-	}
+		} */
 
-	#navbar-collapse-x {
-		right: 10%;
-		top: 25%;
-	}
-	.menu > div > nav > #navbar-collapse-x {
-		right: 12%;
-		top: 47%;
-	}
-} 
-.topo-padding{
-	padding: 100px 0;
-}
-
-@media screen and (min-width: 991px){
-	.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
-		margin-right: -49px;
-	}
+		#navbar-collapse-x {
+			right: 10%;
+			top: 25%;
+		}
+		.menu > div > nav > #navbar-collapse-x {
+			right: 12%;
+			top: 47%;
+		}
+	} 
 	.topo-padding{
-		padding: 250px 0 150px 0;
+		padding: 100px 0;
 	}
-}
+
+	@media screen and (min-width: 991px){
+		.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+			margin-right: -49px;
+		}
+		.topo-padding{
+			padding: 250px 0 150px 0;
+		}
+	}

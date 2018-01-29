@@ -16,7 +16,9 @@
 
       <div class="collapse navbar-collapse" id="navbar-collapse-x">
         <ul class="nav navbar-nav navbar-right">
-         <li><a class="link-menu" href="#inicio">INÍCIO</a></li>
+         <li><a class="link-menu" href="{{route('pagina.index')}}">Pagina Inicial</a></li>
+         <li role="separator" class="divider"></li>
+         <li><a class="link-menu" href="#destinos">DESTINOS</a></li>
          <li role="separator" class="divider"></li>
          <li><a class="link-menu" href="#about">QUEM SOMOS</a></li>
          <li role="separator" class="divider"></li>

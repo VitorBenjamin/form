@@ -33,7 +33,7 @@
         <div class="row">
           <form action="{{route('postcontact')}}" method="post" class="form">
             {{ csrf_field() }}
-            <div class="col-sm-offset-4 col-sm-4 col-md-offset-0">
+            <div class="col-md-4">
               <input id="nome" name="nome" type="text" placeholder="Nome" required>
             </div>
             <div class="col-md-4">
@@ -47,13 +47,15 @@
               <input id="email" name="email" type="email" placeholder="E-mail" required>
             </div>
             <div class="col-xs-12">
-              <textarea name="mensagem" id="mensagem" placeholder="Digite aqui sua mensagem:"></textarea>
+              <textarea name="mensagem" id="mensagem" placeholder="Mensagem:" required></textarea>
             </div>
-            <div class="col-md-offset-10 col-md-2">
-              <button type="submit">ENVIAR</button>
+            <div class="row">
+              <div class="col-sm-offset-9 col-sm-3 col-md-offset-10 col-md-2">
+                <button type="submit">ENVIAR</button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>

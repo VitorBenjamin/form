@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImgsTable extends Migration
+class CreateCarouselsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateImgsTable extends Migration
      */
     public function up()
     {
-        Schema::create('imgs', function (Blueprint $table) {
+        Schema::create('carousels', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
-            $table->string('alt');
-            $table->integer('carousels_id')->unsigned();
+            $table->string('nome');
+            $table->string('descricao');
+            $table->boolean('ativo')->default(false);
             $table->timestamps();
-        });
-        Schema::table('imgs', function (Blueprint $table) {
-            DB::statement("ALTER TABLE imgs ADD imagem LONGBLOB NULL");
         });
     }
 
@@ -32,6 +29,6 @@ class CreateImgsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('imgs');
+        Schema::dropIfExists('carousels');
     }
 }

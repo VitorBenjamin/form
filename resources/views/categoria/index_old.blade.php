@@ -6,7 +6,7 @@
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
 <div class="container-fluid topo-padding" style="background: url('{{asset('assets/bg-categoria-continente-norte.jpg')}}') center/cover no-repeat;">
-  <div class="container continente">
+  <div class="container categoria">
     <div class="row">
       <div class="col-xs-11 col-sm-3 hidden-xs hidden-sm">
         <div class="container vertical-container">
@@ -51,7 +51,7 @@
 
       </div>
       <div class="col-xs-11 col-sm-9 col-md-offset-1 col-md-8">
-        <h1 class="text-right">{{$continente->nome}}</h1>
+        <h1 class="text-right">{{$categoria->nome}}</h1>
         <p>SALONE DEL MOBILE</p>
       </div>      
     </div>
@@ -98,7 +98,7 @@
 
 
 <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
-<section id="destinos">
+<section id="inicio">
   <!-- INCIO SESSÃO DE SELEÇÃO DE VIAGENS -->
   <div class="container-fluid select-brown">
     <div class="container select-margin">
@@ -122,7 +122,6 @@
     </div>
   </div>
   <!-- FIM DA SESSÃO DE SELEÇÃO DE VIAGENS -->
-
   <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
   <div id="dinamico">
     <div class="container-fluid" style="background: #161b33">
@@ -323,7 +322,7 @@
 <!-- INICIO DA SESSÃO DAS VIAGENS -->
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
+    <!-- <div class="col-sm-4">
       <div class="links-viagens">
         <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
 
@@ -364,11 +363,11 @@
         <a href="#" title=""><p>Silversea </p></a>
 
       </div>
-    </div>
+    </div> -->
     <div class="container">
       <div class="row" style="padding: 30px;">
         <div class="col-sm-offset-5 col-sm-2" style="text-align: center;">
-          <button id="add" type="button" class="links-vermais">VER TODAS</button>
+          <button id="add" type="button" class="links-vermais">VER MAIS</button>
         </div>
       </div>
     </div>

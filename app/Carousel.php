@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Img extends Model
+class Carousel extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,6 +12,11 @@ class Img extends Model
      * @var array
      */
     protected $fillable = [
-        'titulo', 'alt' ,'ativo','imagem'
+    	'nome', 'descricao', 'ativo'
     ];
+
+    public function imgs()
+    {
+    	return $this->hasMany('App\Img','carousels_id');
+    }
 }

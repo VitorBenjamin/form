@@ -18,6 +18,8 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a class="link-menu" href="#inicio">INÍCIO</a></li>
           <li role="separator" class="divider"></li>
+          <li><a class="link-menu" href="#destinos">DESTINOS</a></li>
+         <li role="separator" class="divider"></li>
           <li><a class="link-menu" href="#about">QUEM SOMOS</a></li>
           <li role="separator" class="divider"></li>
           <li><a class="link-menu" href="#destaque">VIAGEM DESTAQUE</a></li>

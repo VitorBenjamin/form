@@ -24,7 +24,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
 	Route::group(['prefix' => 'categoria'], function() {
 		Route::get('', ['uses' => 'CategoriaController@index', 'as' => 'categoria.index']);
 		Route::get('cadastrar', ['uses' => 'CategoriaController@create', 'as' => 'categoria.create']);
@@ -53,6 +53,16 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::get('editar-viagem/{id}', ['uses' => 'ViagemController@editar', 'as' => 'viagem.editar']);
 		Route::put('atualizar-viagem/{id}', ['uses' => 'ViagemController@update', 'as' => 'viagem.update']);
 		Route::get('mudar-estado-viagem/{id}', ['uses' => 'ViagemController@mudarEstado', 'as' => 'viagem.mudarEstado']);
+
+	});
+	Route::group(['prefix' => 'carousel'], function() {
+		Route::get('', ['uses' => 'CarouselController@index', 'as' => 'carousel.index']);
+		Route::get('cadastrar', ['uses' => 'CarouselController@create', 'as' => 'carousel.create']);
+		Route::post('salvar', ['uses' => 'CarouselController@salvar', 'as' => 'carousel.salvar']);
+		Route::get('deletar-carousel/{id}', ['uses' => 'CarouselController@excluir', 'as' => 'carousel.excluir']);
+		Route::get('editar-carousel/{id}', ['uses' => 'CarouselController@editar', 'as' => 'carousel.editar']);
+		Route::put('atualizar-carousel/{id}', ['uses' => 'CarouselController@update', 'as' => 'carousel.update']);
+		Route::get('mudar-estado-carousel/{id}', ['uses' => 'CarouselController@mudarEstado', 'as' => 'carousel.mudarEstado']);
 
 	});
 });

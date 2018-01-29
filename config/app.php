@@ -235,6 +235,7 @@ return [
         'Continente' => App\Continente::class,
         'Viagem' => App\Viagem::class,
         'Img' => App\Img::class,
+        'Carousel' => App\Img::class,
 
     ],
 

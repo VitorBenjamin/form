@@ -31,7 +31,7 @@
         @foreach ($viagem as $viagem)
         <tr>
           <td>{{$viagem->titulo}}</td>
-          <td>{{$viagem->descricao}}</td>
+          <td><p class="show-summary">{{$viagem->descricao}}</p></td>
           <td>
             <div class="zoom-gallery" style="display: inline;">
               <a href="{{$viagem->thumb}}" data-source="{{$viagem->thumb}}" title="THUMB DA VIAGEM - {{$viagem->nome}}" style="width:35px;height:35px;">

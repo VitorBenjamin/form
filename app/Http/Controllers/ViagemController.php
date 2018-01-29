@@ -19,7 +19,9 @@ class ViagemController extends Controller
 	public function editar($id)
 	{
 		$viagem = Viagem::find($id);
-		return view('viagem.admin.editar',compact('viagem'));
+		$categorias = Categoria::all('id','nome');
+		$continentes = Continente::all('id','nome');
+		return view('viagem.admin.editar',compact('viagem','continentes','categorias'));
 	}
 
 	public function create()
@@ -113,7 +115,7 @@ class ViagemController extends Controller
 			'msg'=>"Cadastro do Viagem Atualizado com Sucesso!!!",
 			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return redirect()->route('viagem.admin_index');
+		return redirect()->route('viagem.index');
 	}
 	public function excluir($id)
 	{

@@ -5,115 +5,54 @@
 @include('layouts.menu')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: url('{{asset('assets/bg-categoria-continente-norte.jpg')}}') center/cover no-repeat;">
+<div class="container-fluid topo-padding" style="background: url('{{$continente->capa}}') center/cover no-repeat fixed;">
   <div class="container continente">
     <div class="row">
-      <div class="col-xs-11 col-sm-3 hidden-xs hidden-sm">
-        <div class="container vertical-container">
-          <div class="row">
-            <div class="col-sm-1">
-              <div class="arrows">
-                <button class="up"><i class="material-icons">keyboard_arrow_up</i></button>
-                <button class="down"><i class="material-icons">keyboard_arrow_down</i></button>  
-              </div>
-            </div>
-            <div class="col-sm-3 col-md-2">
-              <div class="vertical-menu">
-                <p class="p">
-                  @foreach ($categorias as $cat)
-                  <a href="{{route('pagina.exibirCategoria',mb_strtolower($cat->nome))}}">{{$cat->nome}}</a> 
-                  <br>
-                  @endforeach
-                  {{-- <a href="{{route('pagina.exibirCategoria','ski')}}">SKI</a> 
-                  <br>
-                  <a href="{{route('pagina.exibirCategoria','tenis')}}">TÊNIS</a>
-                  <br>
-                  <a href="{{route('pagina.exibirCategoria','golf')}}">GOLFE</a>
-                  <br>
-                  <a href="{{route('pagina.exibirCategoria','spa-saude')}}">SPA DE SAÚDE</a> 
-                  <br>
-                  <a href="{{route('pagina.exibirCategoria','honeywood-nandwedding')}}">HONEYMOON NANDWEDDING</a>
-                  <br>
-                  <a href="{{route('pagina.exibirCategoria','motociclismo')}}">MOTOCICLISMO</a>
-                  <br>
-                  <a href="{{route('pagina.exibirCategoria','windsurf')}}">WINDSURF</a> 
-                  <br>
-                  <a href="{{route('pagina.exibirCategoria','surf')}}">SURF</a>
-                  <br>
-                  <a href="{{route('pagina.exibirCategoria','boliche')}}">BOLICHE</a>
-                  <br> --}}
-                </p>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
+        <h1 class="text-center">{{$continente->nome}}</h1>
       </div>
-      <div class="col-xs-11 col-sm-9 col-md-offset-1 col-md-8">
-        <h1 class="text-right">{{$continente->nome}}</h1>
-        <p>SALONE DEL MOBILE</p>
-      </div>      
+    </div>
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12" style="text-align: center;">
+        <select class="destino">
+          <option value="">ESCOLHA UM DESTINO</option>}
+          @foreach ($continentes as $cont)
+          <option value="{{route('pagina.exibirContinente',mb_strtolower($cont->nome))}}">{{$cont->nome}}</option>
+          @endforeach
+        </select>
+      </div>
     </div>
   </div>
 </div>
 <!-- FIM SESSÃO TOPO DA VIAGEM -->
 
-{{-- <div class="container vertical-container hidden-xs hidden-sm">
-  <div class="row">
-    <div class="col-sm-1">
-      <div class="arrows">
-        <button class="up"><i class="material-icons">keyboard_arrow_up</i></button>
-        <button class="down"><i class="material-icons">keyboard_arrow_down</i></button>  
-      </div>
-    </div>
-    <div class="col-sm-3 col-md-2">
-      <div class="vertical-menu">
-        <p class="p">
-          <a href="{{route('pagina.exibirCategoria','ski')}}">SKI</a> 
-          <br>
-          <a href="{{route('pagina.exibirCategoria','tenis')}}">TÊNIS</a>
-          <br>
-          <a href="{{route('pagina.exibirCategoria','golf')}}">GOLFE</a>
-          <br>
-          <a href="{{route('pagina.exibirCategoria','spa-saude')}}">SPA DE SAÚDE</a> 
-          <br>
-          <a href="{{route('pagina.exibirCategoria','honeywood-nandwedding')}}">HONEYMOON NANDWEDDING</a>
-          <br>
-          <a href="{{route('pagina.exibirCategoria','motociclismo')}}">MOTOCICLISMO</a>
-          <br>
-          <a href="{{route('pagina.exibirCategoria','windsurf')}}">WINDSURF</a> 
-          <br>
-          <a href="{{route('pagina.exibirCategoria','surf')}}">SURF</a>
-          <br>
-          <a href="{{route('pagina.exibirCategoria','boliche')}}">BOLICHE</a>
-          <br>
-        </p>
-
-      </div>
-    </div>
-  </div>
-</div> --}}
-
-
 
 <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
-<section id="destinos">
+<section id="inicio">
   <!-- INCIO SESSÃO DE SELEÇÃO DE VIAGENS -->
-  <div class="container-fluid select-brown">
+  
+  <!-- SELECT VIAGENS -->
+  <div class="container-fluid select">
     <div class="container select-margin">
       <div class="row margem-padrao">
-        <div class="col-xs-12 col-sm-6 col-md-7">
-          <div class="border-left white">
+        <div class="col-sm-6 col-md-7">
+          <div class="border-left">
             <p class="center">VIAGENS</p>
           </div>
         </div>
         <div class="col-sm-6 col-md-5">
           <div class="select-right">
             <select class="destino">
-              <option value="">SELECIONE O CONTINENTE</option>
-              @foreach ($continentes as $cont)
-              <option value="{{route('pagina.exibirContinente',mb_strtolower($cont->nome))}}">{{$cont->nome}}</option>
+              <option value="">ESCOLHA UMA CATEGORIA</option>
+              @foreach ($categorias as $cat)
+              <option value="{{route('pagina.exibirCategoria',mb_strtolower($cat->nome))}}">{{$cat->nome}}</option>
               @endforeach
             </select>
           </div>
@@ -122,7 +61,7 @@
     </div>
   </div>
   <!-- FIM DA SESSÃO DE SELEÇÃO DE VIAGENS -->
-
+  
   <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
   <div id="dinamico">
     <div class="container-fluid" style="background: #161b33">
@@ -323,52 +262,10 @@
 <!-- INICIO DA SESSÃO DAS VIAGENS -->
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <div class="links-viagens">
-        <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Azura - Moçambique & Tanzania</p></a>
-
-        <a href="#" title=""><p>Art Basel Miami 2017</p></a>
-
-        <a href="#" title=""><p>Silversea </p></a>
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="links-viagens">
-        <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Azura - Moçambique & Tanzania</p></a>
-
-        <a href="#" title=""><p>Art Basel Miami 2017</p></a>
-
-        <a href="#" title=""><p>Silversea </p></a>
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="links-viagens">
-        <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Tailândia - Soneva Kiri</p></a>
-
-        <a href="#" title=""><p>Azura - Moçambique & Tanzania</p></a>
-
-        <a href="#" title=""><p>Art Basel Miami 2017</p></a>
-
-        <a href="#" title=""><p>Silversea </p></a>
-
-      </div>
-    </div>
     <div class="container">
       <div class="row" style="padding: 30px;">
         <div class="col-sm-offset-5 col-sm-2" style="text-align: center;">
-          <button id="add" type="button" class="links-vermais">VER TODAS</button>
+          <button id="add" type="button" class="links-vermais">VER MAIS</button>
         </div>
       </div>
     </div>
@@ -380,41 +277,40 @@
 <section id="destaque">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12" style="padding: 30px; background: url('{{asset('assets/slide-02.jpg')}}') center/cover no-repeat fixed; min-height:550px">
+      <div class="col-xs-12" style="padding: 30px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{asset('assets/slide-02.jpg')}}') center/cover no-repeat; min-height:550px">
         <div style="padding:150px 0 30px 0; width: 100%; min-height: 550px;border: 3px solid #fff">
-          <div class="container destaque">
+          <div class="destaque">
             <div class="row">
-              <div class="col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4" style="text-align: center;" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+              <div class="col-sm-offset-4 col-sm-4 col-md-offset-5 col-md-2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750">
                 <a href="#" title="">
-                  <span class="text-center">PACOTE ESPECIAL</span>
+                  <span> PACOTE ESPECIAL</span>
                 </a>
-
               </div>
             </div>
             <div class="row">
-              <div class="col-md-offset-2 col-md-8">
+              <div class="col-md-offset-1 col-md-10">
                 <h1 class="text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                   Casa de Uco Mendoza
                 </h1>
               </div>
             </div>
             <div class="row">
-             <div class="col-sm-offset-4 col-sm-4 col-md-offset-5 col-md-2">
-              <h5 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="text-center" style="margin-bottom: 150px;">
-                ARGENTINA
-              </h5>
+              <div class="col-md-offset-5 col-md-2">
+                <h5 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="750" class="text-center" style="margin-bottom: 150px;">
+                  ARGENTINA
+                </h5>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-offset-1 col-sm-10 col-md-offset-4 col-md-4">
-              <img class="img-responsive" style="margin:auto" src="{{ asset('assets/logo-formula-turismo-branca.png') }}" alt="">
+            <div class="row">
+              <div class="col-md-offset-4 col-md-4">
+                <img class="img-responsive" style="margin:auto" src="{{ asset('assets/logo-formula-turismo-branca.png') }}" alt="">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 <!-- FIM SESSÃO DA VIAGEM EM DESTAQUE -->
 
@@ -451,5 +347,4 @@
   @include('layouts.footer')
 </section>
 <!-- FIM SESSÃO CLIENTES -->
-
 @endsection

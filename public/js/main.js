@@ -86,6 +86,18 @@ $( document ).ready(function() {
 
 			}
 		});
+	var wordLimitMobile = 40;
+	$('.show-summary-mobile').each(function() {
+		var post = $(this);
+		var text = post.text();
+		var re = /[\s]+/gm, results = null, count = 0;
+		while ((results = re.exec(text)) !== null && ++count < wordLimitMobile) { }
+			if (results !== null && count >= wordLimitMobile) {
+				var summary = text.substring(0, re.lastIndex - results[0].length);
+				post.text(summary + '...');
+
+			}
+		});
 });
 
 $( document ).ready(function() {
