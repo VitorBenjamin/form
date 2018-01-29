@@ -32,6 +32,8 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::get('deletar-categoria/{id}', ['uses' => 'CategoriaController@excluir', 'as' => 'categoria.excluir']);
 		Route::get('editar-categoria/{id}', ['uses' => 'CategoriaController@editar', 'as' => 'categoria.editar']);
 		Route::put('atualizar-categoria/{id}', ['uses' => 'CategoriaController@update', 'as' => 'categoria.update']);
+		Route::get('mudar-estado-categoria/{id}', ['uses' => 'CategoriaController@mudarEstado', 'as' => 'categoria.mudarEstado']);
+
 	});
 	Route::group(['prefix' => 'continente'], function() {
 		Route::get('', ['uses' => 'ContinenteController@index', 'as' => 'continente.index']);
@@ -40,6 +42,8 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::get('deletar-continente/{id}', ['uses' => 'ContinenteController@excluir', 'as' => 'continente.excluir']);
 		Route::get('editar-continente/{id}', ['uses' => 'ContinenteController@editar', 'as' => 'continente.editar']);
 		Route::put('atualizar-continente/{id}', ['uses' => 'ContinenteController@update', 'as' => 'continente.update']);
+		Route::get('mudar-estado-continente/{id}', ['uses' => 'ContinenteController@mudarEstado', 'as' => 'continente.mudarEstado']);
+
 	});
 	Route::group(['prefix' => 'viagem'], function() {
 		Route::get('', ['uses' => 'ViagemController@index', 'as' => 'viagem.index']);
@@ -48,5 +52,7 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::get('deletar-viagem/{id}', ['uses' => 'ViagemController@excluir', 'as' => 'viagem.excluir']);
 		Route::get('editar-viagem/{id}', ['uses' => 'ViagemController@editar', 'as' => 'viagem.editar']);
 		Route::put('atualizar-viagem/{id}', ['uses' => 'ViagemController@update', 'as' => 'viagem.update']);
+		Route::get('mudar-estado-viagem/{id}', ['uses' => 'ViagemController@mudarEstado', 'as' => 'viagem.mudarEstado']);
+
 	});
 });

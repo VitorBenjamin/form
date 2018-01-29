@@ -13,6 +13,20 @@ h1,p{
 	-moz-hyphens: manual;
 	hyphens: manual;
 }
+/*input:invalid,
+textarea:invalid {
+  border-color: red !important;
+}
+input:required:valid { border: 2px solid green; }*/
+input:optional {
+  border-left-color: #999;
+}
+input:required:valid {
+  border-left-color: palegreen;
+}
+input:invalid {
+  border-left-color: salmon;
+}
 button.mfp-arrow, button.mfp-close{
 	position: fixed;
 }
@@ -742,7 +756,7 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	font-weight: 500;
 }
 @media (max-width: 762px) {
-	.menu > .container > .navbar > .navbar-header > span,.menu > .container > .navbar > .navbar-header > button {
+	.menu > .container > .navbar > .navbar-header > span, .menu > .container > .navbar > .navbar-header > button {
 		margin-top:15px;
 	}
 	.navbar-wrapper {

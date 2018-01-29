@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 	$.extend(true, $.magnificPopup.defaults, 
 	{
@@ -39,6 +40,18 @@ $(document).ready(function() {
         }
         
     });
+    var wordLimit = 15;
+	$('.show-summary').each(function() {
+		var post = $(this);
+		var text = post.text();
+		var re = /[\s]+/gm, results = null, count = 0;
+		while ((results = re.exec(text)) !== null && ++count < wordLimit) { }
+			if (results !== null && count >= wordLimit) {
+				var summary = text.substring(0, re.lastIndex - results[0].length);
+				post.text(summary + '...');
+
+			}
+		});
 });
 $(document).ready( function() {
 	$(document).on('change', '.btn-file :file', function() {

@@ -13,6 +13,7 @@
           <th>Descrição</th>
           <th>Thumb</th>
           <th>Capa</th>
+          <th>Estado</th>
           <th>Ações</th>
         </tr>
       </thead>
@@ -22,6 +23,7 @@
           <th>Descrição</th>
           <th>Thumb</th>
           <th>Capa</th>
+          <th>Estado</th>
           <th>Ações</th>
         </tr>
       </tfoot>
@@ -29,7 +31,7 @@
         @foreach ($categoria as $cat)
         <tr>
           <td>{{$cat->nome}}</td>
-          <td>{{$cat->descricao}}</td>
+          <td><p class="show-summary">{{$cat->descricao}}</p></td>
           <td>
             <div class="zoom-gallery" style="display: inline;">
               <a href="{{$cat->thumb}}" data-source="{{$cat->thumb}}" title="THUMB DA CATEGORIA - {{$cat->nome}}" style="width:35px;height:35px;">
@@ -44,7 +46,14 @@
               </a>
             </div>
           </td>
-          <td >asdasdsadsa</td>
+          <td>
+            <span class="{{$cat->ativo ? 'on' : 'off'}}">{{$cat->ativo ? 'on' : 'off'}}</span>
+            <a href="{{route('categoria.mudarEstado',$cat->id)}}" title="" style="margin-top: 2px"><i class="material-icons">swap_horiz</i></a>
+          </td>
+          <td>
+            <a href="{{route('categoria.editar',$cat->id)}}" title=""><i class="material-icons">mode_edit</i></a>
+            <a href="{{route('categoria.excluir',$cat->id)}}" title=""><i class="material-icons">delete</i></a>
+          </td>
         </tr>
         @endforeach
       </tbody>

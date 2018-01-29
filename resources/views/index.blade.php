@@ -122,200 +122,54 @@
     </div>
   </div>
   <!-- FIM DA SESSÃO DE SELEÇÃO DE VIAGENS -->
-  <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
-  <div id="dinamico">
-    <div class="container-fluid" style="background: #161b33">
-      <div class="row">
-        <div class="col-sm-4" >
-          <div class="row">
-            <div class="thumb">
-              <img 
-              src="{{asset('assets/viagem-1.jpg')}}" data-aos="fade-down" alt="" data-aos-duration="500"class="img-responsive">
-              <div class="caption">
-                <div class="col-xs-12">
-                  <div class="caption-titulo">
-                    <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="border-top">
-                    <hr width="25%">
-                    <p>Porto Seguro</p>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="button-caption zoom-gallery">
-                    <a class="popup-modal a-caption" href="#test-modal">
-                      VER MAIS
-                    </a>
-                  </div>
+
+<!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
+<div id="dinamico">
+  @foreach ($viagens as $i => $v)
+  @if ($i/2 == 0 || $i ==0 )
+  <div class="container-fluid" style="background: #161b33">
+    <div class="row">
+      @endif
+      <div class="col-sm-4" >
+        <div class="row">
+          <div class="thumb">
+            <img src="{{$v->thumb}}" data-aos="fade-down" alt="" data-aos-duration="500" class="img-responsive">
+            <div class="caption">
+              <div class="col-xs-12">
+                <div class="caption-titulo">
+                  <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="row">
-            <div class="thumb">
-              <img src="{{asset('assets/viagem-2.jpg')}}" data-aos="fade-down" data-aos-duration="1000" alt="" class="img-responsive">
-              <div class="caption">
-                <div class="col-xs-12">
-                  <div class="caption-titulo">
-                    <div class="caption-titulo">
-                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="border-top">
-                    <hr width="25%">
-                    <p>Porto Seguro</p>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="button-caption zoom-gallery">
-                    <a class="popup-modal a-caption" href="#test-modal">
-                      VER MAIS
-                    </a>
-                  </div>
+              <div class="col-xs-6 col-md-6">
+                <div class="border-top">
+                  <hr width="25%">
+                  <p>Porto Seguro</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="row">
-            <div class="thumb">
-              <img src="{{asset('assets/viagem-3.jpg')}}" data-aos="fade-down" data-aos-duration="1500" alt="" class="img-responsive">
-              <div class="caption">
-                <div class="col-xs-12">
-                  <div class="caption-titulo">
-                    <div class="caption-titulo">
-                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="border-top">
-                    <hr width="25%">
-                    <p>Porto Seguro</p>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="button-caption zoom-gallery">
-                    <a class="popup-modal a-caption" href="#test-modal">
-                      VER MAIS
-                    </a>
-                  </div>
+              <div class="col-xs-6 col-md-6">
+                <div class="button-caption zoom-gallery">
+                  <a class="popup-modal a-caption" href="#test-modal">
+                    VER MAIS
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid" style="background: #161b33">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="row">
-            <div class="thumb">
-              <img src="{{asset('assets/viagem-4.jpg')}}" data-aos="fade-down"  alt="" class="img-responsive">
-              <div class="caption">
-                <div class="col-xs-12">
-                  <div class="caption-titulo">
-                    <div class="caption-titulo">
-                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="caption-rodape">
-                  <div class="col-xs-6 col-md-6">
-                    <div class="border-top">
-                      <hr width="25%">
-                      <p>Porto Seguro</p>
-                    </div>
-                  </div>
-                  <div class="col-xs-6 col-md-6">
-                    <div class="button-caption zoom-gallery">
-                      <a class="popup-modal a-caption" href="#test-modal">
-                        VER MAIS
-
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="row">
-            <div class="thumb">
-              <img src="{{asset('assets/viagem-5.jpg')}}" data-aos="fade-down"  alt="" class="img-responsive">
-              <div class="caption">
-                <div class="col-xs-12">
-                  <div class="caption-titulo">
-                    <div class="caption-titulo">
-                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="border-top">
-                    <hr width="25%">
-                    <p>Porto Seguro</p>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="button-caption zoom-gallery">
-                    <a class="popup-modal a-caption" href="#test-modal">
-                      VER MAIS
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="row">
-            <div class="thumb">
-              <img src="{{asset('assets/viagem-6.jpg')}}" data-aos="fade-down"  alt="" class="img-responsive">
-              <div class="caption">
-                <div class="col-xs-12">
-                  <div class="caption-titulo">
-                    <div class="caption-titulo">
-                      <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="border-top">
-                    <hr width="25%">
-                    <p>Porto Seguro Porto Seguro </p>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                  <div class="button-caption zoom-gallery">
-                    <a class="popup-modal a-caption" href="#test-modal">
-                      VER MAIS
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      @if ($i/2 == 0 && $i>0)
     </div>
   </div>
-  <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
-  <!-- <a class="popup-modal" href="#test-modal">Open modal</a> -->
+  @endif
+  @endforeach
+</div>
+<!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
+<!-- <a class="popup-modal" href="#test-modal">Open modal</a> -->
 
-  <div id="test-modal" class="mfp-hide2 white-popup-block closeOnBgClick ">
-    <h1><a class="popup-modal-dismiss" href="#">X</a></h1>
-    <img class="img-responsive" src="{{asset('assets/arte-viagem.jpg')}}" alt="">
-  </div>
+<div id="test-modal" class="mfp-hide2 white-popup-block closeOnBgClick ">
+  <h1><a class="popup-modal-dismiss" href="#">X</a></h1>
+  <img class="img-responsive" src="{{asset('assets/arte-viagem.jpg')}}" alt="">
+</div>
 </section>
 
 <!-- <div class="zoom-gallery">
@@ -365,49 +219,10 @@
 </section>
 <!-- FIM SESSÃO DA VIAGEM EM DESTAQUE -->
 
-<!-- INCIO da SESSÃO MONTE SEU ROTERIRO -->
-<section id="monte-seu-roteiro">
-  <div class="container-fluid" style="background-color: #fff">
-    <div class="row" style="margin: 7% 0 5% 0">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-7 col-md-5">
-            <div class="border-left">
-              <p class="center" style="color: #161b33;">MONTE O SEU ROTEIRO</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <p class="roteiro-paragrafo" data-aos="fade-down">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting,
-            </p>
-          </div>
-          <div class="col-md-6">
-            <p class="roteiro-paragrafo" data-aos="fade-down">
-              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>
+<!-- INICIO SESSÃO DE ROTEIRO-->
+@include('layouts.roteiro')
+<!-- FIM DA SESSÃO DE ROTEIRO-->
 
-        <div class="row">
-          <div class="col-md-6" data-aos="fade-down">
-            <img class="img-responsive" src="{{asset('assets/avatar-consultora.png')}}" style="float:left;" alt="">
-            <img src="{{asset('assets/assinatura-consultora.svg')}}" style="width: 40%; margin: 40px 0 0 0;clear:both" alt="">
-          </div>
-          <div class="col-md-6" style="margin-top:35px" data-aos="fade-down">
-            <img class="roteiro-img" src="{{asset ('assets/icon-email.svg')}}" alt="" style="width:30px">
-            <span class="roteiro-span">roteiro@formulaturismo.com.br</span>
-
-            <img class="roteiro-img" src="{{asset('assets/icon-telefone.svg')}}" alt="" style="width:30px">
-            <span class="roteiro-span">+55 (21) 2509-4614</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- FIM DA SESSÃO MONTE SEU ROTERIRO -->
 <!-- INCIO SESSÃO CATEGORIAS -->
 @include('layouts.categorias')
 <!-- FIM LISTAGENS CATEGORIAS -->

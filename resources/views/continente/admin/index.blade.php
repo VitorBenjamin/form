@@ -13,6 +13,7 @@
           <th>Descrição</th>
           <th>Thumb</th>
           <th>Capa</th>
+          <th>Estado</th>
           <th>Ações</th>
         </tr>
       </thead>
@@ -22,6 +23,7 @@
           <th>Descrição</th>
           <th>Thumb</th>
           <th>Capa</th>
+          <th>Estado</th>
           <th>Ações</th>
         </tr>
       </tfoot>
@@ -29,7 +31,7 @@
         @foreach ($continente as $cont)
         <tr>
           <td>{{$cont->nome}}</td>
-          <td>{{$cont->descricao}}</td>
+          <td><p class="show-summary">{{$cont->descricao}}</p></td>
           <td>
             <div class="zoom-gallery" style="display: inline;">
               <a href="{{$cont->thumb}}" data-source="{{$cont->thumb}}" title="THUMB DO CONTINENTE - {{$cont->nome}}" style="width:35px;height:35px;">
@@ -44,7 +46,14 @@
               </a>
             </div>
           </td>
-          <td >asdasdsadsa</td>
+          <td>
+            <span class="{{$cont->ativo ? 'on' : 'off'}}">{{$cont->ativo ? 'on' : 'off'}}</span>
+            <a href="{{route('continente.mudarEstado',$cont->id)}}" title="" style="margin-top: 2px"><i class="material-icons">swap_horiz</i></a>
+          </td>
+          <td>
+            <a href="{{route('continente.editar',$cont->id)}}" title=""><i class="material-icons">mode_edit</i></a>
+            <a href="{{route('continente.excluir',$cont->id)}}" title=""><i class="material-icons">delete</i></a>
+          </td>
         </tr>
         @endforeach
       </tbody>

@@ -23,7 +23,7 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<b>Selecione uma Categoria</b>
-					<select name="continentes_id" class="form-control" required>
+					<select name="categorias_id" class="form-control" required>
 						@foreach ($categoria as $cat)
 							<option value="{{$cat->id}}">{{$cat->nome}}</option>}
 						@endforeach
@@ -31,7 +31,7 @@
 				</div>
 				<div class="col-sm-6">
 					<b>Selecione um Continente</b>
-					<select name="categorias_id" class="form-control" required> 
+					<select name="continentes_id" class="form-control" required> 
 						@foreach ($continente as $cont)
 							<option value="{{$cont->id}}">{{$cont->nome}}</option>}
 						@endforeach

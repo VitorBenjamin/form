@@ -13,8 +13,8 @@ class PaginasController extends Controller
     {
         $categorias = Categoria::all('nome');
         $continentes = Continente::all('nome');
-
-        return view('index',compact('categorias','continentes'));
+        $viagens = Viagem::all();
+        return view('index',compact('categorias','continentes','viagens'));
     }
 
     public function exibirContinente($nome)
@@ -31,8 +31,9 @@ class PaginasController extends Controller
             return redirect()->route('pagina.index');
         }
         $continentes = Continente::all('nome');
+        $categorias = Categoria::all('nome');
         $viagens = Viagem::where('continentes_id', $continente->id)->get();
-        return view('continente.index',compact('continentes','continente'));
+        return view('continente.index',compact('continentes','continente','categorias'));
 
     }
     public function exibirCategoria($nome)

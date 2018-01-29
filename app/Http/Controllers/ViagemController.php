@@ -29,6 +29,23 @@ class ViagemController extends Controller
 
 		return view('viagem.admin.create',compact('categoria','continente'));
 	}
+	public function mudarEstado($id)
+	{
+		$viagem = Viagem::find($id);
+		if ($viagem->ativo) {
+			$viagem->ativo = false;
+			$msg ="Viagem ".$viagem->nome." DESATIVADA Com Sucesso!!!";
+		}else{
+			$viagem->ativo = true;
+			$msg ="Viagem ".$viagem->nome." ATIVADA Com Sucesso!!!";
+		}
+		$viagem->save();
+		Session::flash('flash_message',[
+			'msg'=>$msg,
+			'class'=>"alert alert-success alert-dismissible"
+		]);
+		return redirect()->route('viagem.index');
+	}
 
 	public function salvar(Request $request)
 	{	
@@ -38,10 +55,10 @@ class ViagemController extends Controller
 		$data = [
 			'titulo' => $request->titulo,
 			'descricao' => $request->descricao ? $request->descricao : null,
+			'ativo' => true,
 			'categorias_id' => $request->categorias_id,
 			'continentes_id' => $request->continentes_id,
 		];
-
 		if ($mimeFoto == "image/jpeg" || $mimeFoto == "image/png") {
 			$file = Image::make($request->file('foto'));
 			$foto_img_64 = (string) $file->encode('data-url');
@@ -62,10 +79,14 @@ class ViagemController extends Controller
 	public function update(Request $request,$id)
 	{	
 		$viagem = Viagem::find($id);
-		$mimeFoto = $request->file('foto')->getClientMimeType();
-		$mimeThumb = $request->file('thumb')->getClientMimeType();
-		$data = ['nome' => $request->nome];
+		$data = [
+			'titulo' => $request->titulo,
+			'descricao' => $request->descricao ? $request->descricao : null,
+			'categorias_id' => $request->categorias_id,
+			'continentes_id' => $request->continentes_id,
+		];
 		if ($request->file('foto')) {
+			$mimeFoto = $request->file('foto')->getClientMimeType();
 			if ($mimeFoto == "image/jpeg" || $mimeFoto == "image/png") {
 				$file = Image::make($request->file('foto'));
 				$foto_img_64 = (string) $file->encode('data-url');
@@ -76,6 +97,7 @@ class ViagemController extends Controller
 		}
 
 		if ($request->file('thumb')) {
+			$mimeThumb = $request->file('thumb')->getClientMimeType();
 			if ($mimeThumb == "image/jpeg" || $mimeThumb == "image/png") {
 				$file = Image::make($request->file('thumb'));
 				$thumb_img_64 = (string) $file->encode('data-url');
@@ -88,8 +110,8 @@ class ViagemController extends Controller
 		$viagem->update($data);
 
 		Session::flash('flash_message',[
-			'msg'=>"Cadastro do Viagem Realizado com Sucesso!!!",
-			'class'=>"alert bg-green alert-dismissible"
+			'msg'=>"Cadastro do Viagem Atualizado com Sucesso!!!",
+			'class'=>"alert alert-success alert-dismissible"
 		]);
 		return redirect()->route('viagem.admin_index');
 	}
@@ -100,7 +122,7 @@ class ViagemController extends Controller
 
 		Session::flash('flash_message',[
 			'msg'=>"Cadastro do Viagem Realizado com Sucesso!!!",
-			'class'=>"alert bg-green alert-dismissible"
+			'class'=>"alert alert-success alert-dismissible"
 		]);
 		return view('viagem.admin.admin_index');
 	}

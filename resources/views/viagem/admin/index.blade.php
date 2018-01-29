@@ -13,6 +13,7 @@
           <th>Descrição</th>
           <th>Thumb</th>
           <th>Capa</th>
+          <th>Estado</th>
           <th>Ações</th>
         </tr>
       </thead>
@@ -22,6 +23,7 @@
           <th>Descrição</th>
           <th>Thumb</th>
           <th>Capa</th>
+          <th>Estado</th>
           <th>Ações</th>
         </tr>
       </tfoot>
@@ -44,7 +46,14 @@
               </a>
             </div>
           </td>
-          <td>asdasdsadsa</td>
+          <td>
+            <span class="{{$viagem->ativo ? 'on' : 'off'}}">{{$viagem->ativo ? 'on' : 'off'}}</span>
+            <a href="{{route('viagem.mudarEstado',$viagem->id)}}" title="" style="margin-top: 2px"><i class="material-icons">swap_horiz</i></a>
+          </td>
+          <td>
+            <a href="{{route('viagem.editar',$viagem->id)}}" title=""><i class="material-icons">mode_edit</i></a>
+            <a href="{{route('viagem.excluir',$viagem->id)}}" title=""><i class="material-icons">delete</i></a>
+          </td>
         </tr>
         @endforeach
       </tbody>

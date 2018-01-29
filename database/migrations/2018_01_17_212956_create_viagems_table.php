@@ -19,6 +19,7 @@ class CreateViagemsTable extends Migration
             $table->text('descricao');
             $table->integer('categorias_id')->unsigned();
             $table->integer('continentes_id')->unsigned();
+            $table->boolean('ativo')->default(true);
             $table->timestamps();
         });
         Schema::table('viagens', function (Blueprint $table) {

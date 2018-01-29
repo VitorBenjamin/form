@@ -37,7 +37,7 @@
               <input id="nome" name="nome" type="text" placeholder="Nome" required>
             </div>
             <div class="col-md-4">
-              <input id="telefone" name="telefone" pattern="^\d{11}$" type="tel" placeholder="Telefone">
+              <input id="telefone" name="telefone" pattern="^\d{11}$" title="O Número Deve ter 11 digitos Exemplo: 73999541256" type="tel" placeholder="Telefone">
               <label class="nao-aparece">Se você não é um robô, deixe em branco.</label>
               <input type="text" class="nao-aparece" name="leaveblank">
               <label class="nao-aparece">Se você não é um robô, não mude este campo.</label>

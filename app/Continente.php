@@ -12,7 +12,7 @@ class Continente extends Model
      * @var array
      */
     protected $fillable = [
-        'nome', 'thumb', 'capa','descricao','tag'
+        'nome', 'thumb', 'capa','descricao','tag','ativo'
     ];
 
     public function viagem()

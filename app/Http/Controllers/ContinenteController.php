@@ -24,6 +24,26 @@ class ContinenteController extends Controller
 	{
 		return view('continente.admin.create');
 	}
+	public function mudarEstado($id)
+	{
+		$continente = Continente::find($id);
+		if ($continente->ativo) {
+			$continente->ativo = false;
+			$msg ="Continente ".$continente->nome." DESATIVADO com Sucesso!!!";
+		}else{
+			$continente->ativo = true;
+			$msg ="Continente ".$continente->nome." ATIVADO com Sucesso!!!";
+		}
+
+		$continente->save();
+
+
+		Session::flash('flash_message',[
+			'msg'=>$msg,
+			'class'=>"alert alert-success alert-dismissible"
+		]);
+		return redirect()->route('continente.index');
+	}
 
 	public function salvar(Request $request)
 	{ 
@@ -53,10 +73,12 @@ class ContinenteController extends Controller
 	public function update(Request $request,$id)
 	{	
 		$continente = Continente::find($id);
-		$mimeCapa = $request->file('capa')->getClientMimeType();
-		$mimeThumb = $request->file('thumb')->getClientMimeType();
-		$data = ['nome' => $request->nome];
+		$data = [
+			'nome' => $request->nome,
+			'descricao' => $request->descricao ? $request->descricao : null,
+		];
 		if ($request->file('capa')) {
+			$mimeCapa = $request->file('capa')->getClientMimeType();
 			if ($mimeCapa == "image/jpeg" || $mimeCapa == "image/png") {
 				$file = Image::make($request->file('capa'));
 				$capa_img_64 = (string) $file->encode('data-url');
@@ -67,6 +89,7 @@ class ContinenteController extends Controller
 		}
 		
 		if ($request->file('thumb')) {
+			$mimeThumb = $request->file('thumb')->getClientMimeType();
 			if ($mimeThumb == "image/jpeg" || $mimeThumb == "image/png") {
 				$file = Image::make($request->file('thumb'));
 				$thumb_img_64 = (string) $file->encode('data-url');
@@ -79,10 +102,10 @@ class ContinenteController extends Controller
 		$continente->update($data);
 
 		Session::flash('flash_message',[
-			'msg'=>"Cadastro do Continente Realizado com Sucesso!!!",
+			'msg'=>"Continente Atualizado com Sucesso!!!",
 			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return redirect()->route('continente.admin.admin_index');
+		return redirect()->route('continente.index');
 	}
 	public function excluir($id)
 	{
