@@ -179,6 +179,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        JeroenNoten\LaravelCkEditor\ServiceProvider::class,
     ],
 
     /*

@@ -22,7 +22,7 @@
     <div class="row">
       <div class="col-xs-12" style="text-align: center;">
         <select class="destino">
-          <option value="">ESCOLHA UM DESTINO</option>}
+          <option value="">ESCOLHA UM CONTINENTE</option>}
           @foreach ($continentes as $cont)
           <option value="{{route('pagina.exibirContinente',mb_strtolower($cont->nome))}}">{{$cont->nome}}</option>
           @endforeach
@@ -50,7 +50,7 @@
         <div class="col-sm-6 col-md-5">
           <div class="select-right">
             <select class="destino">
-              <option value="">ESCOLHA UMA CATEGORIA</option>
+              <option value="">ESCOLHA UM DESTINO</option>
               @foreach ($categorias as $cat)
               <option value="{{route('pagina.exibirCategoria',mb_strtolower($cat->nome))}}">{{$cat->nome}}</option>
               @endforeach

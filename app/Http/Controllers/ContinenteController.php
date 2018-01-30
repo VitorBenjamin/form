@@ -11,7 +11,7 @@ class ContinenteController extends Controller
 {
 	public function index()
 	{
-		$continente = Continente::all();
+		$continente = Continente::all('id','nome','descricao','ativo');
 		return view('continente.admin.index',compact('continente'));
 	}
 	public function editar($id)

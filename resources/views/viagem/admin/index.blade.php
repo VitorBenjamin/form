@@ -11,8 +11,8 @@
         <tr>
           <th>Nome</th>
           <th>Descrição</th>
-          <th>Thumb</th>
-          <th>Capa</th>
+          <!-- <th>Thumb</th>
+          <th>Capa</th> -->
           <th>Estado</th>
           <th>Ações</th>
         </tr>
@@ -21,8 +21,8 @@
         <tr>
           <th>Nome</th>
           <th>Descrição</th>
-          <th>Thumb</th>
-          <th>Capa</th>
+          <!-- <th>Thumb</th>
+          <th>Capa</th> -->
           <th>Estado</th>
           <th>Ações</th>
         </tr>
@@ -32,7 +32,7 @@
         <tr>
           <td>{{$viagem->titulo}}</td>
           <td><p class="show-summary">{{$viagem->descricao}}</p></td>
-          <td>
+<!--           <td>
             <div class="zoom-gallery" style="display: inline;">
               <a href="{{$viagem->thumb}}" data-source="{{$viagem->thumb}}" title="THUMB DA VIAGEM - {{$viagem->nome}}" style="width:35px;height:35px;">
                 <img class="img_popup" src="{{$viagem->thumb}}" width="35" height="35">
@@ -45,7 +45,7 @@
                 <img class="img_popup" src="{{$viagem->foto}}" width="35" height="35">
               </a>
             </div>
-          </td>
+          </td> -->
           <td>
             <span class="{{$viagem->ativo ? 'on' : 'off'}}">{{$viagem->ativo ? 'on' : 'off'}}</span>
             <a href="{{route('viagem.mudarEstado',$viagem->id)}}" title="" style="margin-top: 2px"><i class="material-icons">swap_horiz</i></a>

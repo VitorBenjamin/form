@@ -52,7 +52,7 @@
       </div>
       <div class="col-xs-11 col-sm-9 col-md-offset-1 col-md-8">
         <h1 class="text-right">{{$continente->nome}}</h1>
-        <p>SALONE DEL MOBILE</p>
+        <p>Lorem ipsum dolor</p>
       </div>      
     </div>
   </div>

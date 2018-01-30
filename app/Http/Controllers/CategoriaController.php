@@ -10,7 +10,7 @@ class CategoriaController extends Controller
 {
 	public function index()
 	{
-		$categoria = Categoria::all();
+		$categoria = Categoria::all('id','nome','descricao','ativo');
 		return view('categoria.admin.index',compact('categoria'));
 	}
 	public function create()

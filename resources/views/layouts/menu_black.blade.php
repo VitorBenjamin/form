@@ -1,5 +1,5 @@
 <div id="teste" class="navbar-wrapper">
-  <div class="container-fluid" data-aos="fade-down">
+  <div class="container-fluid">
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
         <span class="navbar-menu-text hidden-xs">MENU</span>

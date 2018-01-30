@@ -13,7 +13,7 @@
           <div class="row">
             <div class="col-sm-6 hidden-xs"  style="background: #fff center/cover no-repeat;height: 700px">
               <div class="row">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9" data-aos="fade-down" data-aos-duration="2500">
+                <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel">
                     <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
                     <p class="show-summary">
@@ -35,7 +35,7 @@
             </div>
             <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{ asset('assets/slide-01.jpg') }}') center/cover no-repeat; height: 700px;">
               <div class="row visible-xs">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9" data-aos="fade-down" data-aos-duration="2500">
+                <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel-mobi">
                     <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
                     <p data-aos="flip-left" class="show-summary-mobile">
@@ -63,7 +63,7 @@
           <div class="row">
             <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
               <div class="row">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9" data-aos="fade-down" data-aos-duration="2500">
+                <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel">
                     <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
                     <p class="show-summary">
@@ -84,7 +84,7 @@
             </div>
             <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{ asset('assets/slide-02.jpg') }}') center/cover no-repeat; height: 700px;">
               <div class="row visible-xs">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9" data-aos="fade-down" data-aos-duration="2500">
+                <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel-mobi">
                     <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
                     <p data-aos="flip-left" class="show-summary-mobile">
@@ -112,7 +112,7 @@
           <div class="row">
             <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
               <div class="row">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9" data-aos="fade-down" data-aos-duration="2500">
+                <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel">
                     <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
                     <p data-aos="flip-left" class="show-summary">
@@ -136,7 +136,7 @@
             <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{ asset('assets/slide-03.jpg') }}') center/cover no-repeat; height: 700px;">
 
               <div class="row visible-xs">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9" data-aos="fade-down" data-aos-duration="2500">
+                <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel-mobi">
                     <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
                     <p data-aos="flip-left" class="show-summary-mobile">
@@ -160,7 +160,7 @@
         </div>
       </div>
     </div>
-    <div data-aos="fade-down" class="col-sm-offset-6 col-sm-2 col-md-offset-6 col-md-1 hidden-xs" style="position: absolute; top: 10%; z-index:1000">
+    <div class="col-sm-offset-6 col-sm-2 col-md-offset-6 col-md-1 hidden-xs" style="position: absolute; top: 10%; z-index:1000">
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <img class="glyphicon glyphicon-chevron-left" src="{{asset('assets/seta-esq.svg')}}" alt="">
         <span class="sr-only">Previous</span>
@@ -366,8 +366,7 @@
 <!-- INCIO SESSÃO CHECK IN E DICAS -->
 @include('layouts.checkin_dicas')
 
-@include('modals.modals')
-<!-- FINAL SESSÃO CHECK IN E DICAS -->
+
 
 <!-- INCIO SESSÃO QUEM SOMOS -->
 <section id="about">
@@ -384,4 +383,6 @@
   @include('layouts.footer')
 </section>
 <!-- FIM SESSÃO CLIENTES -->
+@include('modals.modals')
+<!-- FINAL SESSÃO CHECK IN E DICAS -->
 @endsection

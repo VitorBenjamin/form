@@ -9,7 +9,9 @@
 		<div class="center">
 			<button type="button" class="btn btn-success submit">CADASTRAR VIAGEM</button>	
 		</div>
-		
+		<textarea id="bodyField"></textarea>
+
+		@ckeditor('bodyField')
 		<form action="{{ route('viagem.salvar')}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			<div class="form-group t">
@@ -25,7 +27,7 @@
 					<b>Selecione uma Categoria</b>
 					<select name="categorias_id" class="form-control" required>
 						@foreach ($categoria as $cat)
-							<option value="{{$cat->id}}">{{$cat->nome}}</option>}
+						<option value="{{$cat->id}}">{{$cat->nome}}</option>}
 						@endforeach
 					</select>
 				</div>
@@ -33,7 +35,7 @@
 					<b>Selecione um Continente</b>
 					<select name="continentes_id" class="form-control" required> 
 						@foreach ($continente as $cont)
-							<option value="{{$cont->id}}">{{$cont->nome}}</option>}
+						<option value="{{$cont->id}}">{{$cont->nome}}</option>}
 						@endforeach
 					</select>
 				</div>
@@ -62,8 +64,10 @@
 				</div>
 				<img id="img-upload" class="img-upload" />
 			</div>
+
 			<button type="submit" class="enviar hidden"></button>
 		</form>
+		
 	</div>
 </div>
 @endsection

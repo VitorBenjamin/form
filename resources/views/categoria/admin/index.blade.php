@@ -11,8 +11,8 @@
         <tr>
           <th>Nome</th>
           <th>Descrição</th>
-          <th>Thumb</th>
-          <th>Capa</th>
+          <!-- <th>Thumb</th>
+          <th>Capa</th> -->
           <th>Estado</th>
           <th>Ações</th>
         </tr>
@@ -21,8 +21,8 @@
         <tr>
           <th>Nome</th>
           <th>Descrição</th>
-          <th>Thumb</th>
-          <th>Capa</th>
+          <!-- <th>Thumb</th>
+          <th>Capa</th> -->
           <th>Estado</th>
           <th>Ações</th>
         </tr>
@@ -32,7 +32,7 @@
         <tr>
           <td>{{$cat->nome}}</td>
           <td><p class="show-summary">{{$cat->descricao}}</p></td>
-          <td>
+          <!-- <td>
             <div class="zoom-gallery" style="display: inline;">
               <a href="{{$cat->thumb}}" data-source="{{$cat->thumb}}" title="THUMB DA CATEGORIA - {{$cat->nome}}" style="width:35px;height:35px;">
                 <img class="img_popup" src="{{$cat->thumb}}" width="35" height="35">
@@ -45,7 +45,7 @@
                 <img class="img_popup" src="{{$cat->capa}}" width="35" height="35">
               </a>
             </div>
-          </td>
+          </td> -->
           <td>
             <span class="{{$cat->ativo ? 'on' : 'off'}}">{{$cat->ativo ? 'on' : 'off'}}</span>
             <a href="{{route('categoria.mudarEstado',$cat->id)}}" title="" style="margin-top: 2px"><i class="material-icons">swap_horiz</i></a>

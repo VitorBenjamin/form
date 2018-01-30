@@ -1,6 +1,3 @@
-AOS.init({
-	duration: 1200,
-});
 $(window).scroll(function(){                        
 	
 
@@ -48,7 +45,7 @@ $(".down").click(function() {
 });
 
 
-$( document ).ready(function() {
+
 	$('.link-menu').on('click', function(){
 		console.log("teste")
 		$('.collapse').removeClass('in');
@@ -86,7 +83,7 @@ $( document ).ready(function() {
 
 			}
 		});
-	var wordLimitMobile = 40;
+	var wordLimitMobile = 19;
 	$('.show-summary-mobile').each(function() {
 		var post = $(this);
 		var text = post.text();
@@ -98,7 +95,7 @@ $( document ).ready(function() {
 
 			}
 		});
-});
+
 
 $( document ).ready(function() {
 	var hamburger = $('#hamburger-icon');
@@ -302,64 +299,70 @@ $(document).ready(function(){
 
 });
 
-$('.formphp').on('submit', function() {
-	var emailContato = "contato@poloman.com.br"; // Escreva aqui o seu e-mail
+// $('.formphp').on('submit', function() {
+// 	var emailContato = "contato@poloman.com.br"; // Escreva aqui o seu e-mail
 
-	var that = $(this),
-	url = that.attr('action'),
-	type = that.attr('method'),
-	data = {};
+// 	var that = $(this),
+// 	url = that.attr('action'),
+// 	type = that.attr('method'),
+// 	data = {};
 	
-	that.find('[name]').each(function(index, value) {
-		var that = $(this),
-		name = that.attr('name'),
-		value = that.val();
+// 	that.find('[name]').each(function(index, value) {
+// 		var that = $(this),
+// 		name = that.attr('name'),
+// 		value = that.val();
 		
-		data[name] = value;
-	});
+// 		data[name] = value;
+// 	});
 	
-	$.ajax({
-		url: url,
-		type: type,
-		data: data,
-		success: function(response) {
+// 	$.ajax({
+// 		url: url,
+// 		type: type,
+// 		data: data,
+// 		success: function(response) {
 			
-			if( $('[name="leaveblank"]').val().length != 0 ) {
-				$('.formphp').html("<div id='form-erro'></div>");
-				$('#form-erro').html("<span>Falha no envio!</span><p>Você pode tentar novamente, ou enviar direto para o e-mail " + emailContato + " </p>")
-				.hide()
-				.fadeIn(1500, function() {
-					$('#form-erro');
-				});
-			} else {
+// 			if( $('[name="leaveblank"]').val().length != 0 ) {
+// 				$('.formphp').html("<div id='form-erro'></div>");
+// 				$('#form-erro').html("<span>Falha no envio!</span><p>Você pode tentar novamente, ou enviar direto para o e-mail " + emailContato + " </p>")
+// 				.hide()
+// 				.fadeIn(1500, function() {
+// 					$('#form-erro');
+// 				});
+// 			} else {
 				
-				$('.formphp').html("<div id='form-send'></div>");
-				$('#form-send').html("<span>Mensagem enviada!</span><p>Em breve eu entro em contato com você. Abraços.</p>")
-				.hide()
-				.fadeIn(1500, function() {
-					$('#form-send');
-				});
-			};
-		},
-		error: function(response) {
-			$('.formphp').html("<div id='form-erro'></div>");
-			$('#form-erro').html("<span>Falha no envio!</span><p>Você pode tentar novamente, ou enviar direto para o e-mail " + emailContato + " </p>")
-			.hide()
-			.fadeIn(1500, function() {
-				$('#form-erro');  
-			});
-		}
-	});
+// 				$('.formphp').html("<div id='form-send'></div>");
+// 				$('#form-send').html("<span>Mensagem enviada!</span><p>Em breve eu entro em contato com você. Abraços.</p>")
+// 				.hide()
+// 				.fadeIn(1500, function() {
+// 					$('#form-send');
+// 				});
+// 			};
+// 		},
+// 		error: function(response) {
+// 			$('.formphp').html("<div id='form-erro'></div>");
+// 			$('#form-erro').html("<span>Falha no envio!</span><p>Você pode tentar novamente, ou enviar direto para o e-mail " + emailContato + " </p>")
+// 			.hide()
+// 			.fadeIn(1500, function() {
+// 				$('#form-erro');  
+// 			});
+// 		}
+// 	});
 	
-	return false;
+// 	return false;
+// });
+
+// $(document).ready(function() {  
+// 	$("#myCarousel").swiperight(function() {  
+// 		$("#myCarousel").carousel('prev');  
+// 	});  
+// 	$("#myCarousel").swipeleft(function() {  
+// 		$("#myCarousel").carousel('next');  
+// 	});  
+// });  
+
+$(window).on('load', function() {
+	AOS.init({
+		duration: 1200,
+	});
+	AOS.refresh();
 });
-
-$(document).ready(function() {  
-	$("#myCarousel").swiperight(function() {  
-		$("#myCarousel").carousel('prev');  
-	});  
-	$("#myCarousel").swipeleft(function() {  
-		$("#myCarousel").carousel('next');  
-	});  
-});  
-
