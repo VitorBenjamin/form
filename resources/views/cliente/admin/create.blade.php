@@ -4,22 +4,25 @@
 <div class="container">
 	<div class="row">
 		<h1 class="center">
-			Cadastro do Carousel
+			Cadastro do Cliente
 		</h1>
 		<div class="center">
 			<button type="button" class="btn btn-success submit">CADASTRAR</button>	
 		</div>
 		
-		<form action="{{ route('carousel.salvar')}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+		<form action="{{ route('cliente.salvar')}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			{{ csrf_field() }}
-			<input type="hidden" name="viagem_id" value="{{$viagem_id}}">
 			<div class="form-group t">
-				<input id="titulo" name="titulo" type="text" class="form-control" required>
-				<label for="titulo">Título do Carouse</label>
+				<input id="nome" name="nome" type="text" class="form-control" required>
+				<label for="nome">Nome do Cliente</label>
 			</div>
 			<div class="form-group t">
-				<textarea id="descricao" name="descricao" class="form-control" required></textarea>
-				<label for="descricao">Descrição</label>
+				<textarea id="title" name="title" class="form-control" required></textarea>
+				<label for="title">Title (SEO)</label>
+			</div>
+			<div class="form-group t">
+				<textarea id="alt" name="alt" class="form-control" required></textarea>
+				<label for="alt">Alt (SEO)</label>
 			</div>
 			<div class="form-group">
 				<b>Enviar Imagem</b>

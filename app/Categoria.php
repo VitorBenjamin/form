@@ -12,7 +12,7 @@ class Categoria extends Model
      * @var array
      */
     protected $fillable = [
-    	'nome', 'thumb', 'capa','descricao','tag','ativo'
+    	'nome', 'title_thumb', 'alt_thumb','title_capa', 'alt_capa', 'thumb', 'capa','descricao','tag','ativo'
     ];
 
     public function viagem()

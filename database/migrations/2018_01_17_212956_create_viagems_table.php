@@ -16,6 +16,7 @@ class CreateViagemsTable extends Migration
         Schema::create('viagens', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
+            $table->string('descricao');
             $table->text('descricao');
             $table->integer('categorias_id')->unsigned();
             $table->integer('continentes_id')->unsigned();

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Viagem;
 use App\Categoria;
 use App\Continente;
+use App\Carousel;
 use Mail;
 class PaginasController extends Controller
 {
@@ -14,7 +15,8 @@ class PaginasController extends Controller
         $categorias = Categoria::all('nome');
         $continentes = Continente::all('nome');
         $viagens = Viagem::all();
-        return view('index',compact('categorias','continentes','viagens'));
+        $carousels = Carousel::all();
+        return view('index',compact('categorias','continentes','viagens','carousels'));
     }
 
     public function exibirContinente($nome)

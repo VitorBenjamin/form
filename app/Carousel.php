@@ -12,11 +12,11 @@ class Carousel extends Model
      * @var array
      */
     protected $fillable = [
-    	'nome', 'descricao', 'ativo'
+    	'titulo', 'descricao', 'title', 'alt', 'imagem', 'ativo','viagens_id'
     ];
 
-    public function imgs()
+    public function viagem()
     {
-    	return $this->hasMany('App\Img','carousels_id');
+    	return $this->belongsTo('App\Viagem','viagens_id');
     }
 }

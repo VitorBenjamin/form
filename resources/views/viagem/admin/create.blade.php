@@ -9,11 +9,14 @@
 		<div class="center">
 			<button type="button" class="btn btn-success submit">CADASTRAR VIAGEM</button>	
 		</div>
-		<textarea id="bodyField"></textarea>
-
-		@ckeditor('bodyField')
+		
 		<form action="{{ route('viagem.salvar')}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			{{ csrf_field() }}
+			<div class="form-group">
+				<textarea id="bodyField"></textarea>
+
+				@ckeditor('bodyField',[])
+			</div>
 			<div class="form-group t">
 				<input id="titulo" name="titulo" type="text" class="form-control" required>
 				<label for="titulo">Título da Viagem</label>
@@ -67,7 +70,7 @@
 
 			<button type="submit" class="enviar hidden"></button>
 		</form>
-		
+
 	</div>
 </div>
 @endsection

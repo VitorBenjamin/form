@@ -8,18 +8,16 @@
 <section id="inicio">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-      <div class="item active">
+      @foreach ($carousels as $i => $car)
+      <div class="item {{$i == 0 ? 'active' :''}}">
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-6 hidden-xs"  style="background: #fff center/cover no-repeat;height: 700px">
               <div class="row">
                 <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel">
-                    <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
-                    <p class="show-summary">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
-                    </p>
-
+                    <h1 style="margin-top: 40%">{{$car->titulo}}</h1>
+                    <p class="show-summary">{{$car->descricao}}</p>
                     <div class="row">
                       <div class="col-xs-5 col-md-4">
                         <div class="zoom-gallery">
@@ -33,14 +31,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{ asset('assets/slide-01.jpg') }}') center/cover no-repeat; height: 700px;">
+            <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('{{ $car->imagem }}') center/cover no-repeat; height: 700px;">
               <div class="row visible-xs">
                 <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel-mobi">
-                    <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
-                    <p data-aos="flip-left" class="show-summary-mobile">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
-                    </p>
+                    <h1 style="margin-top: 40%">{{$car->titulo}}</h1>
+                    <p data-aos="flip-left" class="show-summary-mobile">{{$car->descricao}}</p>
 
                     <div class="row">
                       <div class="col-xs-5 col-md-4">
@@ -58,107 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="item">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
-              <div class="row">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9">
-                  <div class="texto-carousel">
-                    <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
-                    <p class="show-summary">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                    <div class="row">
-                      <div class="col-xs-5 col-md-4">
-                        <div class="zoom-gallery">
-                          <a class="popup-modal" href="#test-modal">
-                            VER MAIS
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{ asset('assets/slide-02.jpg') }}') center/cover no-repeat; height: 700px;">
-              <div class="row visible-xs">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9">
-                  <div class="texto-carousel-mobi">
-                    <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
-                    <p data-aos="flip-left" class="show-summary-mobile">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
-                    </p>
-
-                    <div class="row">
-                      <div class="col-xs-5 col-md-4">
-                        <div class="zoom-gallery">
-                          <a class="popup-modal" href="#test-modal">
-                            VER MAIS
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-6 hidden-xs" style="background: #fff center/cover no-repeat;height: 700px">
-              <div class="row">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9">
-                  <div class="texto-carousel">
-                    <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
-                    <p data-aos="flip-left" class="show-summary">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
-                    </p>
-
-                    <div class="row">
-                      <div class="col-xs-5 col-md-4">
-                        <div class="zoom-gallery">
-                          <a class="popup-modal" href="#test-modal">
-                            VER MAIS
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-sm-6" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{ asset('assets/slide-03.jpg') }}') center/cover no-repeat; height: 700px;">
-
-              <div class="row visible-xs">
-                <div class="col-sm-offset-1 col-sm-10 col-md-9">
-                  <div class="texto-carousel-mobi">
-                    <h1 style="margin-top: 40%">Arte Design e Arquitetura</h1>
-                    <p data-aos="flip-left" class="show-summary-mobile">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only ﬁve centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
-                    </p>
-
-                    <div class="row">
-                      <div class="col-xs-5 col-md-4">
-                        <div class="zoom-gallery">
-                          <a class="popup-modal" href="#test-modal">
-                            VER MAIS
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      @endforeach
     </div>
     <div class="col-sm-offset-6 col-sm-2 col-md-offset-6 col-md-1 hidden-xs" style="position: absolute; top: 10%; z-index:1000">
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -224,9 +120,7 @@
               </div>
               <div class="col-xs-6 col-md-6">
                 <div class="button-caption zoom-gallery">
-                  <a class="popup-modal a-caption" href="#test-modal">
-                    VER MAIS
-                  </a>
+                  <a class="popup-modal a-caption" href="#test-modal">VER MAIS</a>
                 </div>
               </div>
             </div>

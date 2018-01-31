@@ -8,7 +8,7 @@ class Viagem extends Model
 {
     protected $table = 'viagens';
     protected $fillable = [
-        'titulo', 'descricao', 'foto', 'thumb', 'especial', 'categorias_id','continentes_id','ativo'
+        'titulo', 'descricao', 'title_thumb', 'alt_thumb','title_foto', 'alt_foto', 'foto', 'thumb', 'especial', 'categorias_id','continentes_id','ativo'
     ];
     
     /** Consulta a imagem da Viagem
@@ -28,5 +28,9 @@ class Viagem extends Model
     public function continente()
     {
         return $this->belongsTo('App\Continente','continentes_id');
+    }
+    public function carousel()
+    {
+        return $this->hasMany('App\Carousel','viagens_id');
     }
 }

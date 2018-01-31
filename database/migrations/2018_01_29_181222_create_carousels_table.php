@@ -16,9 +16,14 @@ class CreateCarouselsTable extends Migration
         Schema::create('carousels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->string('descricao');
+            $table->text('descricao');
             $table->boolean('ativo')->default(false);
+            $table->integer('viagens_id')->unsigned();
             $table->timestamps();
+        });
+        Schema::table('carousels', function (Blueprint $table) {
+            $table->foreign('viagens_id')->references('id')->on('viagens')->onUpdate('cascade')->onDelete('cascade');
+            DB::statement("ALTER TABLE carousels ADD imagem LONGBLOB NULL");
         });
     }
 

@@ -51,6 +51,7 @@
             <a href="{{route('viagem.mudarEstado',$viagem->id)}}" title="" style="margin-top: 2px"><i class="material-icons">swap_horiz</i></a>
           </td>
           <td>
+            <a href="{{route('carousel.create',$viagem->id)}}" title=""><i class="material-icons">view_carousel</i></a>
             <a href="{{route('viagem.editar',$viagem->id)}}" title=""><i class="material-icons">mode_edit</i></a>
             <a href="{{route('viagem.excluir',$viagem->id)}}" title=""><i class="material-icons">delete</i></a>
           </td>

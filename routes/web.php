@@ -18,7 +18,7 @@ Route::get('pacote-de-viagens/categoria/{categoria}/', ['uses' => 'PaginasContro
 Route::post('enviar', ['uses'=>'PaginasController@postContact','as'=>'postcontact']);
 // Route::get('pacote-de-viagens/{categoria}', ['uses' => 'PaginasController@exibirCategoria', 'as' => 'pagina.exibirCategoria']);
 
-Route::get('admin/', ['uses' => 'Auth\LoginController@showLoginForm']);
+Route::get('admin', ['uses' => 'Auth\LoginController@showLoginForm']);
 
 Auth::routes();
 
@@ -57,12 +57,22 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
 	});
 	Route::group(['prefix' => 'carousel'], function() {
 		Route::get('', ['uses' => 'CarouselController@index', 'as' => 'carousel.index']);
-		Route::get('cadastrar', ['uses' => 'CarouselController@create', 'as' => 'carousel.create']);
+		Route::get('cadastrar/{id}', ['uses' => 'CarouselController@create', 'as' => 'carousel.create']);
 		Route::post('salvar', ['uses' => 'CarouselController@salvar', 'as' => 'carousel.salvar']);
 		Route::get('deletar-carousel/{id}', ['uses' => 'CarouselController@excluir', 'as' => 'carousel.excluir']);
 		Route::get('editar-carousel/{id}', ['uses' => 'CarouselController@editar', 'as' => 'carousel.editar']);
 		Route::put('atualizar-carousel/{id}', ['uses' => 'CarouselController@update', 'as' => 'carousel.update']);
 		Route::get('mudar-estado-carousel/{id}', ['uses' => 'CarouselController@mudarEstado', 'as' => 'carousel.mudarEstado']);
+
+	});
+	Route::group(['prefix' => 'cliente'], function() {
+		Route::get('', ['uses' => 'ClienteController@index', 'as' => 'cliente.index']);
+		Route::get('cadastrar', ['uses' => 'ClienteController@create', 'as' => 'cliente.create']);
+		Route::post('salvar', ['uses' => 'ClienteController@salvar', 'as' => 'cliente.salvar']);
+		Route::get('deletar-cliente/{id}', ['uses' => 'ClienteController@excluir', 'as' => 'cliente.excluir']);
+		Route::get('editar-cliente/{id}', ['uses' => 'ClienteController@editar', 'as' => 'cliente.editar']);
+		Route::put('atualizar-cliente/{id}', ['uses' => 'ClienteController@update', 'as' => 'cliente.update']);
+		Route::get('mudar-estado-cliente/{id}', ['uses' => 'ClienteController@mudarEstado', 'as' => 'cliente.mudarEstado']);
 
 	});
 });

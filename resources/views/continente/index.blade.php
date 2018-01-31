@@ -5,7 +5,7 @@
 @include('layouts.menu')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: url('{{asset('assets/bg-categoria-continente-norte.jpg')}}') center/cover no-repeat;">
+<div class="container-fluid topo-padding" style="background: url('{{$continente->capa}}') center/cover no-repeat;">
   <div class="container continente">
     <div class="row">
       <div class="col-xs-11 col-sm-3 hidden-xs hidden-sm">
