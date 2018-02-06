@@ -13,36 +13,11 @@
   <div class="row">
     <div class="col-xs-12" style="padding: 0">
       <div class="owl-carousel clientes owl-theme">
+        @foreach ($clientes as $cli)
         <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-1.jpg')}}" alt="">
+          <img class="img-responsive" src="{{$cli->imagem}}" alt="">
         </div>
-        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-2.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-3.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-4.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-5.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-1.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-2.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-3.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-4.jpg')}}" alt="">
-        </div>
-        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750">
-          <img class="img-responsive" src="{{asset('assets/cliente-5.jpg')}}" alt="">
-        </div>
+        @endforeach
       </div>
     </div>
   </div>

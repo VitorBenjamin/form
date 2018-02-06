@@ -12,18 +12,10 @@
 		
 		<form action="{{ route('viagem.salvar')}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			{{ csrf_field() }}
-			<div class="form-group">
-				<textarea id="bodyField"></textarea>
-
-				@ckeditor('bodyField',[])
-			</div>
+			
 			<div class="form-group t">
 				<input id="titulo" name="titulo" type="text" class="form-control" required>
 				<label for="titulo">Título da Viagem</label>
-			</div>
-			<div class="form-group t">
-				<textarea id="descricao" name="descricao" class="form-control" required></textarea>
-				<label for="descricao">Descrição</label>
 			</div>
 			<div class="row">
 				<div class="col-sm-6">
@@ -42,6 +34,15 @@
 						@endforeach
 					</select>
 				</div>
+			</div>
+			<div class="form-group">
+				<textarea id="bodyField" name="descricao" required></textarea>
+
+				@ckeditor('bodyField',[
+					'image2_disableResizer' => false,
+					'image2_prefillDimensions' => false,
+					'language' => 'pt-br',
+					])
 			</div>
 			<div class="form-group">
 				<b>Enviar uma miniatura</b>
@@ -67,10 +68,8 @@
 				</div>
 				<img id="img-upload" class="img-upload" />
 			</div>
-
 			<button type="submit" class="enviar hidden"></button>
 		</form>
-
 	</div>
 </div>
 @endsection

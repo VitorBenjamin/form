@@ -18,7 +18,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css') !!}
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css"/>
+    {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.css') !!}
     {!! Html::style('https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css') !!} 
     {!! Html::style('css/admin.css') !!} 
 </head>
@@ -81,9 +82,10 @@
                                     <a href="{{ route('viagem.create') }}">Cadastrar</a>
                                     <a href="{{ route('viagem.index') }}">Listagem</a>
                                 </li>
+                                <li><a href="{{route('carousel.index')}}" class="dropdown-toggle">Carousel</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{route('carousel.index')}}" class="dropdown-toggle">CAROUSEL</a></li>
+                        
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 CLIENTE <span class="caret"></span>
@@ -96,6 +98,18 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                DICAS <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('dica.create') }}">Cadastrar</a>
+                                    <a href="{{ route('dica.index') }}">Listagem</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                     @endif
                     <!-- Right Side Of Navbar -->
@@ -105,13 +119,14 @@
                         <li><a href="{{ route('login') }}">Entrar</a></li>
 
                         @else
-                        <li><a href="{{ route('register') }}">Registrar</a></li>
+                        
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ route('register') }}">Registrar</a></li>
                                 <li>
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair
                                     </a>
@@ -146,6 +161,10 @@
 <!-- Scripts -->
 {!! Html::script('js/app.js') !!} 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+{{-- <script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script> --}}
+<script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+{!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.js') !!}
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js') !!}
 {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js') !!}

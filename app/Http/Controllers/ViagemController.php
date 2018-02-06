@@ -126,6 +126,6 @@ class ViagemController extends Controller
 			'msg'=>"Cadastro do Viagem Realizado com Sucesso!!!",
 			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return view('viagem.admin.admin_index');
+		return redirect()->route('viagem.index');
 	}
 }

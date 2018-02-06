@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-
+use App\Cliente;
+use Intervention\Image\Facades\Image;
 class ClienteController extends Controller
 {
 	public function index()
 	{
-		$cliente = Cliente::all('id','nome','alt','ativo');
-		return view('cliente.admin.index',compact('cliente'));
+		$clientes = Cliente::all('id','nome','alt','ativo');
+		return view('cliente.admin.index',compact('clientes'));
 	}
 	public function editar($id)
 	{
@@ -45,6 +47,8 @@ class ClienteController extends Controller
 		$mimeImagem = $request->file('imagem')->getClientMimeType();
 		$data = [
 			'nome' => $request->nome,
+			'title' => $request->title,
+			'ativo' => true,
 			'alt' => $request->alt,
 		];
 		if ($mimeImagem == "image/jpeg" || $mimeImagem == "image/png") {
@@ -64,9 +68,10 @@ class ClienteController extends Controller
 	public function update(Request $request,$id)
 	{	
 		$cliente = Cliente::find($id);
-		$mimeImagem = $request->file('imagem')->getClientMimeType();
 		$data = [
 			'nome' => $request->nome,
+			'title' => $request->title,
+			'ativo' => $cliente->ativo,
 			'alt' => $request->alt,
 		];
 		if ($request->file('imagem')) {
@@ -81,9 +86,9 @@ class ClienteController extends Controller
 		}
 		
 		$cliente->update($data);
-
+		$msg ="Cliente ".$cliente->nome." Atualizado com Sucesso!!!";
 		Session::flash('flash_message',[
-			'msg'=>"Cliente Atualizado com Sucesso!!!",
+			'msg'=>$msg,
 			'class'=>"alert alert-success alert-dismissible"
 		]);
 		return redirect()->route('cliente.index');
@@ -94,9 +99,9 @@ class ClienteController extends Controller
 		$cliente->delete();
 
 		Session::flash('flash_message',[
-			'msg'=>"Cadastro do Cliente Realizado com Sucesso!!!",
+			'msg'=>"Exclusão do Cliente Realizado com Sucesso!!!",
 			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return view('cliente.admin.index');
+		return redirect()->route('cliente.index');
 	}
 }

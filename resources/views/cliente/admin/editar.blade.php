@@ -4,22 +4,26 @@
 <div class="container">
 	<div class="row">
 		<h1 class="center">
-			Atuliazação do Carousel
+			Atuliazação do Cliente 
 		</h1>
 		<div class="center">
 			<button type="button" class="btn btn-success submit">ATUALIZAR</button>	
 		</div>
 		
-		<form action="{{ route('carousel.update',$carousel->id)}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+		<form action="{{ route('cliente.update',$cliente->id)}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			{{ method_field('PUT')}}
 			<div class="form-group t">
-				<input id="titulo" name="titulo" value="{{$carousel->titulo}}" type="text" class="form-control" required>
-				<label for="titulo">Título do Carouse</label>
+				<input id="nome" name="nome" type="text" class="form-control" value="{{$cliente->nome}}" required>
+				<label for="nome">Nome do Cliente</label>
 			</div>
 			<div class="form-group t">
-				<textarea id="descricao" name="descricao" class="form-control" required>{{$carousel->descricao}}</textarea>
-				<label for="descricao">Descrição</label>
+				<input id="title" name="title" class="form-control" value="{{$cliente->title}}" required>
+				<label for="title">Title (SEO)</label>
+			</div>
+			<div class="form-group t">
+				<input id="alt" name="alt" class="form-control" value="{{$cliente->alt}}" required>
+				<label for="alt">Alt (SEO)</label>
 			</div>
 			<div class="form-group">
 				<b>Enviar Imagem</b>
@@ -31,7 +35,7 @@
 					</span>
 					<input type="text" class="form-control" readonly>
 				</div>
-				<img id="img-upload" class="img-upload" src="{{$carousel->imagem}}" />
+				<img id="img-upload" class="img-upload" src="{{$cliente->imagem}}" />
 			</div>
 			<button type="submit" class="enviar hidden"></button>
 		</form>

@@ -33,7 +33,6 @@
 </div>
 <!-- FIM SESSÃO TOPO DA VIAGEM -->
 
-
 <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
 <section id="destinos">
   <!-- INCIO SESSÃO DE SELEÇÃO DE VIAGENS -->

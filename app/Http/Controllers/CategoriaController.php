@@ -112,6 +112,6 @@ class CategoriaController extends Controller
 			'msg'=>"Cadastro da Categoria Realizado com Sucesso!!!",
 			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return view('categoria.admin.index');
+		return redirect()->route('categoria.index');
 	}
 }

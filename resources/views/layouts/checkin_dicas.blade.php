@@ -9,12 +9,9 @@
           <hr>
           <div class="collumn">
             <ul class="paises-lista">
-              <li><a title="" data-toggle="modal" data-target="#eua">Estados Unidos</a></li>
-              <li><a title="" data-toggle="modal" data-target="#hol">Holanda</a></li>
-              <li><a title="" data-toggle="modal" data-target="#con">Cone Sul</a></li>
-              <li><a title="" data-toggle="modal" data-target="#chi">Chile</a></li>
-              <li><a title="" data-toggle="modal" data-target="#mex">México</a></li>
-              <li><a title="" data-toggle="modal" data-target="#gui">Guiana</a></li>
+              @foreach ($check as $ch)
+                <li><a title="" data-toggle="modal" data-target="#{{$ch->id}}{{$ch->nome}}">{{$ch->nome}}</a></li>
+              @endforeach
             </ul>
           </div>
         </div>
@@ -26,13 +23,9 @@
           <hr>
           <div class="collumn">
             <ul class="paises-lista">
-              <li><a title="" data-toggle="modal" data-target="#casa">Casa</a></li>
-              <li><a title="" data-toggle="modal" data-target="#bolso">Bolso</a></li>
-              <li><a title="" data-toggle="modal" data-target="#doc">Documentos</a></li>
-              <li><a title="" data-toggle="modal" data-target="#sau">Saúde</a></li>
-              <li><a title="" data-toggle="modal" data-target="#seg">Seguro de Viagem</a></li>
-              <li><a title="" data-toggle="modal" data-target="#car">Carro</a></li>
-              <li><a title="" data-toggle="modal" data-target="#aer">Aéreo</a></li>
+              @foreach ($dicas as $d)
+                <li><a title="" data-toggle="modal" data-target="#{{$d->id}}{{$d->nome}}">{{$d->nome}}</a></li>
+              @endforeach
             </ul>
           </div>
         </div>

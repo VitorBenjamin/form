@@ -773,6 +773,15 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	padding: 8px 30px;
 	font-weight: 500;
 }
+
+.artigo>p>img{
+	height: auto !important;
+	width: 100% !important;
+}
+.artigo>p>img{
+	height: auto !important;
+	width: 100% !important;
+}
 @media (max-width: 762px) {
 	.menu > .container > .navbar > .navbar-header > span, .menu > .container > .navbar > .navbar-header > button {
 		margin-top:15px;

@@ -116,6 +116,6 @@ class ContinenteController extends Controller
 			'msg'=>"Cadastro do Continente Realizado com Sucesso!!!",
 			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return view('continente.admin.index');
+		return redirect()->route('continente.index');
 	}
 }

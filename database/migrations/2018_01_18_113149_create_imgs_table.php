@@ -11,19 +11,21 @@ class CreateImgsTable extends Migration
      *
      * @return void
      */
-    // public function up()
-    // {
-    //     Schema::create('imgs', function (Blueprint $table) {
-    //         $table->increments('id');
-    //         $table->string('titulo');
-    //         $table->string('alt');
-    //         $table->integer('carousels_id')->unsigned();
-    //         $table->timestamps();
-    //     });
-    //     Schema::table('imgs', function (Blueprint $table) {
-    //         DB::statement("ALTER TABLE imgs ADD imagem LONGBLOB NULL");
-    //     });
-    // }
+    public function up()
+    {
+        Schema::create('imgs', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('titulo');
+            $table->string('alt');
+            $table->integer('viagens_id')->unsigned();
+            $table->timestamps();
+        });
+        Schema::table('imgs', function (Blueprint $table) {
+            DB::statement("ALTER TABLE imgs ADD imagem LONGBLOB NULL");
+            DB::statement("ALTER TABLE imgs ADD thumb LONGBLOB NULL");
+            $table->foreign('viagens_id')->references('id')->on('viagens')->onUpdate('cascade')->onDelete('cascade');
+        });
+    }
 
     /**
      * Reverse the migrations.

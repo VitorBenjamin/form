@@ -17,10 +17,6 @@
 				<input id="titulo" name="titulo" value="{{$viagem->titulo}}" type="text" class="form-control" required>
 				<label for="titulo">Título da Categoria</label>
 			</div>
-			<div class="form-group t">
-				<textarea id="descricao" name="descricao" class="form-control" rows="5" required>{{$viagem->descricao}}</textarea>
-				<label for="descricao">Descrição</label>
-			</div>
 			<div class="row">
 				<div class="col-sm-6">
 					<b>Selecione uma Categoria</b>
@@ -38,6 +34,11 @@
 						@endforeach
 					</select>
 				</div>
+			</div>
+			<div class="form-group">
+				<textarea id="bodyField" name="descricao" required>{{$viagem->descricao}}</textarea>
+
+				@ckeditor('bodyField',[])
 			</div>
 			<div class="form-group">
 				<b>Enviar uma Miniatura</b>

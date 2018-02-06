@@ -123,6 +123,6 @@ class CarouselController extends Controller
 			'msg'=>"Carousel Excluido com Sucesso!!!",
 			'class'=>"alert alert-success alert-dismissible"
 		]);
-		return view('carousel.admin.index');
+		return redirect()->route('carousel.index');
 	}
 }

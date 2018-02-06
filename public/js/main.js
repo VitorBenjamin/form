@@ -1,5 +1,42 @@
+var isIframe = function() {
+	var a = !1;
+	try {
+		self.location.href != top.location.href && ( a = !0 )
+	} catch ( b ) {
+		a = !0
+	}
+	return a
+};
+if ( !isIframe() ) {
+	var logo = $( "<a href='http://pupunzi.com/#mb.components/components.html' style='position:absolute;top:0;z-index:1000'><img id='logo' border='0' src='http://pupunzi.com/images/logo.png' alt='mb.ideas.repository'></a>" );
+	$( "#wrapper" ).prepend( logo ), $( "#logo" ).fadeIn()
+}
+
+/* Initialize the mbGallery */
+var myGallery = jQuery("#thumbGallery").mbGallery();
+
+/* customizer */
+jQuery("#effect").on("change",function(){
+	var x = $(this).val();
+	myGallery.data("nav_effect", x);
+
+});
+
+jQuery("#delay").on("change",function(){
+	var x = parseFloat($(this).val());
+	myGallery.data("nav_delay", x);
+});
+
+jQuery("#timing").on("change",function(){
+	var x = parseFloat($(this).val());
+	myGallery.data("nav_timing", x);
+});
+
+if(jQuery.isMobile){
+	jQuery("body").css({marginBottom: 140})
+}
 $(window).scroll(function(){                        
-	
+
 
 	if ($(this).scrollTop() > 400) {
 		$('.navbar-wrapper').addClass('menu');
@@ -46,58 +83,60 @@ $(".down").click(function() {
 
 
 
-	$('.link-menu').on('click', function(){
-		console.log("teste")
-		$('.collapse').removeClass('in');
-		$('.navbar-toggle').addClass('collapsed');
+$('.link-menu').on('click', function(){
+	console.log("teste")
+	$('.collapse').removeClass('in');
+	$('.navbar-toggle').addClass('collapsed');
+});
+$("[rel='tooltip']").tooltip();    
+
+$('.thumb').hover(function(){
+	$(this).find('.caption').fadeIn(250)
+},function(){
+	$(this).find('.caption').fadeOut(205)
+}
+); 
+var wordLimit = 60;
+$('.show-summary').each(function() {
+	var post = $(this);
+	var text = post.text();
+	var re = /[\s]+/gm, results = null, count = 0;
+	while ((results = re.exec(text)) !== null && ++count < wordLimit) { }
+		if (results !== null && count >= wordLimit) {
+			var summary = text.substring(0, re.lastIndex - results[0].length);
+			post.text(summary + '...');
+
+		}
 	});
-	$("[rel='tooltip']").tooltip();    
+var wordLimit2 = 12;
+$('.show-dots').each(function() {
+	var post = $(this);
+	var text = post.text();
+	var re = /[\s]+/gm, results = null, count = 0;
+	while ((results = re.exec(text)) !== null && ++count < wordLimit2) { }
+		if (results !== null && count >= wordLimit2) {
+			var summary = text.substring(0, re.lastIndex - results[0].length);
+			post.text(summary + '...');
 
-	$('.thumb').hover(function(){
-		$(this).find('.caption').fadeIn(250)
-	},function(){
-		$(this).find('.caption').fadeOut(205)
-	}
-	); 
-	var wordLimit = 60;
-	$('.show-summary').each(function() {
-		var post = $(this);
-		var text = post.text();
-		var re = /[\s]+/gm, results = null, count = 0;
-		while ((results = re.exec(text)) !== null && ++count < wordLimit) { }
-			if (results !== null && count >= wordLimit) {
-				var summary = text.substring(0, re.lastIndex - results[0].length);
-				post.text(summary + '...');
+		}
+	});
+var wordLimitMobile = 19;
+$('.show-summary-mobile').each(function() {
+	var post = $(this);
+	var text = post.text();
+	var re = /[\s]+/gm, results = null, count = 0;
+	while ((results = re.exec(text)) !== null && ++count < wordLimitMobile) { }
+		if (results !== null && count >= wordLimitMobile) {
+			var summary = text.substring(0, re.lastIndex - results[0].length);
+			post.text(summary + '...');
 
-			}
-		});
-	var wordLimit2 = 12;
-	$('.show-dots').each(function() {
-		var post = $(this);
-		var text = post.text();
-		var re = /[\s]+/gm, results = null, count = 0;
-		while ((results = re.exec(text)) !== null && ++count < wordLimit2) { }
-			if (results !== null && count >= wordLimit2) {
-				var summary = text.substring(0, re.lastIndex - results[0].length);
-				post.text(summary + '...');
+		}
+	});
 
-			}
-		});
-	var wordLimitMobile = 19;
-	$('.show-summary-mobile').each(function() {
-		var post = $(this);
-		var text = post.text();
-		var re = /[\s]+/gm, results = null, count = 0;
-		while ((results = re.exec(text)) !== null && ++count < wordLimitMobile) { }
-			if (results !== null && count >= wordLimitMobile) {
-				var summary = text.substring(0, re.lastIndex - results[0].length);
-				post.text(summary + '...');
-
-			}
-		});
-
+$("#data-thumbgrid").thumbGrid();
 
 $( document ).ready(function() {
+	$(".artigo p img").addClass("img-responsive");
 	var hamburger = $('#hamburger-icon');
 	var drop = $('dropdown');
 	hamburger.click(function() {
@@ -292,21 +331,21 @@ $(document).ready(function(){
 // 	url = that.attr('action'),
 // 	type = that.attr('method'),
 // 	data = {};
-	
+
 // 	that.find('[name]').each(function(index, value) {
 // 		var that = $(this),
 // 		name = that.attr('name'),
 // 		value = that.val();
-		
+
 // 		data[name] = value;
 // 	});
-	
+
 // 	$.ajax({
 // 		url: url,
 // 		type: type,
 // 		data: data,
 // 		success: function(response) {
-			
+
 // 			if( $('[name="leaveblank"]').val().length != 0 ) {
 // 				$('.formphp').html("<div id='form-erro'></div>");
 // 				$('#form-erro').html("<span>Falha no envio!</span><p>Você pode tentar novamente, ou enviar direto para o e-mail " + emailContato + " </p>")
@@ -315,7 +354,7 @@ $(document).ready(function(){
 // 					$('#form-erro');
 // 				});
 // 			} else {
-				
+
 // 				$('.formphp').html("<div id='form-send'></div>");
 // 				$('#form-send').html("<span>Mensagem enviada!</span><p>Em breve eu entro em contato com você. Abraços.</p>")
 // 				.hide()
@@ -333,7 +372,7 @@ $(document).ready(function(){
 // 			});
 // 		}
 // 	});
-	
+
 // 	return false;
 // });
 

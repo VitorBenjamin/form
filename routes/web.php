@@ -15,6 +15,7 @@
 Route::get('/', ['uses' => 'PaginasController@index', 'as' => 'pagina.index']);
 Route::get('pacote-de-viagens/continente/{contiente}/', ['uses' => 'PaginasController@exibirContinente', 'as' => 'pagina.exibirContinente']);
 Route::get('pacote-de-viagens/categoria/{categoria}/', ['uses' => 'PaginasController@exibirCategoria', 'as' => 'pagina.exibirCategoria']);
+Route::get('pacote-de-viagem/{categoria}/', ['uses' => 'PaginasController@exibirViagem', 'as' => 'pagina.Viagem']);
 Route::post('enviar', ['uses'=>'PaginasController@postContact','as'=>'postcontact']);
 // Route::get('pacote-de-viagens/{categoria}', ['uses' => 'PaginasController@exibirCategoria', 'as' => 'pagina.exibirCategoria']);
 
@@ -73,6 +74,16 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
 		Route::get('editar-cliente/{id}', ['uses' => 'ClienteController@editar', 'as' => 'cliente.editar']);
 		Route::put('atualizar-cliente/{id}', ['uses' => 'ClienteController@update', 'as' => 'cliente.update']);
 		Route::get('mudar-estado-cliente/{id}', ['uses' => 'ClienteController@mudarEstado', 'as' => 'cliente.mudarEstado']);
+
+	});
+	Route::group(['prefix' => 'dica'], function() {
+		Route::get('', ['uses' => 'DicaController@index', 'as' => 'dica.index']);
+		Route::get('cadastrar', ['uses' => 'DicaController@create', 'as' => 'dica.create']);
+		Route::post('salvar', ['uses' => 'DicaController@salvar', 'as' => 'dica.salvar']);
+		Route::get('deletar-dica/{id}', ['uses' => 'DicaController@excluir', 'as' => 'dica.excluir']);
+		Route::get('editar-dica/{id}', ['uses' => 'DicaController@editar', 'as' => 'dica.editar']);
+		Route::put('atualizar-dica/{id}', ['uses' => 'DicaController@update', 'as' => 'dica.update']);
+		Route::get('mudar-estado-dica/{id}', ['uses' => 'DicaController@mudarEstado', 'as' => 'dica.mudarEstado']);
 
 	});
 });

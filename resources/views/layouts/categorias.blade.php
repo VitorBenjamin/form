@@ -7,33 +7,11 @@
         </div>
         <div class="col-sm-10">
           <div class="owl-carousel owl-theme">
+            @foreach ($categorias as $cat)
             <div>
-              <img class="img-responsive" src="{{asset('assets/tag-arte-design-arquitetura.svg')}}" alt="">
+              <img class="img-responsive" src="{{$cat->thumb}}" alt="">
             </div>
-            <div>
-              <img class="img-responsive" src="{{asset('assets/tag-aventura.svg')}}" alt="">
-            </div>
-            <div>
-              <img class="img-responsive" src="{{asset('assets/tag-especial-china.svg')}}" alt="">
-            </div>
-            <div>
-              <img class="img-responsive" src="{{asset('assets/tag-arte-design-arquitetura.svg')}}" alt="">
-            </div>
-            <div>
-              <img class="img-responsive" src="{{asset('assets/tag-aventura.svg')}}" alt="">
-            </div>
-            <div>
-              <img class="img-responsive" src="{{asset('assets/tag-especial-china.svg')}}" alt="">
-            </div>
-            <div>
-              <img class="img-responsive" src="{{asset('assets/tag-arte-design-arquitetura.svg')}}" alt="">
-            </div>
-            <div>
-              <img class="img-responsive" src="{{asset('assets/tag-aventura.svg')}}" alt="">
-            </div>
-            <div>
-              <img class="img-responsive" src="{{asset('assets/tag-especial-china.svg')}}" alt="">
-            </div>
+            @endforeach
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientesTable extends Migration
+class CreateDicasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,13 @@ class CreateClientesTable extends Migration
      */
     public function up()
     {
-        Schema::create('clientes', function (Blueprint $table) {
+        Schema::create('dicas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->string('title');
-            $table->string('alt');
             $table->boolean('ativo');
+            $table->enum('tipo',['CHECK-IN','DICAS-VIAGENS']);
+            $table->text('descricao');
             $table->timestamps();
-        });
-        Schema::table('clientes', function($table) {
-          DB::statement("ALTER TABLE clientes ADD imagem LONGBLOB NULL");  
         });
     }
 
@@ -33,6 +30,6 @@ class CreateClientesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('dicas');
     }
 }
