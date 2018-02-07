@@ -133,7 +133,6 @@ $('.show-summary-mobile').each(function() {
 		}
 	});
 
-$("#data-thumbgrid").thumbGrid();
 
 $( document ).ready(function() {
 	$(".artigo p img").addClass("img-responsive");

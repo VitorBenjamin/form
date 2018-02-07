@@ -33,4 +33,8 @@ class Viagem extends Model
     {
         return $this->hasMany('App\Carousel','viagens_id');
     }
+    public function imgs()
+    {
+        return $this->hasMany('App\Img','viagens_id');
+    }
 }

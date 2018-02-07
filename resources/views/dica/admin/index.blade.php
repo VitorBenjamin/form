@@ -33,7 +33,7 @@
           {{-- <td>{!!$dica->descricao!!}</td> --}}
           <td>
             <span class="{{$dica->ativo ? 'on' : 'off'}}">{{$dica->ativo ? 'on' : 'off'}}</span>
-            <a href="{{route('dica.mudarEstado',$dica->id)}}" title="" style="margin-top: 2px"><i class="material-icons">swap_horiz</i></a>
+            <a href="{{route('dica.mudarEstado', $dica->id)}}" title="" style="margin-top: 2px"><i class="material-icons">swap_horiz</i></a>
           </td>
           <td>
             <a href="{{route('dica.editar',$dica->id)}}" title=""><i class="material-icons">mode_edit</i></a>

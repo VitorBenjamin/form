@@ -97,7 +97,7 @@
 
   <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
   <div id="dinamico">
-    @foreach ($viagens as $i => $v)
+    @foreach ($viagens as $i => $v) 
     @if ($i/2 == 0 || $i ==0 )
     <div class="container-fluid" style="background: #161b33">
       <div class="row">
@@ -148,15 +148,10 @@
     <div class="col-sm-4">
       <div class="links-viagens">
         <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
-
         <a href="#" title=""><p>Tailândia - Soneva Kiri</p></a>
-
         <a href="#" title=""><p>Azura - Moçambique & Tanzania</p></a>
-
         <a href="#" title=""><p>Art Basel Miami 2017</p></a>
-
         <a href="#" title=""><p>Silversea </p></a>
-
       </div>
     </div>
     <div class="col-sm-4">
@@ -186,7 +181,7 @@
         <a href="#" title=""><p>Silversea </p></a>
 
       </div>
-    </div>
+    </div> 
     <div class="container">
       <div class="row" style="padding: 30px;">
         <div class="col-sm-offset-5 col-sm-2" style="text-align: center;">

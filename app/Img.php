@@ -12,6 +12,11 @@ class Img extends Model
      * @var array
      */
     protected $fillable = [
-        'titulo', 'alt' ,'ativo','imagem'
+        'titulo', 'alt' , 'ativo', 'imagem', 'viagens_id'
     ];
+
+    public function viagem()
+    {
+        return $this->belongsTo('App\Viagem','viagens_id');
+    }
 }
