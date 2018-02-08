@@ -31,7 +31,7 @@
     <div class="row margem-padrao">
       <div class="col-xs-12">
         <div class="row">
-          <form action="{{route('postcontact')}}" method="post" class="form">
+          <form action="{{route('postContact')}}" method="post" class="form">
             {{ csrf_field() }}
             <div class="col-md-4">
               <input id="nome" name="nome" type="text" placeholder="Nome" required>

@@ -26,8 +26,8 @@
 				<textarea id="bodyField" name="descricao" required></textarea>
 
 				@ckeditor('bodyField',[
-					'image2_disableResizer' => false,
-					'image2_prefillDimensions' => false,
+					'image2_disableResizer' => true,
+					'image2_prefillDimensions' => true,
 					'height' => 700,
 					'language' => 'pt-br',
 					])

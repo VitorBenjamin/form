@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Session;
 use App\Viagem;
 use App\Continente;
 use App\Categoria;
+use App\Img;
 use Intervention\Image\Facades\Image;
 
 class ViagemController extends Controller
@@ -52,7 +53,8 @@ class ViagemController extends Controller
 	public function salvar(Request $request)
 	{	
 		//dd($request->all());
-		$mimeFoto = $request->file('foto')->getClientMimeType();
+		//dd($request->file('carousel'));
+		$mimeCapa = $request->file('capa')->getClientMimeType();
 		$mimeThumb = $request->file('thumb')->getClientMimeType();
 		$data = [
 			'titulo' => $request->titulo,
@@ -60,11 +62,15 @@ class ViagemController extends Controller
 			'ativo' => true,
 			'categorias_id' => $request->categorias_id,
 			'continentes_id' => $request->continentes_id,
+			'title_thumb' => $request->title_thumb, 
+			'alt_thumb' => $request->alt_thumb, 
+			'title_capa' => $request->title_capa, 
+			'alt_capa' => $request->alt_capa, 
 		];
-		if ($mimeFoto == "image/jpeg" || $mimeFoto == "image/png") {
-			$file = Image::make($request->file('foto'));
-			$foto_img_64 = (string) $file->encode('data-url');
-			$data['foto'] = $foto_img_64;
+		if ($mimeCapa == "image/jpeg" || $mimeCapa == "image/png") {
+			$file = Image::make($request->file('capa'));
+			$capa_img_64 = (string) $file->encode('data-url');
+			$data['capa'] = $capa_img_64;
 		}
 		if ($mimeThumb == "image/jpeg" || $mimeThumb == "image/png") {
 			$file = Image::make($request->file('thumb'));
@@ -72,6 +78,23 @@ class ViagemController extends Controller
 			$data['thumb'] = $thumb_img_64;
 		}
 		$viagem = Viagem::create($data);
+		
+		foreach ($request->file('carousel') as $key => $value) {
+
+			$img = [
+				'titulo' => $request->title[$key],
+				'alt' => $request->alt[$key],
+				'viagens_id' => $viagem->id
+			];
+			$mimeImg = $value->getClientMimeType();
+			if ($mimeImg == "image/jpeg" || $mimeImg == "image/png") {
+				$file = Image::make($value);
+				$foto_img_64 = (string) $file->encode('data-url');
+				$img['imagem'] = $foto_img_64;
+			}
+			$img = Img::create($img);
+			//dd($img);
+		}
 		Session::flash('flash_message',[
 			'msg'=>"Cadastro da Viagem Realizado com Sucesso!!!",
 			'class'=>"alert alert-success alert-dismissible"
@@ -87,15 +110,15 @@ class ViagemController extends Controller
 			'categorias_id' => $request->categorias_id,
 			'continentes_id' => $request->continentes_id,
 		];
-		if ($request->file('foto')) {
-			$mimeFoto = $request->file('foto')->getClientMimeType();
-			if ($mimeFoto == "image/jpeg" || $mimeFoto == "image/png") {
-				$file = Image::make($request->file('foto'));
-				$foto_img_64 = (string) $file->encode('data-url');
-				$data['foto'] = $foto_img_64;
+		if ($request->file('capa')) {
+			$mimeCapa = $request->file('capa')->getClientMimeType();
+			if ($mimeCapa == "image/jpeg" || $mimeCapa == "image/png") {
+				$file = Image::make($request->file('capa'));
+				$capa_img_64 = (string) $file->encode('data-url');
+				$data['capa'] = $capa_img_64;
 			}
 		}else{
-			$data['foto'] = $viagem->foto;
+			$data['capa'] = $viagem->capa;
 		}
 
 		if ($request->file('thumb')) {

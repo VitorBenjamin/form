@@ -8,7 +8,7 @@ class Viagem extends Model
 {
     protected $table = 'viagens';
     protected $fillable = [
-        'titulo', 'descricao', 'title_thumb', 'alt_thumb','title_foto', 'alt_foto', 'foto', 'thumb', 'especial', 'categorias_id','continentes_id','ativo'
+        'titulo', 'destino', 'descricao', 'title_thumb', 'alt_thumb', 'thumb', 'title_capa', 'alt_capa', 'capa', 'especial', 'categorias_id', 'continentes_id','ativo'
     ];
     
     /** Consulta a imagem da Viagem

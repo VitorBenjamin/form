@@ -494,10 +494,11 @@ hr {
 .links-viagens{
 	margin: 70px 0 50px 0;
 }
-.links-viagens>a{
+.links-viagens>ul>li>a{
 	color: black;
+	font-weight: 500;
 }
-.links-viagens>a>p{
+.links-viagens>ul>li>a>p{
 	border-left: 2px solid #b1874a;
 	padding-left: 10px;
 }
@@ -630,6 +631,34 @@ hr {
 	margin:  15px;
 	display: inline-block;
 	width: 100%;
+}
+.collumn2{
+	-webkit-column-count:3;
+	-moz-column-count:3;
+	-ms-column-count:3;
+	-o-column-count:3;
+	column-count:3;
+	-webkit-column-gap:15px;
+	-moz-column-gap:15px;
+	-ms-column-gap:15px;
+	-o-column-gap:15px;
+	column-gap:15px;
+	columns:3;
+}
+.viagens-lista2{
+	margin:0;
+	padding:0;
+}
+
+.viagens-lista2>li{
+	color: #fff;
+	text-align: left;
+	margin: 0 15px;
+	display: inline-block;
+	width: 100%;
+}
+.links-viagens>ul>li>a:hover {
+    color: #b1874a;
 }
 ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 .dicas>h1{

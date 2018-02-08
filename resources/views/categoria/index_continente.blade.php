@@ -15,14 +15,14 @@
     <div class="row">
       <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
         <p>
-          {{$categoria->descricao}}
+          {{$cont[0]->nome}}
         </p>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12" style="text-align: center;">
         <select class="destino">
-          <option value="">ESCOLHA UM CONTINENTE</option>}
+          <option value="">ESCOLHA OUTRO CONTINENTE</option>}
           @foreach ($continentes as $cont)
           <option value="{{route('pagina.exibirContinente',mb_strtolower($cont->nome))}}">{{$cont->nome}}</option>
           @endforeach
@@ -49,7 +49,7 @@
         <div class="col-sm-6 col-md-5">
           <div class="select-right">
             <select class="destino">
-              <option value="">ESCOLHA UM DESTINO</option>
+              <option value="">ESCOLHA OUTRA CATEGORIA</option>
               @foreach ($categorias as $cat)
               <option value="{{route('pagina.exibirCategoria',mb_strtolower($cat->nome))}}">{{$cat->nome}}</option>
               @endforeach
@@ -101,7 +101,6 @@
     @endfor
   </div>
   @endif
-  <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
 </section>
 <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
 

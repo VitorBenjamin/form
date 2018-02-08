@@ -57,12 +57,12 @@
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">
-							Carregar… (jpg/png) <input type="file" id="imgInp2" name="foto" accept="image/jpeg, image/png">
+							Carregar… (jpg/png) <input type="file" id="imgInp2" name="capa" accept="image/jpeg, image/png">
 						</span>
 					</span>
 					<input type="text" class="form-control" readonly>
 				</div>
-				<img id="img-upload" class="img-upload" src="{{$viagem->foto}}"/>
+				<img id="img-upload" class="img-upload" src="{{$viagem->capa}}"/>
 			</div>
 			<button type="submit" class="enviar hidden"></button>
 		</form>

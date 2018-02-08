@@ -40,7 +40,8 @@ $(document).ready(function() {
         }
         
     });
-    var wordLimit = 15;
+	var wordLimit = 15;
+	var i=0;
 	$('.show-summary').each(function() {
 		var post = $(this);
 		var text = post.text();
@@ -52,7 +53,43 @@ $(document).ready(function() {
 
 			}
 		});
+	$(".add").click(function(){ 
+		i++;
+		// var html = $(".clone").html();
+		// $(".increment").after(html);
+		console.log('asdasd');
+		$(".dinamico").append(
+			'<div class="control-group input-group" style="margin-top:10px" id="row'+i+'">'
+			+'<div class="row">'
+			+'<div class="col-sm-6">'
+			+'<b>Titulo Para a imagem</b>'
+			+'<input name="title[]" type="text" class="form-control" required>'
+			+'</div>'
+			+'<div class="col-sm-6">'
+			+'<b>Alt Para a imagem</b>'
+			+'<input name="alt[]" type="text" class="form-control" required>'
+			+'</div>'
+			+'</div>'
+			+'<input type="file" name="carousel[]" class="form-control">'
+			+'<div class="input-group-btn" style="vertical-align:bottom !important"> '
+			+'<button class="btn btn-danger"  type="button" id="'+i+'"><i class="glyphicon glyphicon-remove"></i>Remove</button>'
+			+'</div>'
+			+'</div>'
+			);
+
+	});
+
+	$("body").on("click",".btn-danger",function(){ 
+		$(this).parents(".control-group").remove();
+	});
 });
+$(document).on('click', '.btn_remove', function(){  
+
+    var button_id = $(this).attr("id");   
+    console.log(button_id);
+    $('#row'+button_id+'').remove();  
+
+}); 
 $(document).ready( function() {
 	$(document).on('change', '.btn-file :file', function() {
 		var input = $(this),

@@ -21,7 +21,7 @@
                     <div class="row">
                       <div class="col-xs-5 col-md-4">
                         <div class="zoom-gallery">
-                          <a class="popup-modal" href="#test-modal">
+                          <a href="{{route('pagina.Viagem',$car->viagem->titulo)}}">
                             VER MAIS
                           </a>
                         </div>
@@ -41,7 +41,7 @@
                     <div class="row">
                       <div class="col-xs-5 col-md-4">
                         <div class="zoom-gallery">
-                          <a class="popup-modal" href="#test-modal">
+                          <a href="{{route('pagina.Viagem',$car->viagem->titulo)}}">
                             VER MAIS
                           </a>
                         </div>
@@ -96,65 +96,61 @@
   <!-- FIM DA SESSÃO DE SELEÇÃO DE VIAGENS -->
 
   <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
+  @if(count($viagens) > 5)
   <div id="dinamico">
-    @foreach ($viagens as $i => $v) 
+    @for ($i = 0; $i < 6; $i++) 
     @if ($i/2 == 0 || $i ==0 )
     <div class="container-fluid" style="background: #161b33">
       <div class="row">
         @endif
         <div class="col-sm-4" >
           <div class="row">
-            <div class="thumb" style="background: url('{{$v->thumb}}') center/cover no-repeat;">
-             <!--  <img src="{{$v->thumb}}" data-aos="fade-down" alt="" data-aos-duration="500" class="img-responsive"> -->
-             <div class="caption">
-              <div class="col-xs-12">
-                <div class="caption-titulo">
-                  <p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <div class="thumb" style="background: url('{{$viagens[$i]->thumb}}') center/cover no-repeat;">
+              <!--  <img src="{{$viagens[$i]->thumb}}" data-aos="fade-down" alt="" data-aos-duration="500" class="img-responsive"> -->
+              <div class="caption">
+                <div class="col-xs-12">
+                  <div class="caption-titulo">
+                    <p class="show-dots">{{$viagens[$i]->titulo}}</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <div class="border-top">
-                  <hr width="25%">
-                  <p>Porto Seguro</p>
+                <div class="col-xs-6 col-md-6">
+                  <div class="border-top">
+                    <hr width="25%">
+                    <p>{{$viagens[$i]->destino}}</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-xs-6 col-md-6">
-                <div class="button-caption zoom-gallery">
-                  <a class="popup-modal a-caption" href="#test-modal">VER MAIS</a>
+                <div class="col-xs-6 col-md-6">
+                  <div class="button-caption zoom-gallery">
+                    <a class="a-caption" href="{{route('pagina.Viagem',$viagens[$i]->titulo)}}">VER MAIS</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        @if ($i/2 == 0 && $i>0)
       </div>
-      @if ($i/2 == 0 && $i>0)
     </div>
+    @endif
+    @endfor
   </div>
   @endif
-  @endforeach
-</div>
-<!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
-
-<!-- <a class="popup-modal" href="#test-modal">Open modal</a> -->
-
-<div id="test-modal" class="mfp-hide2 white-popup-block closeOnBgClick ">
-  <h1><a class="popup-modal-dismiss" href="#">X</a></h1>
-  <img class="img-responsive" src="{{asset('assets/arte-viagem.jpg')}}" alt="">
-</div>
+  <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
 </section>
 <!-- INICIO DA SESSÃO DAS VIAGENS -->
+@if(count($viagens) > 5)
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <div class="links-viagens">
-        <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
-        <a href="#" title=""><p>Tailândia - Soneva Kiri</p></a>
-        <a href="#" title=""><p>Azura - Moçambique & Tanzania</p></a>
-        <a href="#" title=""><p>Art Basel Miami 2017</p></a>
-        <a href="#" title=""><p>Silversea </p></a>
+    <div class="col-md-offset-1 col-md-10">
+      <div class="links-viagens collumn2">
+        <ul class="viagens-lista2">
+          @for ($i = 6; $i < count($viagens); $i++)
+          <li><a href="{{route('pagina.Viagem',$viagens[$i]->titulo)}}" title=""><p>{{$viagens[$i]->titulo}}</p></a></li>
+          @endfor
+        </ul>
       </div>
     </div>
-    <div class="col-sm-4">
+    {{-- <div class="col-sm-4">
       <div class="links-viagens">
         <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
 
@@ -182,6 +178,19 @@
 
       </div>
     </div> 
+    <div class="col-sm-4">
+      <div class="links-viagens">
+        <a href="#" title=""><p>Silversea Tailândia - Soneva Kiri</p></a>
+
+        <a href="#" title=""><p>Tailândia - Soneva Kiri</p></a>
+
+        <a href="#" title=""><p>Azura - Moçambique & Tanzania</p></a>
+
+        <a href="#" title=""><p>Art Basel Miami 2017</p></a>
+
+        <a href="#" title=""><p>Silversea </p></a>
+      </div>
+    </div>  --}}
     <div class="container">
       <div class="row" style="padding: 30px;">
         <div class="col-sm-offset-5 col-sm-2" style="text-align: center;">
@@ -191,6 +200,7 @@
     </div>
   </div>
 </div>
+@endif
 <!-- FIM DA SESSÃO DAS VIAGENS -->
 
 <!-- <div class="zoom-gallery">

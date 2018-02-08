@@ -16,8 +16,12 @@ class CreateViagemsTable extends Migration
         Schema::create('viagens', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
-            $table->string('descricao');
+            $table->string('destino');
             $table->text('descricao');
+            $table->string('title_thumb');
+            $table->string('alt_thumb');
+            $table->string('title_capa');
+            $table->string('alt_capa');
             $table->integer('categorias_id')->unsigned();
             $table->integer('continentes_id')->unsigned();
             $table->boolean('ativo')->default(true);
@@ -25,7 +29,7 @@ class CreateViagemsTable extends Migration
         });
         Schema::table('viagens', function (Blueprint $table) {
             DB::statement("ALTER TABLE viagens ADD thumb LONGBLOB");
-            DB::statement("ALTER TABLE viagens ADD foto LONGBLOB");
+            DB::statement("ALTER TABLE viagens ADD capa LONGBLOB");
         });
         Schema::table('viagens', function (Blueprint $table) {
             $table->foreign('categorias_id')->references('id')->on('categorias');
