@@ -20,7 +20,7 @@
             <div class="col-sm-3 col-md-2">
               <div class="vertical-menu">
                 <p class="p">
-                  @foreach ($categorias as $cat)
+                  @foreach ($catConti as $cat)
                   <a href="{{route('pagina.exibirContinenteCategoria',[mb_strtolower($continente->nome),mb_strtolower($cat->nome)])}}">{{$cat->nome}}</a> 
                   <br>
                   @endforeach
@@ -45,19 +45,24 @@
   <div class="container-fluid select-brown">
     <div class="container select-margin">
       <div class="row margem-padrao">
-        <div class="col-xs-12 col-sm-6 col-md-7">
+        <div class="col-sm-4">
           <div class="border-left white">
             <p class="center">VIAGENS</p>
           </div>
         </div>
-        <div class="col-sm-6 col-md-5">
+        <div class="col-sm-8 col-md-offset-2 col-md-6">
           <div class="select-right">
-            <select class="destino">
+            {{-- <select class="destino">
               <option value="">SELECIONE O CONTINENTE</option>
               @foreach ($continentes as $cont)
               <option value="{{route('pagina.exibirContinente',mb_strtolower($cont->nome))}}">{{$cont->nome}}</option>
               @endforeach
-            </select>
+            </select> --}}
+            <form class="search" action="{{route('pagina.search')}}" method="post">
+              {{ csrf_field() }}
+              <input type="search" name="search" placeholder="Buscar..">
+              <button type="submit"><i class="material-icons pesquisa">search</i></button>
+            </form>
           </div>
         </div>
       </div>

@@ -40,12 +40,15 @@ $(window).scroll(function(){
 
 	if ($(this).scrollTop() > 400) {
 		$('.navbar-wrapper').addClass('menu');
+		$('.branca').removeClass('visible-xs');
+		$('.preta').addClass('hidden');
 		$('.menu').fadeIn(1000);
 		$('.navbar-wrapper').removeClass('navbar-wrapper');
 
 
 	}else if($(this).scrollTop() < 400 && $(this).scrollTop() >150) {
-
+		$('.branca').addClass('visible-xs');
+		$('.preta').removeClass('hidden');
 		$('#teste').css("display","none");
 		$('.menu').fadeOut(1000);
 		$('#teste').addClass('navbar-wrapper');

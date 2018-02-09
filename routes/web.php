@@ -16,8 +16,11 @@ Route::get('/', ['uses' => 'PaginasController@index', 'as' => 'pagina.index']);
 Route::get('pacote-de-viagens/continente/{contiente}/', ['uses' => 'PaginasController@exibirContinente', 'as' => 'pagina.exibirContinente']);
 Route::get('pacote-de-viagens/categoria/{categoria}/', ['uses' => 'PaginasController@exibirCategoria', 'as' => 'pagina.exibirCategoria']);
 Route::get('pacote-de-viagens/continente/{contiente}/categoria/{categoria}/', ['uses' => 'PaginasController@exibirContinenteCategoria', 'as' => 'pagina.exibirContinenteCategoria']);
+Route::get('todas-viagens', ['uses' => 'PaginasController@exibirTodasViagens', 'as' => 'pagina.exibirTodasViagens']);
+
 Route::get('pacote-de-viagem/{viagem}/', ['uses' => 'PaginasController@exibirViagem', 'as' => 'pagina.Viagem']);
 Route::post('enviar-contact', ['uses'=>'PaginasController@postContact', 'as' => 'postContact']);
+Route::post('search', ['uses'=>'PaginasController@postSearch', 'as' => 'pagina.search']);
 
 Route::post('enviar-reserva', ['uses'=>'PaginasController@postReserva', 'as' => 'postReserva']);
 // Route::get('pacote-de-viagens/{categoria}', ['uses' => 'PaginasController@exibirCategoria', 'as' => 'pagina.exibirCategoria']);

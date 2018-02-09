@@ -39,6 +39,10 @@
 				<input id="destino" name="destino" type="text" class="form-control" required>
 				<label for="destino">Destino</label>
 			</div>
+			<div class="form-group t">
+				<b for="especial">Especial</b>
+				<input type="checkbox" name="especial" value="" id="especial">
+			</div>
 			<div class="row">
 				<div class="col-sm-6">
 					<b>Selecione uma Categoria</b>

@@ -22,6 +22,7 @@ class CreateViagemsTable extends Migration
             $table->string('alt_thumb');
             $table->string('title_capa');
             $table->string('alt_capa');
+            $table->boolean('especial')->default(false);
             $table->integer('categorias_id')->unsigned();
             $table->integer('continentes_id')->unsigned();
             $table->boolean('ativo')->default(true);

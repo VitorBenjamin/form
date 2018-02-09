@@ -58,7 +58,7 @@
 <!-- FIM SESSÃO TOPO DA VIAGEM -->
 
 <section>
-  <div class="container">
+  <div class="container" style="margin-top:50px">
     <div class="row">
       <div class="col-md-offset-1 col-md-10 artigo">
         <section class="content">

@@ -13,11 +13,45 @@ h1,p{
 	-moz-hyphens: manual;
 	hyphens: manual;
 }
+h4{
+	color: #fff;
+}
 /*input:invalid,
 textarea:invalid {
   border-color: red !important;
 }
 input:required:valid { border: 2px solid green; }*/
+.search{
+	position: absolute;
+}
+.search>button{
+	background-color: #f0f8ff00;
+	border: 0;
+}
+.pesquisa{
+	position: relative;
+	top: 8px;
+	color: #fff;
+	font-weight: 500;
+}
+input[type=search] {
+	width: 120px;
+	margin-top: 8px;
+	box-sizing: border-box;
+	border: 2px solid #fff;
+	border-radius: 29px;
+	font-size: 16px;
+	background-color: rgba(0, 0, 0, 0);
+	background-position: 0; 
+	background-repeat: no-repeat;
+	padding: 5px 0px 5px 10px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+input[type=search]:focus {
+	width: 82%;
+}
 input:optional {
 	border-left-color: #999;
 }
@@ -658,7 +692,7 @@ hr {
 	width: 100%;
 }
 .links-viagens>ul>li>a:hover {
-    color: #b1874a;
+	color: #b1874a;
 }
 ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 .dicas>h1{
@@ -812,6 +846,12 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	width: 100% !important;
 }
 @media (max-width: 762px) {
+	input[type=search]:focus {
+		width: 83%;
+	}
+	.select-margin{
+		height: 180px;
+	}
 	.menu > .container > .navbar > .navbar-header > span, .menu > .container > .navbar > .navbar-header > button {
 		margin-top:15px;
 	}
@@ -827,6 +867,7 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	}
 }
 @media (max-width: 575px)  {
+	
 	.thumb{
 		min-height:250px;
 	}

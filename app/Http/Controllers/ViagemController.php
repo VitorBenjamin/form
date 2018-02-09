@@ -65,6 +65,7 @@ class ViagemController extends Controller
 			'title_thumb' => $request->title_thumb, 
 			'alt_thumb' => $request->alt_thumb, 
 			'title_capa' => $request->title_capa, 
+			'especial' => $request->especial,
 			'alt_capa' => $request->alt_capa, 
 		];
 		if ($mimeCapa == "image/jpeg" || $mimeCapa == "image/png") {

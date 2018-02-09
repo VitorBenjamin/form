@@ -54,7 +54,7 @@
     position: relative;
     overflow: hidden;
 }
-.form input, .form textarea {
+.form input[type=text], .form textarea {
     margin: auto;
     width: 60%;
     border: 2px solid gray;
@@ -66,14 +66,14 @@
     padding: 8px 12px;
     outline: 0;
 }
-.form input:valid, .form textarea:valid {
+.form input[type=text]:valid, .form textarea:valid {
     background: white;
 }
-.form input:focus, .form textarea:focus {
+.form input[type=text]:focus, .form textarea:focus {
     border-color: #357EBD;
     margin: 0;
 }
-.form input:focus + label, .form textarea:focus + label {
+.form input[type=text]:focus + label, .form textarea:focus + label {
     background: #357EBD;
     color: white;
     font-size: 70%;

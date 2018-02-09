@@ -75,20 +75,27 @@
   <div class="container-fluid select">
     <div class="container select-margin">
       <div class="row margem-padrao">
-        <div class="col-sm-6 col-md-7">
+        <div class="col-sm-4">
           <div class="border-left">
             <p class="center">VIAGENS</p>
           </div>
         </div>
-        <div class="col-sm-6 col-md-5">
+        {{-- <div class="col-sm-5">
           <div class="select-right">
             <select class="destino">
-              <option value="">SELECIONE O DESTINO</option>
+              <option value="">ESCOLHA O DESTINO</option>
               @foreach ($categorias as $cat)
               <option value="{{route('pagina.exibirCategoria',$cat->nome)}}">{{$cat->nome}}</option>
               @endforeach
             </select>
           </div>
+        </div> --}}
+        <div class="col-sm-8 col-md-offset-3 col-md-5">
+          <form class="search" action="{{route('pagina.search')}}" method="post">
+            {{ csrf_field() }}
+            <input type="search" name="search" placeholder="Buscar..">
+            <button type="submit"><i class="material-icons pesquisa">search</i></button>
+          </form>
         </div>
       </div>
     </div>
@@ -137,6 +144,7 @@
   @endif
   <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
 </section>
+
 <!-- INICIO DA SESSÃO DAS VIAGENS -->
 @if(count($viagens) > 5)
 <div class="container">
@@ -194,7 +202,7 @@
     <div class="container">
       <div class="row" style="padding: 30px;">
         <div class="col-sm-offset-5 col-sm-2" style="text-align: center;">
-          <button id="add" type="button" class="links-vermais">VER TODAS</button>
+          <a id="add" href="{{route('pagina.exibirTodasViagens')}}" class="links-vermais">VER TODAS</a>
         </div>
       </div>
     </div>
@@ -210,15 +218,16 @@
 </div>
 -->
 <!-- INCIO SESSÃO DA VIAGEM EM DESTAQUE -->
+@if ($especial)
 <section id="destaque">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12" style="padding: 30px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{asset('assets/slide-02.jpg')}}') center/cover no-repeat; min-height:550px">
+      <div class="col-xs-12" style="padding: 30px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{$especial->capa}}') center/cover no-repeat; min-height:550px">
         <div style="padding:150px 0 30px 0; width: 100%; min-height: 550px;border: 3px solid #fff">
           <div class="destaque">
             <div class="row">
               <div class="col-sm-offset-4 col-sm-4 col-md-offset-5 col-md-2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750">
-                <a href="#" title="">
+                <a href="{{route('pagina.Viagem',$especial->titulo)}}" title="">
                   <span> PACOTE ESPECIAL</span>
                 </a>
               </div>
@@ -226,14 +235,14 @@
             <div class="row">
               <div class="col-md-offset-1 col-md-10">
                 <h1 class="text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                  Casa de Uco Mendoza
+                  {{$especial->titulo}}
                 </h1>
               </div>
             </div>
             <div class="row">
               <div class="col-md-offset-5 col-md-2">
                 <h5 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="750" class="text-center" style="margin-bottom: 150px;">
-                  ARGENTINA
+                  {{$especial->destino}}
                 </h5>
               </div>
             </div>
@@ -248,6 +257,7 @@
     </div>
   </div>
 </section>
+@endif
 <!-- FIM SESSÃO DA VIAGEM EM DESTAQUE -->
 
 <!-- INICIO SESSÃO DE ROTEIRO-->

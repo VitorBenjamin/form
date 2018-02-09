@@ -8,9 +8,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <span class="navbar-menu-text hidden-xs">
+        </span>
         <a class="navbar-brand" href="#top">
-          <img src="{{ asset('assets/logo-formula-turismo-preta.png') }}" class="img-responsive hidden-xs" alt="">
-          <img src="{{ asset('assets/logo-formula-turismo-branca.png') }}" class="img-responsive visible-xs" alt="">
+          <img src="{{ asset('assets/logo-formula-turismo-preta.png') }}" class="img-responsive hidden-xs preta" alt="">
+          <img src="{{ asset('assets/logo-formula-turismo-branca.png') }}" class="img-responsive visible-xs branca" alt="">
         </a>
       </div>
 
@@ -19,7 +21,7 @@
           <li><a class="link-menu" href="#inicio">INÍCIO</a></li>
           <li role="separator" class="divider"></li>
           <li><a class="link-menu" href="#destinos">DESTINOS</a></li>
-         <li role="separator" class="divider"></li>
+          <li role="separator" class="divider"></li>
           <li><a class="link-menu" href="#about">QUEM SOMOS</a></li>
           <li role="separator" class="divider"></li>
           <li><a class="link-menu" href="#destaque">VIAGEM DESTAQUE</a></li>

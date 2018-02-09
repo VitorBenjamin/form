@@ -17,14 +17,25 @@ class PaginasController extends Controller
     {
         $categorias = Categoria::all('nome','thumb');
         $continentes = Continente::all('nome');
-        $viagens = Viagem::all();
-        $viagens2 = Viagem::all();
+        $viagens = Viagem::take(21)->get();
         $carousels = Carousel::all();
         $clientes = Cliente::all();
         $check = Dica::where('tipo','CHECK-IN')->take(8)->get();
         $dicas = Dica::where('tipo','DICAS-VIAGENS')->take(8)->get();
+        $especial = Viagem::where('especial',true)->first();
         //dd($clientes);
-        return view('index',compact('categorias','continentes','viagens','viagens2','carousels','clientes','check','dicas'));
+        return view('index',compact('categorias','continentes','viagens','carousels','clientes','check','dicas','especial'));
+    }
+    public function exibirTodasViagens()
+    {
+        $categorias = Categoria::all('nome','thumb');
+        $continentes = Continente::all('nome');
+        $viagens = Viagem::all('titulo');
+        $clientes = Cliente::all();
+        $check = Dica::where('tipo','CHECK-IN')->take(8)->get();
+        $dicas = Dica::where('tipo','DICAS-VIAGENS')->take(8)->get();
+        $especial = Viagem::where('especial',true)->first();
+        return view('viagem.todas',compact('categorias','continentes','viagens','clientes','check','dicas','especial'));
     }
 
     public function exibirViagem($nome)
@@ -75,10 +86,12 @@ class PaginasController extends Controller
         $cat = Viagem::where('continentes_id',$continente->id)->distinct()->get(['categorias_id'])->toArray();
         //dd($t);
         $continentes = Continente::all('nome');
-        $categorias = Categoria::where('id',$cat)->get(['nome']);
+        $catConti = Categoria::where('id',$cat)->get(['nome']);
+        $categorias = Categoria::all('nome','thumb');
+
         $viagens = Viagem::where('continentes_id', $continente->id)->get(['titulo', 'destino','title_thumb', 'alt_thumb', 'thumb']);
         $clientes = Cliente::all();
-        return view('continente.index',compact('continentes','continente','categorias','clientes','check','dicas','viagens'));
+        return view('continente.index',compact('continentes','continente','catConti','categorias','clientes','check','dicas','viagens'));
 
     }
     public function exibirCategoria($nome)
@@ -122,7 +135,7 @@ class PaginasController extends Controller
         $cat = Viagem::where('continentes_id',$cont[0]->id)->distinct()->get(['categorias_id'])->toArray();
         $catCont = Categoria::where('id',$cat)->get(['nome']);
         $continentes = Continente::all('nome');
-        $categorias = Categoria::all('nome');
+        $categorias = Categoria::all('nome','thumb');
         $viagens = Viagem::where('categorias_id',$categoria->id)
         ->where('continentes_id',$cont[0]->id)
         ->get();
@@ -130,6 +143,36 @@ class PaginasController extends Controller
         return view('categoria.index_continente',compact('categorias','cont','categoria','continentes','viagens','clientes','check','dicas'));
 
     }
+    public function postSearch(Request $request)
+    {
+        $busca = $request->search;
+        $clientes = Cliente::all();
+        $categorias = Categoria::all('nome','thumb');
+        $viagens = Viagem::where('titulo','like','%'.$busca.'%')
+        ->select('id','titulo','thumb')
+        ->get();
+        $conts = Continente::where('nome','like','%'.$busca.'%')
+        ->select('id','nome','descricao','thumb')
+        ->get();
+        $continentes = Continente::all('nome');
+        $cats = Categoria::where('nome','like','%'.$busca.'%')
+        ->select('id','nome','descricao','thumb')
+        ->get();
+
+        $msg = "Desculpe, nada foi encontrado na busca por ".$busca."!";
+        if (count($viagens) == 0 || count($cats) == 0 || count($conts) == 0) {
+            Session::flash('flash_message',[
+                'msg'=>$msg,
+                'class'=>"alert warning alert-dismissible",
+                'alert-type' => 'warning'
+            ]);
+            return redirect()->route('pagina.index');
+        } 
+        
+        //dd($continentes);
+        return view('resultados',compact('categorias','clientes','viagens','continentes','conts','cats','categorias','busca'));
+    }
+
     public function postContact(Request $request)
     {
         //dd($request->all());
