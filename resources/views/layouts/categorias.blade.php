@@ -7,9 +7,9 @@
         </div>
         <div class="col-sm-10">
           <div class="owl-carousel owl-theme">
-            @foreach ($categorias as $cat)
+            @foreach ($categorias as $cati)
             <div>
-              <a href="{{route('pagina.exibirCategoria',$cat->nome)}}" title=""><img class="img-responsive" src="{{$cat->thumb}}" alt=""></a>
+              <a href="{{route('pagina.exibirCategoria',$cati->nome)}}" title=""><img class="img-responsive" src="{{$cati->thumb}}" alt=""></a>
             </div>
             @endforeach
           </div>

@@ -23,7 +23,7 @@
 <!-- FIM SESSÃO TOPO DA VIAGEM -->
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: url('{{$viagem->capa}}') center/cover no-repeat;">
+<div class="container-fluid topo-padding" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('{{$viagem->capa}}') center/cover no-repeat;">
   <div class="container continente">
     <div class="row">
       <div class="col-xs-11 col-sm-3 hidden-xs hidden-sm">
@@ -50,7 +50,14 @@
       </div>
       <div class="col-xs-11 col-sm-9 col-md-offset-1 col-md-8">
         <h1 class="text-right">{{$viagem->titulo}}</h1>
-        <p>{{$cont->nome}}</p>
+        {{-- {{$cont->nome}} --}}
+        <div class="col-xs-12" style="text-align: right; padding: 0;">
+          <select class="destino" style="border: 0; padding: 4px 4px;">
+            @foreach ($continentes as $conti)
+            <option value="{{route('pagina.exibirContinente',mb_strtolower($conti->nome))}}" {{$cont->nome == $conti->nome ? 'selected' : ''}}>{{$conti->nome}}</option>
+            @endforeach
+          </select>
+        </div>
       </div>      
     </div>
   </div>
@@ -62,31 +69,32 @@
     <div class="row">
       <div class="col-md-offset-1 col-md-10 artigo">
         <section class="content">
+          @if (count($viagem->imgs) > 0)
 
-          <div id="thumbGallery"
-          class="thumbGallery"
-          data-thumbGallery="true"
-          data-nav_effect="slide_horizontal"
-          data-nav_delay="100"
-          data-nav_timing="1000"
-          data-nav_show="true"
-          data-nav_delay_inverse="1"
-          data-nav_pagination="6"
-          data-gallery_cover="true"
-          data-gallery_effect="slide_horizontal"
-          data-gallery_fullscreenw="90%"
-          data-gallery_fullscreenh="100%"
-          >
-          @foreach ($viagem->imgs as $img)
-          <img src="http://via.placeholder.com/1920x1080" data-highres="http://via.placeholder.com/1920x1080" data-caption="Parturient Bibendum Malesuada Etiam"/>
-          <img src="{{$img->imagem}}" data-highres="{{$img->imagem}}"/>
-          <img src="http://via.placeholder.com/1920x1080" data-highres="http://via.placeholder.com/1920x1080" data-caption="Parturient Bibendum Malesuada Etiam"/>
-          @endforeach
-        </div>
+            <div id="thumbGallery"
+            class="thumbGallery"
+            data-thumbGallery="true"
+            data-nav_effect="slide_horizontal"
+            data-nav_delay="100"
+            data-nav_timing="1000"
+            data-nav_show="true"
+            data-nav_delay_inverse="1"
+            data-nav_pagination="6"
+            data-gallery_cover="true"
+            data-gallery_effect="slide_horizontal"
+            data-gallery_fullscreenw="90%"
+            data-gallery_fullscreenh="100%"
+            >
+            @foreach ($viagem->imgs as $img)
+            <img src="http://via.placeholder.com/1920x1080" data-highres="http://via.placeholder.com/1920x1080" data-caption="Parturient Bibendum Malesuada Etiam"/>
+            <img src="{{$img->imagem}}" data-highres="{{$img->imagem}}"/>
+            <img src="http://via.placeholder.com/1920x1080" data-highres="http://via.placeholder.com/1920x1080" data-caption="Parturient Bibendum Malesuada Etiam"/>
+            @endforeach
+            </div>
+          @endif
 
       </section>
       {!!$viagem->descricao!!}
-      
     </div>
   </div>
 </div>
@@ -116,7 +124,6 @@
   </div>
 </div>
 </section>
-
 
 <!-- INCIO SESSÃO CATEGORIAS -->
 @include('layouts.categorias')

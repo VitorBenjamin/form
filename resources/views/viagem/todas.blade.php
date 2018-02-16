@@ -40,7 +40,83 @@
 
 <!-- INICIO DA SESSÃO DAS VIAGENS -->
 
-<div class="container">
+<section id="destinos">
+  <!-- INCIO SESSÃO DE SELEÇÃO DE VIAGENS -->
+  <div class="container-fluid select">
+    <div class="container select-margin">
+      <div class="row margem-padrao">
+        <div class="col-sm-4">
+          <div class="border-left">
+            <p class="center">VIAGENS</p>
+          </div>
+        </div>
+        {{-- <div class="col-sm-5">
+          <div class="select-right">
+            <select class="destino">
+              <option value="">ESCOLHA O DESTINO</option>
+              @foreach ($categorias as $cat)
+              <option value="{{route('pagina.exibirCategoria',$cat->nome)}}">{{$cat->nome}}</option>
+              @endforeach
+            </select>
+          </div>
+        </div> --}}
+        <div class="col-sm-offset-4 col-sm-4">
+          <form class="search" action="{{route('pagina.search')}}" method="post">
+            {{ csrf_field() }}
+            <input type="search" name="search" placeholder="Buscar..">
+            <button type="submit"><i class="material-icons pesquisa">search</i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DA SESSÃO DE SELEÇÃO DE VIAGENS -->
+
+  <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
+  @if(count($viagens) > 5)
+  <div id="dinamico">
+    @for ($i = 0; $i < 6; $i++) 
+    @if ($i/2 == 0 || $i ==0 )
+    <div class="container-fluid" style="background: #161b33">
+      <div class="row">
+        @endif
+        <div class="col-sm-4" >
+          <div class="row">
+            <div class="thumb" style="background: url('{{$viagens[$i]->thumb}}') center/cover no-repeat;">
+              <!--  <img src="{{$viagens[$i]->thumb}}" data-aos="fade-down" alt="" data-aos-duration="500" class="img-responsive"> -->
+              <div class="caption">
+                <div class="col-xs-12">
+                  <div class="caption-titulo">
+                    <p class="show-dots">{{$viagens[$i]->titulo}}</p>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="border-top">
+                    <hr width="25%">
+                    <p>{{$viagens[$i]->destino}}</p>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <div class="button-caption zoom-gallery">
+                    <a class="a-caption" href="{{route('pagina.Viagem',$viagens[$i]->titulo)}}">VER MAIS</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        @if ($i/2 == 0 && $i>0)
+      </div>
+    </div>
+    @endif
+    @endfor
+  </div>
+  @endif
+  <!-- FIM  DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY -->
+</section>
+
+
+{{-- <div class="container">
   <div class="row">
     <div class="col-md-offset-1 col-md-10">
       <div class="links-viagens collumn2">
@@ -52,7 +128,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 
 <!-- FIM DA SESSÃO DAS VIAGENS -->
 

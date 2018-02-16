@@ -8,19 +8,21 @@
 		</h1>
 		<div class="center">
 			<button type="button" class="btn btn-success submit">CADASTRAR VIAGEM</button>
+			<h3>Slide do Artigo</h3>
 		</div>
 		
 		<form action="{{ route('viagem.salvar')}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			{{ csrf_field() }}
+
 			<div class="input-group control-group increment" >
 				<div class="row">
 					<div class="col-sm-6">
 						<b>Título Para a Imagem</b>
-						<input name="title[]" type="text" class="form-control" required/>
+						<input name="title[]" type="text" class="form-control" style="width:100%" required/>
 					</div>
 					<div class="col-sm-6">
 						<b>Alt Para a Imagem</b>
-						<input name="alt[]" type="text" class="form-control" required/>
+						<input name="alt[]" type="text" class="form-control" style="width:100%" required/>
 					</div>
 				</div>
 				<input type="file" name="carousel[]" class="form-control">

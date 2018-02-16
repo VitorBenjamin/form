@@ -17,7 +17,7 @@ class PaginasController extends Controller
     {
         $categorias = Categoria::all('nome','thumb');
         $continentes = Continente::all('nome');
-        $viagens = Viagem::take(21)->get();
+        $viagens = Viagem::take(21)->orderBy('created_at','desc')->get();
         $carousels = Carousel::all();
         $clientes = Cliente::all();
         $check = Dica::where('tipo','CHECK-IN')->take(8)->get();
@@ -30,7 +30,7 @@ class PaginasController extends Controller
     {
         $categorias = Categoria::all('nome','thumb');
         $continentes = Continente::all('nome');
-        $viagens = Viagem::all('titulo');
+        $viagens = Viagem::orderBy('created_at','desc')->get();
         $clientes = Cliente::all();
         $check = Dica::where('tipo','CHECK-IN')->take(8)->get();
         $dicas = Dica::where('tipo','DICAS-VIAGENS')->take(8)->get();
@@ -50,6 +50,7 @@ class PaginasController extends Controller
         $cat = Viagem::where('continentes_id',$viagem->continentes_id)->distinct()->get(['categorias_id'])->toArray();
         $catCont = Categoria::where('id',$cat)->get(['nome']);
         $categorias = Categoria::all('nome','thumb');
+        //dd($categorias);
         $continentes = Continente::all('nome');
         $cont = Continente::where('id',$viagem->continentes_id)->first();
         $clientes = Cliente::all();
@@ -71,10 +72,10 @@ class PaginasController extends Controller
     public function exibirContinente($nome)
     {
     	//$viagem = Viagem::with('imgs','categoria')->where('id',$id);
+
         $check = Dica::where('tipo','CHECK-IN')->take(8)->get();
         $dicas = Dica::where('tipo','DICAS-VIAGENS')->take(8)->get();
         $continente = Continente::where('nome',$nome)->first();
-
         if (count($continente) == 0) {
             Session::flash('flash_message',[
                 'msg'=>"Continente Não Encontrado",
@@ -85,8 +86,15 @@ class PaginasController extends Controller
         }
         $cat = Viagem::where('continentes_id',$continente->id)->distinct()->get(['categorias_id'])->toArray();
         //dd($t);
+        //dd($cat);
         $continentes = Continente::all('nome');
-        $catConti = Categoria::where('id',$cat)->get(['nome']);
+        if (count($cat) >0) {
+            $catConti = Categoria::where('id',$cat)->get(['nome']);
+
+        } else {
+            $catConti = [];
+        }
+        
         $categorias = Categoria::all('nome','thumb');
 
         $viagens = Viagem::where('continentes_id', $continente->id)->get(['titulo', 'destino','title_thumb', 'alt_thumb', 'thumb']);
@@ -133,7 +141,12 @@ class PaginasController extends Controller
         }
         $cont = Continente::where('nome', $continente)->get(['id','nome']);
         $cat = Viagem::where('continentes_id',$cont[0]->id)->distinct()->get(['categorias_id'])->toArray();
-        $catCont = Categoria::where('id',$cat)->get(['nome']);
+        if (count($cat) >0) {
+            $catConti = Categoria::where('id',$cat)->get(['nome']);
+
+        } else {
+            $catConti = [];
+        }
         $continentes = Continente::all('nome');
         $categorias = Categoria::all('nome','thumb');
         $viagens = Viagem::where('categorias_id',$categoria->id)
@@ -160,7 +173,7 @@ class PaginasController extends Controller
         ->get();
 
         $msg = "Desculpe, nada foi encontrado na busca por ".$busca."!";
-        if (count($viagens) == 0 || count($cats) == 0 || count($conts) == 0) {
+        if (count($viagens) == 0 && count($cats) == 0 && count($conts) == 0) {
             Session::flash('flash_message',[
                 'msg'=>$msg,
                 'class'=>"alert warning alert-dismissible",

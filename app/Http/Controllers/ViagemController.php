@@ -14,7 +14,7 @@ class ViagemController extends Controller
 {
 	public function index()
 	{
-		$viagem = Viagem::all('id','titulo','descricao','ativo');
+		$viagem = Viagem::all('id','titulo','descricao','ativo','continentes_id','categorias_id');
 		return view('viagem.admin.index',compact('viagem'));
 	}
 	public function editar($id)

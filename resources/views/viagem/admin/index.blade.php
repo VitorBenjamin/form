@@ -10,29 +10,35 @@
       <thead>
         <tr>
           <th>Nome</th>
-          <th>Descrição</th>
+          <th>Continente</th>
+          <th>Categoria</th>
+          {{-- <th>Descrição</th> --}}
           <!-- <th>Thumb</th>
-          <th>Capa</th> -->
-          <th>Estado</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <th>Nome</th>
-          <th>Descrição</th>
+            <th>Capa</th> -->
+            <th>Estado</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Nome</th>
+            <th>Continente</th>
+            <th>Categoria</th>
+            {{-- <th>Descrição</th> --}}
           <!-- <th>Thumb</th>
-          <th>Capa</th> -->
-          <th>Estado</th>
-          <th>Ações</th>
-        </tr>
-      </tfoot>
-      <tbody>
-        @foreach ($viagem as $viagem)
-        <tr>
-          <td>{{$viagem->titulo}}</td>
-          <td><p class="show-summary">{{$viagem->descricao}}</p></td>
-<!--           <td>
+            <th>Capa</th> -->
+            <th>Estado</th>
+            <th>Ações</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          @foreach ($viagem as $viagem)
+          <tr>
+            <td>{{$viagem->titulo}}</td>
+            <td>{{$viagem->continente->nome}}</td>
+            <td>{{$viagem->categoria->nome}}</td>
+            <!--<td><p class="show-summary">{!!$viagem->descricao!!}</p></td>
+            <td>
             <div class="zoom-gallery" style="display: inline;">
               <a href="{{$viagem->thumb}}" data-source="{{$viagem->thumb}}" title="THUMB DA VIAGEM - {{$viagem->nome}}" style="width:35px;height:35px;">
                 <img class="img_popup" src="{{$viagem->thumb}}" width="35" height="35">

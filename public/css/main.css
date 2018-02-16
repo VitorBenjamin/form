@@ -1015,6 +1015,9 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	}
 
 	@media screen and (min-width: 991px){
+		.search{
+			margin-left: 100px;
+		}
 		.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
 			margin-right: -49px;
 		}
