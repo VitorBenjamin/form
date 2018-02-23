@@ -6,16 +6,16 @@
 		<h1 class="center">
 			EDITANDO A VIAGEM {{$viagem->titulo}}
 		</h1>
-		<div class="center">
-			<button type="button" class="btn btn-success submit">EDITAR VIAGEM</button>	
-		</div>
-		
 		<form action="{{ route('viagem.update',$viagem->id)}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			{{ method_field('PUT') }}
 			<div class="form-group t">
 				<input id="titulo" name="titulo" value="{{$viagem->titulo}}" type="text" class="form-control" required>
-				<label for="titulo">Título da Categoria</label>
+				<label for="titulo">Título do Produto</label>
+			</div>
+			<div class="form-group t">
+				<input id="destino" name="destino" type="text" value="{{$viagem->destino}}" class="form-control" required>
+				<label for="destino">Destino</label>
 			</div>
 			<div class="row">
 				<div class="col-sm-6">
@@ -35,13 +35,16 @@
 					</select>
 				</div>
 			</div>
+			<div class="form-group t">
+				<b for="especial">Especial</b>
+				<input type="checkbox" name="especial" {{$viagem->especial == 1 ? 'checked' : '' }} id="especial">
+			</div>
 			<div class="form-group">
 				<textarea id="bodyField" name="descricao" required>{{$viagem->descricao}}</textarea>
-
 				@ckeditor('bodyField',[])
 			</div>
 			<div class="form-group">
-				<b>Enviar uma Miniatura</b>
+				<b>Miniatura</b>
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">
@@ -53,7 +56,7 @@
 				<img id='img-upload' src="{{$viagem->thumb}}" />
 			</div>
 			<div class="form-group">
-				<b>Enviar Capa para a Categoria</b>
+				<b>Capa para a Categoria</b>
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">
@@ -65,6 +68,9 @@
 				<img id="img-upload" class="img-upload" src="{{$viagem->capa}}"/>
 			</div>
 			<button type="submit" class="enviar hidden"></button>
+			<div class="center" style="margin:50px 0">
+				<button type="button" class="btn btn-success submit">EDITAR VIAGEM</button>	
+			</div>
 		</form>
 	</div>
 </div>

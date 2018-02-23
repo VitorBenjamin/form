@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<h1 class="center">
-			Cadastro do Carousel
+			Cadastro do Destaque
 		</h1>
 		<div class="center">
 			<button type="button" class="btn btn-success submit">CADASTRAR</button>	
@@ -14,8 +14,8 @@
 			{{ csrf_field() }}
 			<input type="hidden" name="viagem_id" value="{{$viagem_id}}">
 			<div class="form-group t">
-				<input id="titulo" name="titulo" type="text" class="form-control" required>
-				<label for="titulo">Título do Carouse</label>
+				<input id="nome" name="nome" type="text" class="form-control" required>
+				<label for="nome">Nome do Produto</label>
 			</div>
 			<div class="form-group t">
 				<textarea id="descricao" name="descricao" class="form-control" required></textarea>

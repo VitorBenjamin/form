@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <h1 class="center">
-      Listagem dos Carousels
+      Listagem dos Destaques
     </h1>
     <table id="listagem" class="table table-striped table-bordered" width="100%" cellspacing="0">
       <thead>

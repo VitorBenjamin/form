@@ -55,7 +55,7 @@ class CategoriaController extends Controller
 			$data['capa'] = $capa_img_64;
 		}
 		if ($mimeThumb == "image/jpeg" || $mimeThumb == "image/png") {
-			$file = Image::make($request->file('capa'));
+			$file = Image::make($request->file('thumb'));
 			$thumb_img_64 = (string) $file->encode('data-url');
 			$data['thumb'] = $thumb_img_64;
 		}

@@ -5,7 +5,7 @@
 @include('layouts.menu')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: url('{{$continente->capa}}') center/cover no-repeat;">
+<div class="container-fluid topo-padding" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.41)), url('{{$continente->capa}}') center/cover no-repeat;">
   <div class="container continente">
     <div class="row">
       <div class="col-xs-11 col-sm-3 hidden-xs hidden-sm">
@@ -32,7 +32,7 @@
       </div>
       <div class="col-xs-11 col-sm-9 col-md-offset-1 col-md-8">
         <h1 class="text-right">{{$continente->nome}}</h1>
-        <p>Lorem ipsum dolor</p>
+        <p>{{$continente->descricao}}</p>
       </div>      
     </div>
   </div>

@@ -7,3 +7,7 @@ Email: {{ $email }}
 <p>
 Message: {{ $user_message }}
 </p>
+
+<p>
+Como você gostaria que fosse a sua viagem?: {{ $message }}
+</p>

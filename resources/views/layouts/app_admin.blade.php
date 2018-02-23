@@ -82,7 +82,7 @@
                                     <a href="{{ route('viagem.create') }}">Cadastrar</a>
                                     <a href="{{ route('viagem.index') }}">Listagem</a>
                                 </li>
-                                <li><a href="{{route('carousel.index')}}" class="dropdown-toggle">Carousel</a></li>
+                                <li><a href="{{route('carousel.index')}}" class="dropdown-toggle">Listagem Destaques</a></li>
                             </ul>
                         </li>
                         

@@ -24,7 +24,7 @@
           <div class="collumn">
             <ul class="paises-lista">
               @foreach ($dicas as $d)
-                <li><a title="" data-toggle="modal" data-target="#{{$d->id}}{{$d->nome}}">{{$d->nome}}</a></li>
+                <li><a title="" data-toggle="modal" data-target="#{{$d->id}}{{preg_replace('/\s+/', '', $d->nome)}}">{{$d->nome}}</a></li>
               @endforeach
             </ul>
           </div>

@@ -16,7 +16,7 @@
               <div class="row">
                 <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel">
-                    <h1 style="margin-top: 40%">{{$car->titulo}}</h1>
+                    <h1 style="margin-top: 40%">{{$car->nome}}</h1>
                     <p class="show-summary">{{$car->descricao}}</p>
                     <div class="row">
                       <div class="col-xs-5 col-md-4">
@@ -202,7 +202,7 @@
     <div class="container">
       <div class="row" style="padding: 30px;">
         <div class="col-sm-offset-5 col-sm-2" style="text-align: center;">
-          <a id="add" href="{{route('pagina.exibirTodasViagens')}}" class="links-vermais">VER TODAS</a>
+          <a href="{{route('pagina.exibirTodasViagens')}}" class="links-vermais">VER TODAS</a>
         </div>
       </div>
     </div>

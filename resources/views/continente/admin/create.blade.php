@@ -21,7 +21,7 @@
 				<label for="descricao">Descrição</label>
 			</div>
 			<div class="form-group">
-				<b>Enviar uma miniatura</b>
+				<b>Miniatura para Busca</b>
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">
@@ -30,10 +30,10 @@
 					</span>
 					<input type="text" class="form-control" readonly>
 				</div>
-				<img id='img-upload'/>
+				<img id='img-upload' />
 			</div>
 			<div class="form-group">
-				<b>Enviar Capa para a Continente</b>
+				<b>Capa para a Continente</b>
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">
@@ -44,6 +44,7 @@
 				</div>
 				<img id="img-upload" class="img-upload" />
 			</div>
+			
 			<button type="submit" class="enviar hidden"></button>
 		</form>
 	</div>

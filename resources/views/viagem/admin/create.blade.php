@@ -6,33 +6,8 @@
 		<h1 class="center">
 			Cadastro da Viagem
 		</h1>
-		<div class="center">
-			<button type="button" class="btn btn-success submit">CADASTRAR VIAGEM</button>
-			<h3>Slide do Artigo</h3>
-		</div>
-		
 		<form action="{{ route('viagem.salvar')}}" class="col-md-offset-2 col-md-8 go-right form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			{{ csrf_field() }}
-
-			<div class="input-group control-group increment" >
-				<div class="row">
-					<div class="col-sm-6">
-						<b>Título Para a Imagem</b>
-						<input name="title[]" type="text" class="form-control" style="width:100%" required/>
-					</div>
-					<div class="col-sm-6">
-						<b>Alt Para a Imagem</b>
-						<input name="alt[]" type="text" class="form-control" style="width:100%" required/>
-					</div>
-				</div>
-				<input type="file" name="carousel[]" class="form-control">
-				<div class="input-group-btn" style="vertical-align:bottom !important"> 
-					<button class="btn btn-success add" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
-				</div>
-			</div>
-			<div class="dinamico">
-				
-			</div>
 			<div class="form-group t">
 				<input id="titulo" name="titulo" type="text" class="form-control" required>
 				<label for="titulo">Título da Viagem</label>
@@ -63,8 +38,6 @@
 					</select>
 				</div>
 			</div>
-
-
 			<div class="form-group">
 				<textarea id="bodyField" name="descricao" required></textarea>
 
@@ -85,7 +58,7 @@
 							<input name="alt_thumb" type="text" class="form-control" required/>
 						</div>
 					</div>
-					<b>Enviar uma miniatura</b>
+					<b>Miniatura</b>
 					<div class="input-group">
 						<span class="input-group-btn">
 							<span class="btn btn-default btn-file">
@@ -107,7 +80,7 @@
 							<input name="alt_capa" type="text" class="form-control" required/>
 						</div>
 					</div>
-					<b>Enviar imagem da Viagem</b>
+					<b>Imagem do Topo da Viagem</b>
 					<div class="input-group">
 						<span class="input-group-btn">
 							<span class="btn btn-default btn-file">
@@ -118,8 +91,33 @@
 					</div>
 					<img id="img-upload" class="img-upload" />
 				</div>
+				<div class="input-group control-group increment" >
+					<div class="center">
+						<h3>Galeria do Artigo</h3>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<b>Título Para a Imagem</b>
+							<input name="title[]" type="text" class="form-control" style="width:100%" required/>
+						</div>
+						<div class="col-sm-6">
+							<b>Alt Para a Imagem</b>
+							<input name="alt[]" type="text" class="form-control" style="width:100%" required/>
+						</div>
+					</div>
+					<input type="file" name="carousel[]" class="form-control">
+					<div class="input-group-btn" style="vertical-align:bottom !important"> 
+						<button class="btn btn-success add" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+					</div>
+				</div>
+				<div class="dinamico">
+				</div>
+				<div class="center" style="margin:50px 0">
+					<button type="button" class="btn btn-success submit">CADASTRAR VIAGEM</button>
+				</div>
 				<button type="submit" class="enviar hidden"></button>
 			</form>
+			
 		</div>
 	</div>
 	@endsection

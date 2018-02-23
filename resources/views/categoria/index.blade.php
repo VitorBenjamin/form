@@ -5,7 +5,7 @@
 @include('layouts.menu')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: url('{{$categoria->capa}}') center/cover no-repeat fixed;">
+<div class="container-fluid topo-padding" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.41)), url('{{$categoria->capa}}') center/cover no-repeat fixed;">
   <div class="container categoria">
     <div class="row">
       <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">

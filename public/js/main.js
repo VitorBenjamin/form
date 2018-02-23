@@ -145,124 +145,124 @@ $( document ).ready(function() {
 		hamburger.toggleClass('active');
 		return false;
 	});
-	$('#add').click(function(){  
-		var rota = "http://developer.agenciavilaca.com.br/formula/public/assets/viagem-15.jpg";
-		$('#dinamico').append(
-			'<div class="container-fluid" style="background: #161b33">'
-			+'<div class="row">'
-			+'<div class="col-sm-4">'
-			+'<div class="row">'
-			+'<div class="thumb">'
-			+'<img src="'+rota+'" data-aos="fade-down"  alt="" class="img-responsive">'
-			+'<div class="caption">'
-			+'<div class="col-xs-12">'
-			+'<div class="caption-titulo">'
-			+'<div class="caption-titulo">'
-			+'<p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'<div class="caption-rodape">'
-			+'<div class="col-xs-6 col-md-6">'
-			+'<div class="border-top">'
-			+'<hr width="25%">'
-			+'<p>Porto Seguro</p>'
-			+'</div>'
-			+'</div>'
-			+'<div class="col-xs-6 col-md-6">'
-			+'<a href="#" class="a-caption">'
-			+'<div class="button-caption">'
-			+'VER MAIS'
-			+'</div>'
-			+'</a>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'<div class="col-sm-4">'
-			+'<div class="row">'
-			+'<div class="thumb">'
-			+'<img src="'+rota+'" data-aos="fade-down"  alt="" class="img-responsive">'
-			+'<div class="caption">'
-			+'<div class="col-xs-12">'
-			+'<div class="caption-titulo">'
-			+'<div class="caption-titulo">'
-			+'<p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'<div class="col-xs-6 col-md-6">'
-			+'<div class="border-top">'
-			+'<hr width="25%">'
-			+'<p>Porto Seguro</p>'
-			+'</div>'
-			+'</div>'
-			+'<div class="col-xs-6 col-md-6">'
-			+'<a href="#" class="a-caption">'
-			+'<div class="button-caption">'
-			+'VER MAIS'
-			+'</div>'
-			+'</a>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'<div class="col-sm-4">'
-			+'<div class="row">'
-			+'<div class="thumb">'
-			+'<img src="'+rota+'" data-aos="fade-down"  alt="" class="img-responsive">'
-			+'<div class="caption">'
-			+'<div class="col-xs-12">'
-			+'<div class="caption-titulo">'
-			+'<div class="caption-titulo">'
-			+'<p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'<div class="col-xs-6 col-md-6">'
-			+'<div class="border-top">'
-			+'<hr width="25%">'
-			+'<p>Porto Seguro Porto Seguro </p>'
-			+'</div>'
-			+'</div>'
-			+'<div class="col-xs-6 col-md-6">'
-			+'<a href="#" class="a-caption">'
-			+'<div class="button-caption">'
-			+'VER MAIS'
-			+'</div>'
-			+'</a>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'</div>'
-			+'</div>');
-		$('.thumb').hover(function(){
-			$(this).find('.caption').fadeIn(250)
-		},function(){
-			$(this).find('.caption').fadeOut(205)
-		}
-		);
-		$('.popup-modal').magnificPopup({
-			type: 'inline',
-			midClick: true,
-			preloader: false,
-			modal: false
-		});
-		$(document).on('click', '.popup-modal-dismiss', function (e) {
-			e.preventDefault();
-			$.magnificPopup.close();
-		});
-		$('.popup-modal').on('click',function (e) {
-		//console.log('asdasdas');
-		e.preventDefault();
-		$('#test-modal').removeClass('mfp-hide2');
-	});
-	}); 
+	// $('#add').click(function(){  
+	// 	var rota = "http://developer.agenciavilaca.com.br/formula/public/assets/viagem-15.jpg";
+	// 	$('#dinamico').append(
+	// 		'<div class="container-fluid" style="background: #161b33">'
+	// 		+'<div class="row">'
+	// 		+'<div class="col-sm-4">'
+	// 		+'<div class="row">'
+	// 		+'<div class="thumb">'
+	// 		+'<img src="'+rota+'" data-aos="fade-down"  alt="" class="img-responsive">'
+	// 		+'<div class="caption">'
+	// 		+'<div class="col-xs-12">'
+	// 		+'<div class="caption-titulo">'
+	// 		+'<div class="caption-titulo">'
+	// 		+'<p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'<div class="caption-rodape">'
+	// 		+'<div class="col-xs-6 col-md-6">'
+	// 		+'<div class="border-top">'
+	// 		+'<hr width="25%">'
+	// 		+'<p>Porto Seguro</p>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'<div class="col-xs-6 col-md-6">'
+	// 		+'<a href="#" class="a-caption">'
+	// 		+'<div class="button-caption">'
+	// 		+'VER MAIS'
+	// 		+'</div>'
+	// 		+'</a>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'<div class="col-sm-4">'
+	// 		+'<div class="row">'
+	// 		+'<div class="thumb">'
+	// 		+'<img src="'+rota+'" data-aos="fade-down"  alt="" class="img-responsive">'
+	// 		+'<div class="caption">'
+	// 		+'<div class="col-xs-12">'
+	// 		+'<div class="caption-titulo">'
+	// 		+'<div class="caption-titulo">'
+	// 		+'<p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'<div class="col-xs-6 col-md-6">'
+	// 		+'<div class="border-top">'
+	// 		+'<hr width="25%">'
+	// 		+'<p>Porto Seguro</p>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'<div class="col-xs-6 col-md-6">'
+	// 		+'<a href="#" class="a-caption">'
+	// 		+'<div class="button-caption">'
+	// 		+'VER MAIS'
+	// 		+'</div>'
+	// 		+'</a>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'<div class="col-sm-4">'
+	// 		+'<div class="row">'
+	// 		+'<div class="thumb">'
+	// 		+'<img src="'+rota+'" data-aos="fade-down"  alt="" class="img-responsive">'
+	// 		+'<div class="caption">'
+	// 		+'<div class="col-xs-12">'
+	// 		+'<div class="caption-titulo">'
+	// 		+'<div class="caption-titulo">'
+	// 		+'<p class="show-dots">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'<div class="col-xs-6 col-md-6">'
+	// 		+'<div class="border-top">'
+	// 		+'<hr width="25%">'
+	// 		+'<p>Porto Seguro Porto Seguro </p>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'<div class="col-xs-6 col-md-6">'
+	// 		+'<a href="#" class="a-caption">'
+	// 		+'<div class="button-caption">'
+	// 		+'VER MAIS'
+	// 		+'</div>'
+	// 		+'</a>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>'
+	// 		+'</div>');
+	// 	$('.thumb').hover(function(){
+	// 		$(this).find('.caption').fadeIn(250)
+	// 	},function(){
+	// 		$(this).find('.caption').fadeOut(205)
+	// 	}
+	// 	);
+	// 	$('.popup-modal').magnificPopup({
+	// 		type: 'inline',
+	// 		midClick: true,
+	// 		preloader: false,
+	// 		modal: false
+	// 	});
+	// 	$(document).on('click', '.popup-modal-dismiss', function (e) {
+	// 		e.preventDefault();
+	// 		$.magnificPopup.close();
+	// 	});
+	// 	$('.popup-modal').on('click',function (e) {
+	// 	//console.log('asdasdas');
+	// 	e.preventDefault();
+	// 	$('#test-modal').removeClass('mfp-hide2');
+	// });
+	// }); 
 });
 $(document).ready(function() {
 	$('.popup-modal').magnificPopup({

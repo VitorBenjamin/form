@@ -54,7 +54,7 @@ class PaginasController extends Controller
         $continentes = Continente::all('nome');
         $cont = Continente::where('id',$viagem->continentes_id)->first();
         $clientes = Cliente::all();
-
+        $especial = Viagem::where('especial',true)->first();
         //dd($cont);
         if (count($viagem) == 0) {
             Session::flash('flash_message',[
@@ -88,6 +88,7 @@ class PaginasController extends Controller
         //dd($t);
         //dd($cat);
         $continentes = Continente::all('nome');
+        $especial = Viagem::where('especial',true)->first();
         if (count($cat) >0) {
             $catConti = Categoria::where('id',$cat)->get(['nome']);
 
@@ -99,7 +100,7 @@ class PaginasController extends Controller
 
         $viagens = Viagem::where('continentes_id', $continente->id)->get(['titulo', 'destino','title_thumb', 'alt_thumb', 'thumb']);
         $clientes = Cliente::all();
-        return view('continente.index',compact('continentes','continente','catConti','categorias','clientes','check','dicas','viagens'));
+        return view('continente.index',compact('continentes','continente','catConti','categorias','clientes','check','dicas','viagens','especial'));
 
     }
     public function exibirCategoria($nome)
@@ -118,10 +119,11 @@ class PaginasController extends Controller
         }
         $continentes = Continente::all('nome');
         $categorias = Categoria::all('nome','thumb');
+        $especial = Viagem::where('especial',true)->first();
         //dd($categoria);
         $viagens = Viagem::where('categorias_id',$categoria->id)->get();
         $clientes = Cliente::all();
-        return view('categoria.index',compact('categorias','categoria','continentes','viagens','clientes','check','dicas'));
+        return view('categoria.index',compact('categorias','categoria','continentes','viagens','clientes','check','dicas','especial'));
 
     }
     public function exibirContinenteCategoria($continente,$categoria)
@@ -139,6 +141,7 @@ class PaginasController extends Controller
             ]);
             return redirect()->route('pagina.index');
         }
+        $especial = Viagem::where('especial',true)->first();
         $cont = Continente::where('nome', $continente)->get(['id','nome']);
         $cat = Viagem::where('continentes_id',$cont[0]->id)->distinct()->get(['categorias_id'])->toArray();
         if (count($cat) >0) {
@@ -153,7 +156,7 @@ class PaginasController extends Controller
         ->where('continentes_id',$cont[0]->id)
         ->get();
         $clientes = Cliente::all();
-        return view('categoria.index_continente',compact('categorias','cont','categoria','continentes','viagens','clientes','check','dicas'));
+        return view('categoria.index_continente',compact('categorias','cont','categoria','continentes','viagens','clientes','check','dicas','especial'));
 
     }
     public function postSearch(Request $request)
@@ -165,7 +168,7 @@ class PaginasController extends Controller
         ->select('id','titulo','thumb')
         ->get();
         $conts = Continente::where('nome','like','%'.$busca.'%')
-        ->select('id','nome','descricao','thumb')
+        ->select('id','nome','descricao','capa')
         ->get();
         $continentes = Continente::all('nome');
         $cats = Categoria::where('nome','like','%'.$busca.'%')
@@ -203,8 +206,8 @@ class PaginasController extends Controller
                 'user_message' => $request->get('mensagem')
             ], function($message)
             {
-                $message->from('developer@vilacacomunicacao.com.br');
-                $message->to('moselo@betsoccer.club', 'Admin')->subject('Contato pelo Site');
+                $message->from('naoreponder@formulaturimo.com.br');
+                $message->to('formula@formulaturimo.com.br', 'Admin')->subject('Contato pelo Site');
             });
         Session::flash('flash_message',[
             'msg'=>"Obrigado Por entrar em contato! Seu E-mail foi Enviado com Sucesso",
@@ -226,11 +229,12 @@ class PaginasController extends Controller
             [
                 'name' => $request->get('nome'),
                 'email' => $request->get('email'),
-                'user_message' => "Mostrou Interesse pela viagem " . $request->get('viagem')
+                'user_message' => "Mostrou Interesse pela viagem " . $request->get('viagem'),
+                'message' => $request->get('mensagem')
             ], function($message)
             {
-                $message->from('developer@vilacacomunicacao.com.br');
-                $message->to('moselo@betsoccer.club', 'Admin')->subject('Reserva pelo Site');
+                $message->from('naoreponder@formulaturimo.com.br');
+                $message->to('formula@formulaturimo.com.br', 'Cliente')->subject('Reserva pelo Site');
             });
         Session::flash('flash_message',[
             'msg'=>"Obrigado Por entrar em contato! Seu E-mail foi Enviado com Sucesso",

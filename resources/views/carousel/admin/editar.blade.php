@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<h1 class="center">
-			Atuliazação do Carousel
+			Atuliazação do Destaque
 		</h1>
 		<div class="center">
 			<button type="button" class="btn btn-success submit">ATUALIZAR</button>	
@@ -14,8 +14,8 @@
 			{{ csrf_field() }}
 			{{ method_field('PUT')}}
 			<div class="form-group t">
-				<input id="titulo" name="titulo" value="{{$carousel->titulo}}" type="text" class="form-control" required>
-				<label for="titulo">Título do Carouse</label>
+				<input id="nome" name="nome" value="{{$carousel->nome}}" type="text" class="form-control" required>
+				<label for="nome">Nome do Produto</label>
 			</div>
 			<div class="form-group t">
 				<textarea id="descricao" name="descricao" class="form-control" required>{{$carousel->descricao}}</textarea>

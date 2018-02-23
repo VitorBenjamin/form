@@ -56,16 +56,18 @@ class ViagemController extends Controller
 		//dd($request->file('carousel'));
 		$mimeCapa = $request->file('capa')->getClientMimeType();
 		$mimeThumb = $request->file('thumb')->getClientMimeType();
+		//dd($request->especial);
 		$data = [
 			'titulo' => $request->titulo,
 			'descricao' => $request->descricao ? $request->descricao : null,
+			'destino' => $request->destino,
 			'ativo' => true,
 			'categorias_id' => $request->categorias_id,
 			'continentes_id' => $request->continentes_id,
 			'title_thumb' => $request->title_thumb, 
 			'alt_thumb' => $request->alt_thumb, 
 			'title_capa' => $request->title_capa, 
-			'especial' => $request->especial,
+			'especial' => $request->especial == null ? 0 : $request->especial,
 			'alt_capa' => $request->alt_capa, 
 		];
 		if ($mimeCapa == "image/jpeg" || $mimeCapa == "image/png") {
@@ -107,6 +109,7 @@ class ViagemController extends Controller
 		$viagem = Viagem::find($id);
 		$data = [
 			'titulo' => $request->titulo,
+			'destino' => $request->destino,
 			'descricao' => $request->descricao ? $request->descricao : null,
 			'categorias_id' => $request->categorias_id,
 			'continentes_id' => $request->continentes_id,

@@ -33,7 +33,7 @@
         @foreach ($conts as $c)
         <a href="{{route('pagina.exibirContinente',$c->nome)}}" title="">
           <h1>{{$c->nome}}</h1>
-          <img src="{{$c->thumb}}" alt="" width="250" height="150">
+          <img src="{{$c->capa}}" alt="" width="250" height="150">
         </a>
         @endforeach
         @foreach ($cats as $ca)

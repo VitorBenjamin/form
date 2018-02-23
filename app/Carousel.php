@@ -12,7 +12,7 @@ class Carousel extends Model
      * @var array
      */
     protected $fillable = [
-    	'titulo', 'descricao', 'title', 'alt', 'imagem', 'ativo','viagens_id'
+    	'nome', 'descricao', 'imagem', 'ativo','viagens_id'
     ];
 
     public function viagem()

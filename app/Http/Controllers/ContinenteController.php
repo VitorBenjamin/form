@@ -59,7 +59,7 @@ class ContinenteController extends Controller
 			$data['capa'] = $capa_img_64;
 		}
 		if ($mimeThumb == "image/jpeg" || $mimeThumb == "image/png") {
-			$file = Image::make($request->file('capa'));
+			$file = Image::make($request->file('thumb'));
 			$thumb_img_64 = (string) $file->encode('data-url');
 			$data['thumb'] = $thumb_img_64;
 		}
@@ -88,16 +88,16 @@ class ContinenteController extends Controller
 			$data['capa'] = $continente->capa;
 		}
 		
-		if ($request->file('thumb')) {
-			$mimeThumb = $request->file('thumb')->getClientMimeType();
-			if ($mimeThumb == "image/jpeg" || $mimeThumb == "image/png") {
-				$file = Image::make($request->file('thumb'));
-				$thumb_img_64 = (string) $file->encode('data-url');
-				$data['thumb'] = $thumb_img_64;
-			}
-		}else{
-			$data['thumb'] = $continente->thumb;
-		}
+		// if ($request->file('thumb')) {
+		// 	$mimeThumb = $request->file('thumb')->getClientMimeType();
+		// 	if ($mimeThumb == "image/jpeg" || $mimeThumb == "image/png") {
+		// 		$file = Image::make($request->file('thumb'));
+		// 		$thumb_img_64 = (string) $file->encode('data-url');
+		// 		$data['thumb'] = $thumb_img_64;
+		// 	}
+		// }else{
+		// 	$data['thumb'] = $continente->thumb;
+		// }
 		
 		$continente->update($data);
 

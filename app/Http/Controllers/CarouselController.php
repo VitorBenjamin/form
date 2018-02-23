@@ -69,7 +69,7 @@ class CarouselController extends Controller
 		$mimeImagem = $request->file('imagem')->getClientMimeType();
 		//dd($request->all());
 		$data = [
-			'titulo' => $request->titulo,
+			'nome' => $request->nome,
 			'descricao' => $request->descricao ? $request->descricao : null,
 			'ativo' => true,
 			'viagens_id' => $request->viagem_id,
@@ -90,7 +90,7 @@ class CarouselController extends Controller
 	{	
 		$carousel = Carousel::find($id);
 		$data = [
-			'titulo' => $request->titulo,
+			'nome' => $request->nome,
 			'descricao' => $request->descricao ? $request->descricao : null,
 			'ativo' => $carousel->ativo,
 			'viagens_id' => $carousel->viagens_id,

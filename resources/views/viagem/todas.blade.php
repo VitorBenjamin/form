@@ -4,7 +4,7 @@
 @include('layouts.menu')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: url('{{$especial->capa}}') center/cover no-repeat;">
+<div class="container-fluid topo-padding" style="background: url('{{$especial == null ? asset('assets/bg-categoria-continente-norte.jpg') : $especial->capa}}') center/cover no-repeat;">
   <div class="container continente">
     <div class="row">
       <div class="col-xs-11 col-sm-3 hidden-xs hidden-sm">
@@ -30,8 +30,8 @@
         </div>
       </div>
       <div class="col-xs-11 col-sm-9 col-md-offset-1 col-md-8">
-        <h1 class="text-right">{{$especial->titulo}}</h1>
-        <p>{{$especial->categoria->nome}}</p>
+        <h1 class="text-right">{{$especial == null ? 'Todas As Viagens' : $especial->titulo}}</h1>
+        <p>{{$especial == null ? 'É só escolher e desfrutar' :$especial->categoria->nome}}</p>
       </div>      
     </div>
   </div>
@@ -74,6 +74,7 @@
 
   <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
   @if(count($viagens) > 5)
+
   <div id="dinamico">
     @for ($i = 0; $i < 6; $i++) 
     @if ($i/2 == 0 || $i ==0 )

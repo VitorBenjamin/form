@@ -26,11 +26,11 @@
         <div class="row">
           <div class="col-md-6" data-aos="fade-down">
             <img class="img-responsive" src="{{asset('assets/avatar-consultora.png')}}" style="float:left;" alt="">
-            <img src="{{asset('assets/assinatura-consultora.svg')}}" style="width: 40%; margin: 40px 0 0 0;clear:both" alt="">
+            <img src="{{asset('assets/assinatura-consultora.svg')}}" style="width: 60%; margin: 20px 0 0 0;clear:both" alt="">
           </div>
           <div class="col-md-6" style="margin-top:35px" data-aos="fade-down">
             <img class="roteiro-img" src="{{asset ('assets/icon-email.svg')}}" alt="" style="width:30px">
-            <span class="roteiro-span">roteiro@formulaturismo.com.br</span>
+            <span class="roteiro-span">byana@formulaturismo.com.br</span>
 
             <img class="roteiro-img" src="{{asset('assets/icon-telefone.svg')}}" alt="" style="width:30px">
             <span class="roteiro-span">+55 (21) 2509-4614</span>

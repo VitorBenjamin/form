@@ -71,28 +71,25 @@
         <section class="content">
           @if (count($viagem->imgs) > 0)
 
-            <div id="thumbGallery"
-            class="thumbGallery"
-            data-thumbGallery="true"
-            data-nav_effect="slide_horizontal"
-            data-nav_delay="100"
-            data-nav_timing="1000"
-            data-nav_show="true"
-            data-nav_delay_inverse="1"
-            data-nav_pagination="6"
-            data-gallery_cover="true"
-            data-gallery_effect="slide_horizontal"
-            data-gallery_fullscreenw="90%"
-            data-gallery_fullscreenh="100%"
-            >
-            @foreach ($viagem->imgs as $img)
-            <img src="http://via.placeholder.com/1920x1080" data-highres="http://via.placeholder.com/1920x1080" data-caption="Parturient Bibendum Malesuada Etiam"/>
-            <img src="{{$img->imagem}}" data-highres="{{$img->imagem}}"/>
-            <img src="http://via.placeholder.com/1920x1080" data-highres="http://via.placeholder.com/1920x1080" data-caption="Parturient Bibendum Malesuada Etiam"/>
-            @endforeach
-            </div>
-          @endif
-
+          <div id="thumbGallery"
+          class="thumbGallery"
+          data-thumbGallery="true"
+          data-nav_effect="slide_horizontal"
+          data-nav_delay="100"
+          data-nav_timing="1000"
+          data-nav_show="true"
+          data-nav_delay_inverse="1"
+          data-nav_pagination="6"
+          data-gallery_cover="true"
+          data-gallery_effect="slide_horizontal"
+          data-gallery_fullscreenw="90%"
+          data-gallery_fullscreenh="100%"
+          >
+          @foreach ($viagem->imgs as $img)
+          <img src="{{$img->imagem}}" data-highres="{{$img->imagem}}"/>
+          @endforeach
+        </div>
+        @endif
       </section>
       {!!$viagem->descricao!!}
     </div>
@@ -104,19 +101,27 @@
       <form action="{{route('postReserva')}}" method="post" class="form">
         {{ csrf_field() }}
         <input id="viagem" name="viagem" type="hidden" value="{{$viagem->titulo}}" placeholder="Nome" required>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <input id="nome" name="nome" type="text" placeholder="Nome" required>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-7">
           <input id="email" name="email" type="email" placeholder="E-mail" required>
           <label class="nao-aparece">Se você não é um robô, deixe em branco.</label>
           <input type="text" class="nao-aparece" name="leaveblank">
           <label class="nao-aparece">Se você não é um robô, não mude este campo.</label>
           <input type="text" class="nao-aparece" name="dontchange" value="http://">
         </div>
-        <div class="col-md-3">
+        {{-- <div class="col-md-3">
           <div>
             <button type="submit" style="margin-top:0; width: 100% !important;">RESERVAR</button>
+          </div>
+        </div> --}}
+        <div class="col-xs-12">
+          <textarea name="mensagem" id="mensagem" placeholder="Como você gostaria que fosse a sua viagem?" required></textarea>
+        </div>
+        <div class="row">
+          <div class="col-sm-offset-9 col-sm-3 col-md-offset-10 col-md-2">
+            <button type="submit">RESERVAR</button>
           </div>
         </div>
       </form>

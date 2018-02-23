@@ -4,11 +4,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta name="robots" content="index, follow">
+	<meta name="description" content="Agência de viagens desde 1988, membro Virtuoso, especialista em viagens segmentadas e personalizadas, oferecendo turismo de alto padrão em qualquer parte do mundo." />
+	<meta name="keywords" content="blog de viagem, guia de viagem, viagens, férias, hotéis, passeios, viagem de conhecimento, roteiros de viagem, praia, montanha, neve, dicas de restaurantes, gastronomia, enogastronomia, resorts, skiresorts, viagem de luxo, hotéis de luxo, viagem cultural, viagem de aventura, safari, cruzeiros, viagens, europa, paris, new York, nova york, londres, brasil, destinos, cultura, entretenimento, boa comida, restaurantes, eventos, passeios, museus, parques, compras, noite, dicas de viagem, , o que fazer, onde comprar, onde ir, dicas restaurantes, dicas viagens exóticas, onde comer, onde beber, dicas de viagens exóticas, inspiração de viagens, dicas exclusivas, roteiros personalizado, dicas de esqui, dicas de ski, viagem casamento, casamento exterior, viagem lua de mel, viagem a dois, roteiros personalizados, viagem personalizada, roteiro de luxo, roteiros exclusivos.
+	"/>
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link rel="icon" href="{{ asset('assets/favicon.png') }}">
-	<title>{{ config('app.name', 'Formula Turismo') }}</title>
+	<title>{{ config('app.name', '- Formula Turismo | Arte de Viajar') }}</title>
 
 	<!-- Styles -->
 	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
