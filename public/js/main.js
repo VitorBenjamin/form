@@ -285,7 +285,7 @@ $(document).ready(function() {
 $(".link-menu").click(function() {
 
 	$('html, body').animate({
-		scrollTop: $($(this).attr('href')).offset().top
+		scrollTop: $($(this).attr('href')).offset().top - 90
 	}, 1500);
 });
 

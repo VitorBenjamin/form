@@ -758,7 +758,7 @@ ul.paises-lista>li:before { content:'\ffed'; margin-right:0.5em; }
 	font-weight: 700;
 }
 .form>div>textarea {
-	height: 200px;
+	height: 150px;
 	margin-top: 25px;
 	width: 100%;
 }

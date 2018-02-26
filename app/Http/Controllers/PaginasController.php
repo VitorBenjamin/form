@@ -23,6 +23,7 @@ class PaginasController extends Controller
         $check = Dica::where('tipo','CHECK-IN')->take(8)->get();
         $dicas = Dica::where('tipo','DICAS-VIAGENS')->take(8)->get();
         $especial = Viagem::where('especial',true)->first();
+        //dd($especial);
         //dd($clientes);
         return view('index',compact('categorias','continentes','viagens','carousels','clientes','check','dicas','especial'));
     }

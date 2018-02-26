@@ -113,6 +113,8 @@ class ViagemController extends Controller
 			'descricao' => $request->descricao ? $request->descricao : null,
 			'categorias_id' => $request->categorias_id,
 			'continentes_id' => $request->continentes_id,
+			'especial' => $request->especial == null ? 0 : $request->especial,
+
 		];
 		if ($request->file('capa')) {
 			$mimeCapa = $request->file('capa')->getClientMimeType();

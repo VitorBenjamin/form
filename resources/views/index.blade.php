@@ -16,7 +16,7 @@
               <div class="row">
                 <div class="col-sm-offset-1 col-sm-10 col-md-9">
                   <div class="texto-carousel">
-                    <h1 style="margin-top: 40%">{{$car->nome}}</h1>
+                    <h1 style="margin-top: 45%">{{$car->nome}}</h1>
                     <p class="show-summary">{{$car->descricao}}</p>
                     <div class="row">
                       <div class="col-xs-5 col-md-4">
@@ -219,7 +219,7 @@
 -->
 
 <!-- INICIO SESSÃO DE ROTEIRO-->
-{{-- @include('layouts.especial') --}}
+@include('layouts.especial')
 <!-- FIM DA SESSÃO DE ROTEIRO-->
 
 <!-- INICIO SESSÃO DE ROTEIRO-->

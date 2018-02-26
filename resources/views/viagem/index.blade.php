@@ -141,19 +141,17 @@
 <!-- INCIO SESSÃO CHECK IN E DICAS -->
 @include('layouts.checkin_dicas')
 
-<!-- INCIO SESSÃO QUEM SOMOS -->
-<section id="about">
-  @include('layouts.about')
-</section>
-<!-- FINAL SESSÃO QUEM SOMOS -->
-
 <!-- INCIO SESSÃO CLIENTES -->
 @include('layouts.clientes')
 <!-- FINAL SESSÃO CLIENTES -->
 
 <!-- INCIO SESSÃO CLIENTES -->
 <section id="contato">
-  @include('layouts.footer')
+  @include('layouts.footer_sem_form')
 </section>
+
+<!-- FIM SESSÃO CLIENTES -->
+@include('modals.modals')
+<!-- FINAL SESSÃO CHECK IN E DICAS -->
 
 @endsection

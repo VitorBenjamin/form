@@ -17,11 +17,11 @@
         <ul class="nav navbar-nav navbar-right">
          <li><a class="link-menu" href="{{route('pagina.index')}}">Pagina Inicial</a></li>
          <li role="separator" class="divider"></li>
-         <li><a class="link-menu" href="#destinos">DESTINOS</a></li>
+         <li><a class="link-menu" href="http://localhost/form/public/#destinos">DESTINOS</a></li>
          <li role="separator" class="divider"></li>
          <li><a class="link-menu" href="#about">QUEM SOMOS</a></li>
          <li role="separator" class="divider"></li>
-         <li><a class="link-menu" href="#destaque">VIAGEM DESTAQUE</a></li>
+         <li><a class="link-menu" href="http://localhost/form/public/#destaque">VIAGEM DESTAQUE</a></li>
          <li role="separator" class="divider"></li>
          <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ROTEIROS<span class="caret"></span></a>

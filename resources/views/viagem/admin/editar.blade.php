@@ -37,7 +37,7 @@
 			</div>
 			<div class="form-group t">
 				<b for="especial">Especial</b>
-				<input type="checkbox" name="especial" {{$viagem->especial == 1 ? 'checked' : '' }} id="especial">
+				<input type="checkbox" name="especial" value="1" {{$viagem->especial == 1 ? 'checked' : '' }} id="especial">
 			</div>
 			<div class="form-group">
 				<textarea id="bodyField" name="descricao" required>{{$viagem->descricao}}</textarea>
