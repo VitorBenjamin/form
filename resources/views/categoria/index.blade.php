@@ -1,26 +1,21 @@
 @extends('layouts.app')
-
 @section('content')
 
-@include('layouts.menu')
+@include('layouts.menu_black')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.41)), url('{{$categoria->capa}}') center/cover no-repeat fixed;">
-  <div class="container categoria">
-    <div class="row">
-      <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
+<div class="container-fluid" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.41)), url('{{$categoria->capa}}') center/cover no-repeat fixed;">
+  <div class="container height-80 height-100-mobile categoria">
+    <div class="row justify-content-center height-50">
+      <div class="col-md-10 align-self-end">
         <h1 class="text-center">{{$categoria->nome}}</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
         <p>
           {{$categoria->descricao}}
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12" style="text-align: center;">
+    <div class="row justify-content-center height-20">
+      <div class="col-12 align-self-end" style="text-align: center;">
         <select class="destino">
           <option value="">ESCOLHA UM CONTINENTE</option>}
           @foreach ($continentes as $cont)
@@ -39,14 +34,14 @@
   
   <!-- SELECT VIAGENS -->
   <div class="container-fluid select">
-    <div class="container select-margin">
-      <div class="row margem-padrao">
-        <div class="col-sm-6 col-md-7">
+    <div class="container">
+      <div class="row justify-content-between py-5">
+        <div class="col-md-7">
           <div class="border-left">
             <p class="center">VIAGENS</p>
           </div>
         </div>
-        <div class="col-sm-6 col-md-5">
+        <div class="col-md-4">
           <div class="select-right">
             <select class="destino">
               <option value="">ESCOLHA UM DESTINO</option>

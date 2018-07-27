@@ -20,6 +20,9 @@ class CreateCarouselsTable extends Migration
             $table->boolean('ativo')->default(false);
             $table->integer('viagens_id')->unsigned();
             $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_unicode_ci';
         });
         Schema::table('carousels', function (Blueprint $table) {
             $table->foreign('viagens_id')->references('id')->on('viagens')->onUpdate('cascade')->onDelete('cascade');

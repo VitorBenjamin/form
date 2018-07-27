@@ -1,40 +1,31 @@
 @extends('layouts.app')
-
 @section('content')
 
-@include('layouts.menu')
+@include('layouts.menu_black')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.41)), url('{{$continente->capa}}') center/cover no-repeat;">
+<div class="container-fluid topo-padding" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.41)), url('{{$continente->capa}}') center center/cover no-repeat;">
   <div class="container continente">
-    <div class="row">
-      <div class="col-xs-11 col-sm-3 hidden-xs hidden-sm">
-        <div class="container vertical-container">
-          <div class="row">
-            <div class="col-sm-1">
-              <div class="arrows">
-                <button class="up"><i class="material-icons">keyboard_arrow_up</i></button>
-                <button class="down"><i class="material-icons">keyboard_arrow_down</i></button>  
-              </div>
-            </div>
-            <div class="col-sm-3 col-md-2">
-              <div class="vertical-menu">
-                <p class="p">
-                  @foreach ($catConti as $cat)
-                  <a href="{{route('pagina.exibirContinenteCategoria',[mb_strtolower($continente->nome),mb_strtolower($cat->nome)])}}">{{$cat->nome}}</a> 
-                  <br>
-                  @endforeach
-                </p>
-              </div>
-            </div>
-          </div>
+    <div class="row height-80 height-100-mobile">
+      <div class="col-md-5 d-none d-md-block align-self-center">
+        <div class="vertical-menu">
+          <p class="p">
+            @foreach ($catConti as $cat)
+            <a href="{{route('pagina.exibirContinenteCategoria',[mb_strtolower($continente->nome),mb_strtolower($cat->nome)])}}">{{$cat->nome}}</a> 
+            <br>
+            @endforeach
+          </p>
+        </div>
+        <div style="position:absolute; bottom:20px;">
+          <button class="up"><i class="material-icons">keyboard_arrow_up</i></button>
+          <button class="down"><i class="material-icons">keyboard_arrow_down</i></button>  
         </div>
       </div>
-      <div class="col-xs-11 col-sm-9 col-md-offset-1 col-md-8">
+      <div class="col-md-7 align-self-center">
         <h1 class="text-right">{{$continente->nome}}</h1>
         <p>{{$continente->descricao}}</p>
-      </div>      
-    </div>
+      </div> 
+    </div>     
   </div>
 </div>
 <!-- FIM SESSÃO TOPO DA VIAGEM -->
@@ -42,28 +33,20 @@
 <!-- INICIO DA SESSÃO DAS VIAGENS COM CAPTION/OVERLAY-->
 <section id="destinos">
   <!-- INCIO SESSÃO DE SELEÇÃO DE VIAGENS -->
-  <div class="container-fluid select-brown">
-    <div class="container select-margin">
-      <div class="row margem-padrao">
-        <div class="col-sm-4">
+  <div class="container-fluid">
+    <div class="container py-5">
+      <div class="row justify-content-between">
+        <div class="col-md-4">
           <div class="border-left white">
             <p class="center">VIAGENS</p>
           </div>
         </div>
-        <div class="col-md-offset-4 col-sm-4">
-          <div class="select-right">
-            {{-- <select class="destino">
-              <option value="">SELECIONE O CONTINENTE</option>
-              @foreach ($continentes as $cont)
-              <option value="{{route('pagina.exibirContinente',mb_strtolower($cont->nome))}}">{{$cont->nome}}</option>
-              @endforeach
-            </select> --}}
-            <form class="search" action="{{route('pagina.search')}}" method="post">
-              {{ csrf_field() }}
-              <input type="search" name="search" placeholder="Buscar..">
-              <button type="submit"><i class="material-icons pesquisa">search</i></button>
-            </form>
-          </div>
+        <div class="col-md-4">
+          <form class="search" action="{{route('pagina.search')}}" method="post">
+            {{ csrf_field() }}
+            <input type="search" name="search" placeholder="Buscar..">
+            <button type="submit"><i class="material-icons pesquisa" style="float: right;">search</i></button>
+          </form>
         </div>
       </div>
     </div>
@@ -155,7 +138,7 @@
 <!-- FIM SESSÃO NEWS LATTER -->
 
 <!-- INCIO SESSÃO CHECK IN E DICAS -->
-@include('layouts.checkin_dicas')
+<!-- @include('layouts.checkin_dicas') -->
 
 @include('modals.modals')
 <!-- FINAL SESSÃO CHECK IN E DICAS -->
@@ -175,5 +158,4 @@
   @include('layouts.footer')
 </section>
 <!-- FIM SESSÃO CLIENTES -->
-
 @endsection

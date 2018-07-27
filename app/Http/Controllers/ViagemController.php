@@ -52,11 +52,8 @@ class ViagemController extends Controller
 
 	public function salvar(Request $request)
 	{	
-		//dd($request->all());
-		//dd($request->file('carousel'));
 		$mimeCapa = $request->file('capa')->getClientMimeType();
 		$mimeThumb = $request->file('thumb')->getClientMimeType();
-		//dd($request->especial);
 		$data = [
 			'titulo' => $request->titulo,
 			'descricao' => $request->descricao ? $request->descricao : null,
@@ -81,22 +78,22 @@ class ViagemController extends Controller
 			$data['thumb'] = $thumb_img_64;
 		}
 		$viagem = Viagem::create($data);
-		
-		foreach ($request->file('carousel') as $key => $value) {
+		if ($request->file('galeria')) {
+			foreach ($request->file('galeria') as $key => $value) {
 
-			$img = [
-				'titulo' => $request->title[$key],
-				'alt' => $request->alt[$key],
-				'viagens_id' => $viagem->id
-			];
-			$mimeImg = $value->getClientMimeType();
-			if ($mimeImg == "image/jpeg" || $mimeImg == "image/png") {
-				$file = Image::make($value);
-				$foto_img_64 = (string) $file->encode('data-url');
-				$img['imagem'] = $foto_img_64;
+				$img = [
+					'titulo' => $request->title[$key],
+					'alt' => $request->alt[$key],
+					'viagens_id' => $viagem->id
+				];
+				$mimeImg = $value->getClientMimeType();
+				if ($mimeImg == "image/jpeg" || $mimeImg == "image/png") {
+					$file = Image::make($value);
+					$foto_img_64 = (string) $file->encode('data-url');
+					$img['imagem'] = $foto_img_64;
+				}
+				$img = Img::create($img);
 			}
-			$img = Img::create($img);
-			//dd($img);
 		}
 		Session::flash('flash_message',[
 			'msg'=>"Cadastro da Viagem Realizado com Sucesso!!!",
@@ -104,6 +101,72 @@ class ViagemController extends Controller
 		]);
 		return redirect()->route('viagem.index');
 	}
+	
+	public function salvarGaleria(Request $request)
+	{	
+
+		//dd($request->all());
+		if ($request->file('galeria')) {
+			foreach ($request->file('galeria') as $key => $value) {
+
+				$img = [
+					'titulo' => $request->title[$key],
+					'alt' => $request->alt[$key],
+					'ativo' => true,
+					'viagens_id' => $request->viagem
+				];
+				$mimeImg = $value->getClientMimeType();
+				if ($mimeImg == "image/jpeg" || $mimeImg == "image/png") {
+					$file = Image::make($value);
+					$foto_img_64 = (string) $file->encode('data-url');
+					$img['imagem'] = $foto_img_64;
+				}
+				$img = Img::create($img);
+			}
+		}
+		Session::flash('flash_message',[
+			'msg'=>"Cadastro da Galeria Realizado com Sucesso!!!",
+			'class'=>"alert alert-success alert-dismissible"
+		]);
+		return redirect()->back();
+	}
+	public function mudarEstadoGaleria($id)
+	{
+		$img = Img::find($id);
+		if ($img->ativo) {
+			$img->ativo = false;
+			$msg ="img ".$img->nome." DESATIVADA Com Sucesso!!!";
+		}else{
+			$img->ativo = true;
+			$msg ="img ".$img->nome." ATIVADA Com Sucesso!!!";
+		}
+		$img->save();
+		Session::flash('flash_message',[
+			'msg'=>$msg,
+			'class'=>"alert alert-success alert-dismissible"
+		]);
+		return redirect()->back();
+	}
+
+	public function exibirGaleria($id){
+
+		$viagemId = $id;
+		$galeria = Img::where('viagens_id',$id)->get();
+
+		return view('viagem.admin.galeria',compact('viagemId','galeria'));
+	}
+
+	public function deletarImgGaleria($id)
+	{
+		$img = Img::find($id);
+		$img->delete();
+		Session::flash('flash_message',[
+			'msg'=>"Imagem Removida com Sucesso",
+			'class'=>"alert alert-success alert-dismissible"
+		]);
+		return redirect()->back();
+	}
+
 	public function update(Request $request,$id)
 	{	
 		$viagem = Viagem::find($id);

@@ -22,7 +22,7 @@
 					<b>Selecione uma Categoria</b>
 					<select name="categorias_id" class="form-control" required>
 						@foreach ($categorias as $cat)
-						<option value="{{$cat->id}}" {{$cat->nome == $viagem->categoria->id ? 'selected' : ''}}>{{$cat->nome}}</option>}
+						<option value="{{$cat->id}}" {{$cat->id == $viagem->categoria->id ? 'selected' : ''}}>{{$cat->nome}}</option>}
 						@endforeach
 					</select>
 				</div>
@@ -30,7 +30,7 @@
 					<b>Selecione um Continente</b>
 					<select name="continentes_id" class="form-control" required> 
 						@foreach ($continentes as $cont)
-						<option value="{{$cont->id}}">{{$cont->nome}}</option>}
+						<option value="{{$cont->id}}" {{$cont->id == $viagem->continente->id ? 'selected' : ''}}>{{$cont->nome}}</option>}
 						@endforeach
 					</select>
 				</div>
@@ -56,7 +56,7 @@
 				<img id='img-upload' src="{{$viagem->thumb}}" />
 			</div>
 			<div class="form-group">
-				<b>Capa para a Categoria</b>
+				<b>Capa</b>
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">

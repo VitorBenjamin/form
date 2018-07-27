@@ -20,6 +20,9 @@ class CreateDicasTable extends Migration
             $table->enum('tipo',['CHECK-IN','DICAS-VIAGENS']);
             $table->text('descricao');
             $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_unicode_ci';
         });
     }
 

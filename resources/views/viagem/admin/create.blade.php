@@ -10,7 +10,7 @@
 			{{ csrf_field() }}
 			<div class="form-group t">
 				<input id="titulo" name="titulo" type="text" class="form-control" required>
-				<label for="titulo">Título da Viagem</label>
+				<label for="titulo">Título do Produto</label>
 			</div>
 			<div class="form-group t">
 				<input id="destino" name="destino" type="text" class="form-control" required>
@@ -98,14 +98,14 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<b>Título Para a Imagem</b>
-							<input name="title[]" type="text" class="form-control" style="width:100%" required/>
+							<input name="title[]" type="text" class="form-control" style="width:100%"/>
 						</div>
 						<div class="col-sm-6">
 							<b>Alt Para a Imagem</b>
-							<input name="alt[]" type="text" class="form-control" style="width:100%" required/>
+							<input name="alt[]" type="text" class="form-control" style="width:100%"/>
 						</div>
 					</div>
-					<input type="file" name="carousel[]" class="form-control">
+					<input type="file" name="galeria[]" class="form-control">
 					<div class="input-group-btn" style="vertical-align:bottom !important"> 
 						<button class="btn btn-success add" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
 					</div>

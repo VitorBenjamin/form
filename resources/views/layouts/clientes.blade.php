@@ -11,10 +11,10 @@
 </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12" style="padding: 0">
+    <div class="col-12" style="padding: 0">
       <div class="owl-carousel clientes owl-theme">
         @foreach ($clientes as $cli)
-        <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="750">
+        <div>
           <img class="img-responsive" src="{{$cli->imagem}}" alt="">
         </div>
         @endforeach

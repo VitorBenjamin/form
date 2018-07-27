@@ -15,27 +15,29 @@
       </div>
       <div class="collapse navbar-collapse" id="navbar-collapse-x">
         <ul class="nav navbar-nav navbar-right">
-         <li><a class="link-menu" href="{{route('pagina.index')}}">Pagina Inicial</a></li>
-         <li role="separator" class="divider"></li>
-         <li><a class="link-menu" href="http://localhost/form/public/#destinos">DESTINOS</a></li>
-         <li role="separator" class="divider"></li>
-         <li><a class="link-menu" href="#about">QUEM SOMOS</a></li>
-         <li role="separator" class="divider"></li>
-         <li><a class="link-menu" href="http://localhost/form/public/#destaque">VIAGEM DESTAQUE</a></li>
-         <li role="separator" class="divider"></li>
-         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ROTEIROS<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-             @foreach ($continentes as $cont)
+          <li>
+            <a class="link-menu" href="{{route('pagina.index')}}">Pagina Inicial</a>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li><a class="link-menu" href="http://localhost/form/public/#destinos">DESTINOS</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a class="link-menu" href="#about">QUEM SOMOS</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a class="link-menu" href="http://localhost/form/public/#destaque">VIAGEM DESTAQUE</a></li>
+          <li role="separator" class="divider"></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ROTEIROS<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              @foreach ($continentes as $cont)
               <li><a class="link-menu" href="{{route('pagina.exibirContinente', mb_strtolower($cont->nome))}}">{{$cont->nome}}</a></li>
               @endforeach
-          </ul>
-        </li>
-        <li><a class="link-menu" href="#monte-seu-roteiro">MONTE UM ROTEIRO</a></li>
+            </ul>
+          </li>
+          <li><a class="link-menu" href="#monte-seu-roteiro">MONTE UM ROTEIRO</a></li>
           <li role="separator" class="divider"></li>
           <li><a class="link-menu" href="#contato">CONTATO</a></li>
-      </ul>
-    </div>
-  </nav>
-</div>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </div>

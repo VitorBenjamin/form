@@ -2,25 +2,25 @@
 
 @section('content')
 
-@include('layouts.menu')
+@include('layouts.menu_black')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
 <div class="container-fluid topo-padding" style="background: url('{{$categoria->capa}}') center/cover no-repeat fixed;">
-  <div class="container categoria">
-    <div class="row">
-      <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
+  <div class="container categoria height-80 height-100-mobile" >
+    <div class="row justify-content-center height-40">
+      <div class="col-md-10 align-self-end">
         <h1 class="text-center">{{$categoria->nome}}</h1>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
         <p>
           {{$cont[0]->nome}}
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12" style="text-align: center;">
+    <div class="row justify-content-center height-10">
+      <div class="col-12 align-self-end" style="text-align: center;">
         <select class="destino">
           <option value="">ESCOLHA OUTRO CONTINENTE</option>}
           @foreach ($continentes as $cont)
@@ -38,7 +38,7 @@
   <!-- INCIO SESSÃO DE SELEÇÃO DE VIAGENS -->
   
   <!-- SELECT VIAGENS -->
-  <div class="container-fluid select">
+  <div class="container-fluid select py-5">
     <div class="container select-margin">
       <div class="row margem-padrao">
         <div class="col-sm-6 col-md-7">
@@ -71,8 +71,7 @@
         @endif
         <div class="col-sm-4" >
           <div class="row">
-            <div class="thumb" style="background: url('{{$viagens[$i]->thumb}}') center/cover no-repeat;">
-              <!--  <img src="{{$viagens[$i]->thumb}}" data-aos="fade-down" alt="" data-aos-duration="500" class="img-responsive"> -->
+            <div class="thumb" style="background: no-repeat url('{{$viagens[$i]->thumb}}') center center/cover scroll;">
               <div class="caption">
                 <div class="col-xs-12">
                   <div class="caption-titulo">
@@ -146,7 +145,8 @@
 <!-- FIM DA SESSÃO DAS VIAGENS -->
 
 <!-- INCIO SESSÃO DA VIAGEM EM DESTAQUE -->
-<section id="destaque">
+@include('layouts.especial')
+<!-- <section id="destaque">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12" style="padding: 30px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.25)), url('{{asset('assets/slide-02.jpg')}}') center/cover no-repeat; min-height:550px">
@@ -183,7 +183,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- FIM SESSÃO DA VIAGEM EM DESTAQUE -->
 
 <!-- INICIO SESSÃO DE ROTEIRO-->
@@ -199,7 +199,7 @@
 <!-- FIM SESSÃO NEWS LATTER -->
 
 <!-- INCIO SESSÃO CHECK IN E DICAS -->
-@include('layouts.checkin_dicas')
+<!-- @include('layouts.checkin_dicas') -->
 
 @include('modals.modals')
 <!-- FINAL SESSÃO CHECK IN E DICAS -->

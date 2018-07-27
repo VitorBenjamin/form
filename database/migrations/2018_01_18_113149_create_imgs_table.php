@@ -17,8 +17,12 @@ class CreateImgsTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('alt');
+             $table->boolean('ativo')->default(true);
             $table->integer('viagens_id')->unsigned();
             $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_unicode_ci';
         });
         Schema::table('imgs', function (Blueprint $table) {
             DB::statement("ALTER TABLE imgs ADD imagem LONGBLOB NULL");

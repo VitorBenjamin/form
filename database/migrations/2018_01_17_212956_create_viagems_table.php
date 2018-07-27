@@ -27,6 +27,9 @@ class CreateViagemsTable extends Migration
             $table->integer('continentes_id')->unsigned();
             $table->boolean('ativo')->default(true);
             $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_unicode_ci';
         });
         Schema::table('viagens', function (Blueprint $table) {
             DB::statement("ALTER TABLE viagens ADD thumb LONGBLOB");

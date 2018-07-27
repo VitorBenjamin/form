@@ -22,7 +22,7 @@
 				<label for="descricao">Descrição</label>
 			</div>
 			<div class="form-group">
-				<b>Miniatura</b>
+				<b>Logo	</b>
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">
@@ -34,7 +34,7 @@
 				<img id='img-upload' src="{{$categoria->thumb}}" />
 			</div>
 			<div class="form-group">
-				<b>Capa para a Categoria</b>
+				<b>Capa</b>
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">

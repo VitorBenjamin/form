@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<h1 class="center">
-			Atuliazação do Destaque
+			Atualização do Destaque
 		</h1>
 		<div class="center">
 			<button type="button" class="btn btn-success submit">ATUALIZAR</button>	

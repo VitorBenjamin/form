@@ -1,19 +1,15 @@
-<div class="container-fluid select">
-  <div class="row" style="margin: 10% 0 5% 0">
-    <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-      <div class="row">
-        <div class="col-sm-2 middle">
-          <p class="categorias">QUAL ESTILO DE VIAGEM FAZ PARTE DO SEU SONHO?</p>
+<div class="container-fluid select height-50 height-50-mobile">
+  <div class="row justify-content-center height-50 height-50-mobile">
+    <div class="col-10 col-sm-3 col-md-2 align-self-center">
+      <p class="categorias">QUAL ESTILO DE VIAGEM FAZ PARTE DO SEU SONHO?</p>
+    </div>
+    <div class="col-10 col-md-8 align-self-end">
+      <div class="owl-carousel categoria-slide owl-theme">
+        @foreach ($categorias as $cati)
+        <div>
+          <a href="{{route('pagina.exibirCategoria',$cati->nome)}}" title=""><img class="img-responsive" src="{{$cati->thumb}}" alt=""></a>
         </div>
-        <div class="col-sm-10">
-          <div class="owl-carousel owl-theme">
-            @foreach ($categorias as $cati)
-            <div>
-              <a href="{{route('pagina.exibirCategoria',$cati->nome)}}" title=""><img class="img-responsive" src="{{$cati->thumb}}" alt=""></a>
-            </div>
-            @endforeach
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </div>

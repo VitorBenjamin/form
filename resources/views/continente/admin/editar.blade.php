@@ -26,7 +26,7 @@
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">
-							Carregar… (jpg/png) <input type="file" id="imgInp" name="thumb" accept="image/jpeg, image/png" required>
+							Carregar… (jpg/png) <input type="file" id="imgInp" name="thumb" accept="image/jpeg, image/png">
 						</span>
 					</span>
 					<input type="text" class="form-control" readonly>
@@ -34,7 +34,7 @@
 				<img id='img-upload' src="{{$continente->thumb}}" />
 			</div>
 			<div class="form-group">
-				<b>Capa para a Continente</b>
+				<b>Capa</b>
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">

@@ -33,7 +33,7 @@
 				<img id='img-upload' />
 			</div>
 			<div class="form-group">
-				<b>Capa para a Continente</b>
+				<b>Capa</b>
 				<div class="input-group">
 					<span class="input-group-btn">
 						<span class="btn btn-default btn-file">

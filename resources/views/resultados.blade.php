@@ -1,14 +1,13 @@
 @extends('layouts.app')
-
 @section('content')
 
-@include('layouts.menu')
+@include('layouts.menu_black')
 
 <!-- INCIO SESSÃO TOPO DA VIAGEM -->
-<div class="container-fluid topo-padding" style="background: url('{{ asset('assets/bg-pesquisa.jpg') }}') center/cover no-repeat;">
+<div class="container-fluid topo-padding" style="background: url('{{ asset('assets/bg-pesquisa.jpg') }}') center center/cover no-repeat;">
   <div class="container continente">
-    <div class="row">
-      <div class="col-md-offset-4 col-md-4 text-center">
+    <div class="row height-60 height-60-mobile justify-content-center">
+      <div class="col-md-4 align-self-center text-center">
         <h1>{{$busca}}</h1>
         <h4>Resultados...</h4>
       </div>      
@@ -20,13 +19,13 @@
 <!-- INCIO SESSÃO RESULTADO -->
 <section style="margin: 5% 0 7% 0">
   <div class="container busca">
-    <div class="row">
-      <div class="col-md-offset-1 col-md-10">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
         @if(count($viagens) > 0 || count($conts) > 0 || count($cats) > 0)
         @foreach ($viagens as $v)
         <a href="{{route('pagina.Viagem',$v->titulo)}}" title="">
-          <h1 >{{$v->titulo}}</h1>
-          <h4>{{$v->destino}}</h4>
+          <h1 style="color:#000">{{$v->titulo}}</h1>
+          <h6 style="color:#000">{{$v->destino}}</h6>
           <img src="{{$v->thumb}}" alt="" width="200" height="100">
         </a>
         @endforeach

@@ -28,7 +28,7 @@
       <tbody>
         @foreach ($carousels as $car)
         <tr>
-          <td>{{$car->titulo}}</td>
+          <td>{{$car->nome}}</td>
           <td><p class="show-summary">{{$car->descricao}}</p></td>
           <td>
             <span class="{{$car->ativo ? 'on' : 'off'}}">{{$car->ativo ? 'on' : 'off'}}</span>

@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> --}}
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css') !!}
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css"/>
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.css') !!}
@@ -62,6 +63,18 @@
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                PARCEIROS <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('parceiro.create') }}">Cadastrar</a>
+                                    <a href="{{ route('parceiro.index') }}">Listagem</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 CONTINENTE <span class="caret"></span>
                             </a>
 
@@ -83,6 +96,18 @@
                                     <a href="{{ route('viagem.index') }}">Listagem</a>
                                 </li>
                                 <li><a href="{{route('carousel.index')}}" class="dropdown-toggle">Listagem Destaques</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                ARTIGO <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('artigo.create') }}">Cadastrar</a>
+                                    <a href="{{ route('artigo.index') }}">Listagem</a>
+                                </li>
                             </ul>
                         </li>
                         

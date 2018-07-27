@@ -20,6 +20,9 @@ class CreateClientesTable extends Migration
             $table->string('alt');
             $table->boolean('ativo');
             $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_unicode_ci';
         });
         Schema::table('clientes', function($table) {
           DB::statement("ALTER TABLE clientes ADD imagem LONGBLOB NULL");  

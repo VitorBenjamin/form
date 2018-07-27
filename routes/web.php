@@ -17,8 +17,11 @@ Route::get('pacote-de-viagens/continente/{contiente}/', ['uses' => 'PaginasContr
 Route::get('pacote-de-viagens/categoria/{categoria}/', ['uses' => 'PaginasController@exibirCategoria', 'as' => 'pagina.exibirCategoria']);
 Route::get('pacote-de-viagens/continente/{contiente}/categoria/{categoria}/', ['uses' => 'PaginasController@exibirContinenteCategoria', 'as' => 'pagina.exibirContinenteCategoria']);
 Route::get('todas-viagens', ['uses' => 'PaginasController@exibirTodasViagens', 'as' => 'pagina.exibirTodasViagens']);
+Route::get('todos-artigos', ['uses' => 'PaginasController@exibirTodosArtigos', 'as' => 'pagina.exibirTodosArtigos']);
 
 Route::get('pacote-de-viagem/{viagem}/', ['uses' => 'PaginasController@exibirViagem', 'as' => 'pagina.Viagem']);
+Route::get('artigo/{artigo}/', ['uses' => 'PaginasController@exibirArtigo', 'as' => 'pagina.artigo']);
+
 Route::post('enviar-contact', ['uses'=>'PaginasController@postContact', 'as' => 'postContact']);
 Route::post('search', ['uses'=>'PaginasController@postSearch', 'as' => 'pagina.search']);
 
@@ -42,6 +45,16 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
 		Route::get('mudar-estado-categoria/{id}', ['uses' => 'CategoriaController@mudarEstado', 'as' => 'categoria.mudarEstado']);
 
 	});
+	Route::group(['prefix' => 'parceiro'], function() {
+		Route::get('', ['uses' => 'ParceiroController@index', 'as' => 'parceiro.index']);
+		Route::get('cadastrar', ['uses' => 'ParceiroController@create', 'as' => 'parceiro.create']);
+		Route::post('salvar', ['uses' => 'ParceiroController@salvar', 'as' => 'parceiro.salvar']);
+		Route::get('deletar-parceiro/{id}', ['uses' => 'ParceiroController@excluir', 'as' => 'parceiro.excluir']);
+		Route::get('editar-parceiro/{id}', ['uses' => 'ParceiroController@editar', 'as' => 'parceiro.editar']);
+		Route::put('atualizar-parceiro/{id}', ['uses' => 'ParceiroController@update', 'as' => 'parceiro.update']);
+		Route::get('mudar-estado-parceiro/{id}', ['uses' => 'ParceiroController@mudarEstado', 'as' => 'parceiro.mudarEstado']);
+
+	});
 	Route::group(['prefix' => 'continente'], function() {
 		Route::get('', ['uses' => 'ContinenteController@index', 'as' => 'continente.index']);
 		Route::get('cadastrar', ['uses' => 'ContinenteController@create', 'as' => 'continente.create']);
@@ -56,10 +69,25 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
 		Route::get('', ['uses' => 'ViagemController@index', 'as' => 'viagem.index']);
 		Route::get('cadastrar', ['uses' => 'ViagemController@create', 'as' => 'viagem.create']);
 		Route::post('salvar', ['uses' => 'ViagemController@salvar', 'as' => 'viagem.salvar']);
+		Route::post('salvar-galeria', ['uses' => 'ViagemController@salvarGaleria', 'as' => 'viagem.salvarGaleria']);
+		Route::get('exibir-galeria/{id}', ['uses' => 'ViagemController@exibirGaleria', 'as' => 'viagem.exibirGaleria']);
+		Route::get('deletar-imagem-galeria/{id}', ['uses' => 'ViagemController@deletarImgGaleria', 'as' => 'viagem.deletarImgGaleria']);
 		Route::get('deletar-viagem/{id}', ['uses' => 'ViagemController@excluir', 'as' => 'viagem.excluir']);
 		Route::get('editar-viagem/{id}', ['uses' => 'ViagemController@editar', 'as' => 'viagem.editar']);
 		Route::put('atualizar-viagem/{id}', ['uses' => 'ViagemController@update', 'as' => 'viagem.update']);
 		Route::get('mudar-estado-viagem/{id}', ['uses' => 'ViagemController@mudarEstado', 'as' => 'viagem.mudarEstado']);
+
+		Route::get('mudar-estado-img-galera/{id}', ['uses' => 'ViagemController@mudarEstadoGaleria', 'as' => 'viagem.mudarEstadoGaleria']);
+
+	});
+	Route::group(['prefix' => 'artigo'], function() {
+		Route::get('', ['uses' => 'ArtigoController@index', 'as' => 'artigo.index']);
+		Route::get('cadastrar', ['uses' => 'ArtigoController@create', 'as' => 'artigo.create']);
+		Route::post('salvar', ['uses' => 'ArtigoController@salvar', 'as' => 'artigo.salvar']);
+		Route::get('deletar-artigo/{id}', ['uses' => 'ArtigoController@excluir', 'as' => 'artigo.excluir']);
+		Route::get('editar-artigo/{id}', ['uses' => 'ArtigoController@editar', 'as' => 'artigo.editar']);
+		Route::put('atualizar-artigo/{id}', ['uses' => 'ArtigoController@update', 'as' => 'artigo.update']);
+		Route::get('mudar-estado-artigo/{id}', ['uses' => 'ArtigoController@mudarEstado', 'as' => 'artigo.mudarEstado']);
 
 	});
 	Route::group(['prefix' => 'carousel'], function() {

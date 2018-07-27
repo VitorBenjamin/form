@@ -47,6 +47,8 @@ class ContinenteController extends Controller
 
 	public function salvar(Request $request)
 	{ 
+		//dd(Image::make($request->file('capa'))->height());
+
 		$mimeCapa = $request->file('capa')->getClientMimeType();
 		$mimeThumb = $request->file('thumb')->getClientMimeType();
 		$data = [
@@ -55,11 +57,36 @@ class ContinenteController extends Controller
 		];
 		if ($mimeCapa == "image/jpeg" || $mimeCapa == "image/png") {
 			$file = Image::make($request->file('capa'));
+			$height = $file->height();
+			$width = $file->width();
+			if ($height > 1080) {
+				$file->heighten(1080, function ($constraint) {
+					$constraint->upsize();
+				});
+			}
+			if ($width > 1920) {
+				$file->widen(1920, function ($constraint) {
+					$constraint->upsize();
+				});
+			}
+			//$file = Image::make($request->file('capa'));
 			$capa_img_64 = (string) $file->encode('data-url');
 			$data['capa'] = $capa_img_64;
 		}
 		if ($mimeThumb == "image/jpeg" || $mimeThumb == "image/png") {
 			$file = Image::make($request->file('thumb'));
+			$height = $file->height();
+			$width = $file->width();
+			if ($height > 360) {
+				$file->heighten(360, function ($constraint) {
+					$constraint->upsize();
+				});
+			}
+			if ($width > 720) {
+				$file->widen(720, function ($constraint) {
+					$constraint->upsize();
+				});
+			}
 			$thumb_img_64 = (string) $file->encode('data-url');
 			$data['thumb'] = $thumb_img_64;
 		}
